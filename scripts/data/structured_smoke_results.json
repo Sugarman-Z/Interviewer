@@ -1,0 +1,512 @@
+{
+  "timestamp": "2026-09-16T18:17:47",
+  "model": "glm-5.3-flash",
+  "prompt": "EVALUATOR_SYSTEM v0",
+  "schema": "Scorecard",
+  "methods": {
+    "function_calling": {
+      "success_rate": 1.0,
+      "n_ok": 20,
+      "n_total": 20,
+      "avg_latency_s": 12.55,
+      "dim_means": {
+        "technical_depth": 2.0,
+        "correctness": 2.6,
+        "communication": 2.3
+      },
+      "worth_followup_true": 9,
+      "by_expect": {
+        "strong": [
+          "ok",
+          "ok",
+          "ok",
+          "ok"
+        ],
+        "mid": [
+          "ok",
+          "ok",
+          "ok",
+          "ok"
+        ],
+        "weak": [
+          "ok",
+          "ok",
+          "ok",
+          "ok"
+        ],
+        "vague": [
+          "ok",
+          "ok",
+          "ok",
+          "ok"
+        ],
+        "off": [
+          "ok",
+          "ok",
+          "ok",
+          "ok"
+        ]
+      },
+      "failures": [],
+      "records": [
+        {
+          "idx": 0,
+          "expect": "strong",
+          "ok": true,
+          "latency_s": 16.24,
+          "scorecard": {
+            "technical_depth": 4,
+            "correctness": 3,
+            "communication": 5,
+            "evidence": {
+              "communication": "回答按『问题背景→职责→技术方案→量化结果→个人贡献』结构展开，『损耗率从 8% 降到 3%』给出量化结论，结构清晰、有例子有结论",
+              "correctness": "『门店 POS 的增量变更经 Kafka 进来，消费端做幂等去重后更新 MySQL，再由定时对账任务兜底修正差异』链路正确无明显错误，但幂等『怎么去重』（唯一键/Redis/版本号）、对账周期与偏差处理等边界未说，存在含糊",
+              "technical_depth": "『幂等和对账这两个模块的方案是我设计的』以及『消费端做幂等去重后更新 MySQL，再由定时对账任务兜底修正差异』显示有方案设计经验，但未说幂等实现方式、冲突处理等原理级细节，属于'做过且有思路'而非原理级取舍"
+            },
+            "weak_points": [
+              "幂等去重的具体实现机制（唯一键/Redis 去重表/消息 offset）未说明",
+              "定时对账任务与实时链路冲突时如何处理差异、对账周期和窗口边界未提及",
+              "未说明为何选 Kafka 而非其他方案、消费失败与重试顺序性如何保证"
+            ],
+            "worth_followup": true
+          },
+          "error": ""
+        },
+        {
+          "idx": 1,
+          "expect": "mid",
+          "ok": true,
+          "latency_s": 9.95,
+          "scorecard": {
+            "technical_depth": 2,
+            "correctness": 3,
+            "communication": 2,
+            "evidence": {
+              "communication": "『我负责后端接口开发，用 Spring Boot 写的』回答了问题但结构松散，无具体例子和结论",
+              "correctness": "『分订单管理和库存管理两个模块』描述大体可信但无任何细节佐证，含糊",
+              "technical_depth": "『用 Spring Boot 写的，数据库用 MySQL』仅名词罗列，无任何架构、难点或取舍描述"
+            },
+            "weak_points": [
+              "未说明系统架构分层、模块间如何交互（订单与库存如何联动）",
+              "未提及任何技术难点、设计取舍或量化结果（如并发量、接口性能）",
+              "未说明个人在项目中的具体职责边界和突出贡献"
+            ],
+            "worth_followup": true
+          },
+          "error": ""
+        },
+        {
+          "idx": 2,
+          "expect": "weak",
+          "ok": true,
+          "latency_s": 17.46,
+          "scorecard": {
+            "technical_depth": 1,
+            "correctness": 2,
+            "communication": 2,
+            "evidence": {
+              "communication": "回答未按问题结构展开：没有说明项目解决什么问题，'项目是我们团队一起做的管理系统'一笔带过",
+              "correctness": "无事实性错误但信息量极低且含糊，'我负责的部分不算多'、'帮忙写过几个页面'边界不清",
+              "technical_depth": "'主要是修了一些别人模块的 bug'、'整体架构是组长搭的'，未展示任何技术理解"
+            },
+            "weak_points": [
+              "无法描述项目解决的问题与业务背景",
+              "对自己负责部分的技术细节无任何展开",
+              "对系统整体架构没有个人理解"
+            ],
+            "worth_followup": true
+          },
+          "error": ""
+        },
+        {
+          "idx": 3,
+          "expect": "vague",
+          "ok": true,
+          "latency_s": 8.85,
+          "scorecard": {
+            "technical_depth": 1,
+            "correctness": 2,
+            "communication": 1,
+            "evidence": {
+              "communication": "具体细节太多了，一下子讲不完",
+              "correctness": "整体是一套很成熟的方案",
+              "technical_depth": "我们用的是微服务架构，技术栈都是业界主流"
+            },
+            "weak_points": [
+              "未回答问题：既没说明项目解决什么问题，也没说明自己负责哪部分",
+              "微服务架构无任何具体内容：服务拆分方式、通信方式、技术选型理由均未提及",
+              "'性能表现也不错'无任何指标或数据支撑"
+            ],
+            "worth_followup": false
+          },
+          "error": ""
+        },
+        {
+          "idx": 4,
+          "expect": "off",
+          "ok": true,
+          "latency_s": 10.56,
+          "scorecard": {
+            "technical_depth": 1,
+            "correctness": 1,
+            "communication": 1,
+            "evidence": {
+              "communication": "候选人被问项目解决了什么问题、负责哪部分，回答却全部围绕团队氛围与团建，未给出任何项目信息，属答非所问",
+              "correctness": "通篇为「领导对我们评价也很高」等态度性表态，无任何具体技术事实可供核对正确性，按规则降分",
+              "technical_depth": "全段没有任何技术内容，无架构、无职责描述，符合1=完全不会/仅态度表述"
+            },
+            "weak_points": [
+              "未回答项目解决什么问题",
+              "未说明自己负责的部分",
+              "无任何架构或技术选型描述"
+            ],
+            "worth_followup": false
+          },
+          "error": ""
+        },
+        {
+          "idx": 5,
+          "expect": "strong",
+          "ok": true,
+          "latency_s": 11.8,
+          "scorecard": {
+            "technical_depth": 4,
+            "correctness": 4,
+            "communication": 4,
+            "evidence": {
+              "communication": "先讲结论与需求匹配，再讲代价与备选劣势，结构清晰、有具体场景（对账任务、峰值）",
+              "correctness": "“Kafka 分区并行度高、日志可回放”“RabbitMQ 路由灵活但消息堆积能力弱”，判断基本准确，但“堆积能力弱”表述略绝对且未展开原因",
+              "technical_depth": "“我们的事件量大、允许秒级延迟、还要支持故障后回溯重放，所以选 Kafka”“消息堆积能力弱，扛不住我们的峰值”，有基于实际场景的取舍逻辑"
+            },
+            "weak_points": [
+              "未量化关键指标（事件量级、延迟、堆积规模），取舍停留在定性描述",
+              "未说明为什么需要 3 节点、副本/可用性配置等运维代价的具体权衡"
+            ],
+            "worth_followup": true
+          },
+          "error": ""
+        },
+        {
+          "idx": 6,
+          "expect": "mid",
+          "ok": true,
+          "latency_s": 14.04,
+          "scorecard": {
+            "technical_depth": 2,
+            "correctness": 4,
+            "communication": 3,
+            "evidence": {
+              "communication": "回答围绕单一选型展开，理由按团队熟悉度、社区资料、运维体系三点陈述，但结构松散，未总结选型原则",
+              "correctness": "“公司现有的运维体系也是围绕 MySQL 建的”“没有做过特别深入的对比测试”——理由真实可信，但自我承认未做深入对比，含糊",
+              "technical_depth": "数据库选了 MySQL 而不是 MongoDB，主要因为团队都熟悉 MySQL，社区资料多，出问题好排查"
+            },
+            "weak_points": [
+              "未做过深入的选型对比测试，缺乏基于业务特性（数据模型、事务、扩展性）的取舍分析",
+              "只提到 MySQL vs MongoDB，未涉及关系型/文档型在查询模式、schema 演进上的差异",
+              "未讨论团队熟悉度这类组织因素与技术因素的权衡边界"
+            ],
+            "worth_followup": true
+          },
+          "error": ""
+        },
+        {
+          "idx": 7,
+          "expect": "weak",
+          "ok": true,
+          "latency_s": 10.42,
+          "scorecard": {
+            "technical_depth": 1,
+            "correctness": 2,
+            "communication": 1,
+            "evidence": {
+              "communication": "没有针对选型问题给出任何结构化内容，直接表明未参与且无信息可说",
+              "correctness": "“用的是公司统一的技术栈，Java 那一套”——表述含糊，未说明具体技术组件",
+              "technical_depth": "“技术选型主要是架构师和领导定的，我们负责执行”"
+            },
+            "weak_points": [
+              "无任何参与或了解技术选型的经历与取舍依据",
+              "无法说明所用技术栈的具体组件及备选方案对比",
+              "对公司技术栈选型的动机、约束（性能/成本/生态）缺乏认知"
+            ],
+            "worth_followup": false
+          },
+          "error": ""
+        },
+        {
+          "idx": 8,
+          "expect": "vague",
+          "ok": true,
+          "latency_s": 17.38,
+          "scorecard": {
+            "technical_depth": 2,
+            "correctness": 3,
+            "communication": 2,
+            "evidence": {
+              "communication": "回答未包含任何具体项目、选型对象或备选方案对比，仅重复泛化表述",
+              "correctness": "「没有最好的技术，只有最合适的技术」「综合考量性能、成本、社区活跃度和团队熟悉度」——均为常见套话，无错误但也无具体内容",
+              "technical_depth": "「我们会综合考量性能、成本、社区活跃度和团队熟悉度做全面权衡」——仅有选型维度的罗列，没有任何具体选型实例、对比分析或取舍细节"
+            },
+            "weak_points": [
+              "未给出任何具体技术选型案例（无具体技术名、无备选方案、无对比）",
+              "权衡维度（性能、成本、社区活跃度、团队熟悉度）只停留在口号层面，无真实取舍过程",
+              "声称基于项目经验，但回答中没有任何项目细节佐证"
+            ],
+            "worth_followup": false
+          },
+          "error": ""
+        },
+        {
+          "idx": 9,
+          "expect": "off",
+          "ok": true,
+          "latency_s": 11.19,
+          "scorecard": {
+            "technical_depth": 1,
+            "correctness": 2,
+            "communication": 1,
+            "evidence": {
+              "communication": "整段回答没有回应问题本身，没有提到任何项目中做过的选型、备选方案或取舍依据，属于答非所问。",
+              "correctness": "「选型就应该选最新最热的技术，旧技术迟早会被淘汰」是一种有事实性偏差的绝对化论断，未考虑成熟度、稳定性、团队维护成本等选型边界条件。",
+              "technical_depth": "候选人只说「业余时间在学 Rust 和 AI 大模型」，没有任何项目中的真实选型经历、备选方案对比或取舍理由，停留在名词与态度层面。"
+            },
+            "weak_points": [
+              "没有说出任何真实项目中的技术选型及备选方案对比",
+              "选型方法论错误：以'新旧热度'代替业务需求、成熟度与维护成本等客观标准",
+              "对已学技术的理解程度无法从回答中体现，无任何原理性内容"
+            ],
+            "worth_followup": false
+          },
+          "error": ""
+        },
+        {
+          "idx": 10,
+          "expect": "strong",
+          "ok": true,
+          "latency_s": 11.92,
+          "scorecard": {
+            "technical_depth": 5,
+            "correctness": 4,
+            "communication": 5,
+            "evidence": {
+              "communication": "整体按哈希→红黑树→B+树逐个对比，每个结论都带理由，最后收在树高推导上，结构清晰",
+              "correctness": "哈希表等值查询 O(1)，但不支持范围扫描和排序……红黑树是二叉的，千万级数据树高二十多层，每层一次磁盘 IO",
+              "technical_depth": "B+ 树矮胖，3 层约能撑两千万行，非叶子节点只存键，单页能放更多索引项；叶子节点链表相连，范围查询是顺序 IO"
+            },
+            "weak_points": [
+              "未提到哈希索引在 Memory 引擎/自适应哈希中的实际使用场景，'不支持'表述略绝对",
+              "未提 B+ 树相对 B 树的取舍（如 B 树叶子也存数据导致范围扫描劣势、非叶子存数据的扇出问题）",
+              "'3 层约撑两千万行'未说明依赖的页大小与行大小假设，边界条件含糊"
+            ],
+            "worth_followup": true
+          },
+          "error": ""
+        },
+        {
+          "idx": 11,
+          "expect": "mid",
+          "ok": true,
+          "latency_s": 13.94,
+          "scorecard": {
+            "technical_depth": 3,
+            "correctness": 4,
+            "communication": 3,
+            "evidence": {
+              "communication": "回答短小但逐条对比哈希表与红黑树，结论清晰（'所以数据库选它'），但无例子、无展开，结构松散",
+              "correctness": "'哈希虽然等值查询快，但不支持范围查询''叶子节点之间有指针相连'均正确，但未提磁盘页/扇区大小、树高估算、InnoDB 自适应哈希等边界，存在含糊空间",
+              "technical_depth": "知道'矮胖→磁盘 IO 少'和'叶子节点指针相连便于范围查询'，但未解释为何 B+ 树节点大小匹配磁盘页、非叶子节点不存数据带来的扇出提升等原理级细节"
+            },
+            "weak_points": [
+              "未解释 B+ 树矮胖的根本原因（节点大小匹配磁盘页、非叶子节点不存数据提高扇出）",
+              "未提哈希在 InnoDB 中的实际存在形式（自适应哈希索引）及哈希冲突/排序劣势",
+              "未提红黑树/二叉树每个节点一次 IO、IO 次数等于树高的量化分析"
+            ],
+            "worth_followup": true
+          },
+          "error": ""
+        },
+        {
+          "idx": 12,
+          "expect": "weak",
+          "ok": true,
+          "latency_s": 11.81,
+          "scorecard": {
+            "technical_depth": 1,
+            "correctness": 2,
+            "communication": 2,
+            "evidence": {
+              "communication": "候选人的回答没有针对'为什么'给出任何论据或结构，只有结论式的一句话，随后承认不了解。",
+              "correctness": "\"B+ 树是 MySQL 自带的索引数据结构……效率应该比其他数据结构高\"——'应该比其他高'是含糊的推测，未区分场景（哈希在等值查询上其实更快），且红黑树的对比完全未提及。",
+              "technical_depth": "\"具体为什么选它我没有深入了解过，我平时主要是用索引，比如加索引、看执行计划\"——明确停留在使用层面，没有任何原理级内容。"
+            },
+            "weak_points": [
+              "不了解 B+ 树与哈希表在等值查询、范围查询上的取舍（哈希不支持范围/排序，等值更快）",
+              "不了解红黑树在磁盘场景下因树高和 IO 次数不适用、以及 B+ 树矮胖/叶子链表的设计动因",
+              "未提及 InnoDB 对自适应哈希索引、Memory 引擎哈希索引等实际工程边界"
+            ],
+            "worth_followup": false
+          },
+          "error": ""
+        },
+        {
+          "idx": 13,
+          "expect": "vague",
+          "ok": true,
+          "latency_s": 16.41,
+          "scorecard": {
+            "technical_depth": 1,
+            "correctness": 1,
+            "communication": 1,
+            "evidence": {
+              "communication": "整段回答没有回答问题本身，全部是诉诸权威的态度性表述，无任何针对哈希表或红黑树的结构化论证",
+              "correctness": "回答中没有任何关于 B+ 树、哈希表或红黑树的技术性陈述，无可核实的正确内容，只有结论没有理由",
+              "technical_depth": "「因为 B+ 树是经过大厂大规模实践检验的最优方案」「直接相信成熟方案就不会错」——全篇无任何原理分析，属于纯态度性表态"
+            },
+            "weak_points": [
+              "未解释 B+ 树为何适合磁盘/页式存储（矮胖树高、减少 I/O、叶子节点链表利于范围查询）",
+              "未对比哈希表的缺陷：不支持范围查询与排序、存在哈希冲突问题",
+              "未对比红黑树的缺陷：二叉树高导致磁盘 I/O 次数多，不适合块设备读取特性"
+            ],
+            "worth_followup": false
+          },
+          "error": ""
+        },
+        {
+          "idx": 14,
+          "expect": "off",
+          "ok": true,
+          "latency_s": 11.32,
+          "scorecard": {
+            "technical_depth": 1,
+            "correctness": 1,
+            "communication": 1,
+            "evidence": {
+              "communication": "通篇没有针对问题给出任何结构化回答，仅是心得分享与表态",
+              "correctness": "未回答'为什么是B+树而不是哈希表或红黑树'，只提到'慢SQL加了联合索引后从10秒优化到0.1秒'，未涉及任何数据结构对比",
+              "technical_depth": "'索引是性能优化的第一要务'仅为经验性表态，无B+树/哈希/红黑树的原理阐述"
+            },
+            "weak_points": [
+              "完全未涉及B+树与哈希表、红黑树的对比（如范围查询、磁盘IO、有序性）",
+              "未回答问题本身，答非所问"
+            ],
+            "worth_followup": false
+          },
+          "error": ""
+        },
+        {
+          "idx": 15,
+          "expect": "strong",
+          "ok": true,
+          "latency_s": 9.63,
+          "scorecard": {
+            "technical_depth": 4,
+            "correctness": 4,
+            "communication": 5,
+            "evidence": {
+              "communication": "两个关键取舍：不先删缓存后更库，因为并发下旧值会回填；删而不是改缓存，避免并发写覆盖",
+              "correctness": "写的时候先更新数据库再删除缓存。删缓存失败靠 MQ 异步重试兜底，所有 key 都带过期时间作为最终一致的保底",
+              "technical_depth": "不先删缓存后更库，因为并发下旧值会回填；删而不是改缓存，避免并发写覆盖"
+            },
+            "weak_points": [
+              "未说明删除缓存失败重试仍失败时的最终处理与监控手段",
+              "未涉及延迟双删或主从延迟下的读到旧值问题",
+              "MQ 异步重试的顺序性/重复消费幂等如何保证未提及"
+            ],
+            "worth_followup": true
+          },
+          "error": ""
+        },
+        {
+          "idx": 16,
+          "expect": "mid",
+          "ok": true,
+          "latency_s": 14.25,
+          "scorecard": {
+            "technical_depth": 3,
+            "correctness": 4,
+            "communication": 4,
+            "evidence": {
+              "communication": "先说策略，再说兜底和失败补偿，最后主动声明边界，层次清楚但无具体例子",
+              "correctness": "用的是先更新数据库、再删除缓存的策略，并且给缓存设置了过期时间。如果删除失败会进重试队列",
+              "technical_depth": "特别极端的并发时序我没有实际处理过"
+            },
+            "weak_points": [
+              "未提及 Cache Aside 读写并发下的脏数据场景（如读旧值回填）及概率评估",
+              "重试队列细节缺失：重试失败最终如何兜底（如订阅 binlog/Canal 补偿）未说明",
+              "未讨论为何选删除缓存而非更新缓存、延迟双删等取舍"
+            ],
+            "worth_followup": true
+          },
+          "error": ""
+        },
+        {
+          "idx": 17,
+          "expect": "weak",
+          "ok": true,
+          "latency_s": 10.75,
+          "scorecard": {
+            "technical_depth": 1,
+            "correctness": 1,
+            "communication": 1,
+            "evidence": {
+              "communication": "「一致性问题我们没怎么遇到过，应该问题不大吧」——无任何结构或展开，直接跳过考点核心",
+              "correctness": "「应该问题不大吧」——对一致性问题的存在性做出无依据的否定判断，掩盖了对更新路径完全未涉及的事实",
+              "technical_depth": "「读的时候先读 Redis，Redis 没有就去读 MySQL 再写回 Redis」——仅描述了读路径的 Cache-Aside 读取半边，对写路径如何保证一致性只字未提"
+            },
+            "weak_points": [
+              "完全未回答写路径的缓存一致性策略（Cache Aside 的更新/删除选择、先库后缓存的时序）",
+              "未考虑过期时间兜底、延迟双删、binlog 订阅等常见方案",
+              "用「没遇到过」替代技术论证，缺乏对不一致窗口和并发读写竞态的认知"
+            ],
+            "worth_followup": false
+          },
+          "error": ""
+        },
+        {
+          "idx": 18,
+          "expect": "vague",
+          "ok": true,
+          "latency_s": 11.85,
+          "scorecard": {
+            "technical_depth": 1,
+            "correctness": 2,
+            "communication": 1,
+            "evidence": {
+              "communication": "候选人没有给出任何结构化展开，仅一句话表态：\"缓存一致性是分布式系统的经典难题……把不一致窗口控制到最小\"",
+              "correctness": "\"根据业务场景在强一致和最终一致之间做权衡，采用业界成熟方案\"——方向正确但完全未说明任何具体方案或机制",
+              "technical_depth": "\"采用业界成熟方案，配合监控告警保证数据的一致性\"——未提及任何具体策略（如 Cache Aside、延迟双删、binlog 订阅失效等），属名词级空谈"
+            },
+            "weak_points": [
+              "未说明任何具体缓存更新策略（Cache Aside / Read-Through / Write-Behind 等均未提及）",
+              "未解释强一致与最终一致的权衡具体如何落地",
+              "未提及不一致窗口的来源及监控告警的具体实现手段"
+            ],
+            "worth_followup": false
+          },
+          "error": ""
+        },
+        {
+          "idx": 19,
+          "expect": "off",
+          "ok": true,
+          "latency_s": 11.18,
+          "scorecard": {
+            "technical_depth": 1,
+            "correctness": 3,
+            "communication": 1,
+            "evidence": {
+              "communication": "面试官问的是『一致性怎么处理』，候选人回答的是『缓存的穿透、击穿、雪崩这三个经典问题我们都处理过』，答非所问，未提及任何一致性方案。",
+              "correctness": "『布隆过滤器防穿透，互斥锁防击穿，过期时间加随机值防雪崩』这三种手段本身表述正确，未出现事实性错误，但属于背诵式陈述，边界与适用条件均未展开。",
+              "technical_depth": "仅罗列名词和固定对策（布隆过滤器、互斥锁、过期时间加随机值），没有任何原理级解释，如布隆过滤器误判率如何、互斥锁用什么实现、锁失败如何降级，停留在背诵层面。"
+            },
+            "weak_points": [
+              "完全没有回答缓存与数据库的一致性方案（如 Cache Aside、延迟双删、binlog 订阅等均未提及）",
+              "对策仅为背诵结论，未说明布隆过滤器误判率、互斥锁实现方式与降级策略等边界条件"
+            ],
+            "worth_followup": false
+          },
+          "error": ""
+        }
+      ]
+    }
+  }
+}

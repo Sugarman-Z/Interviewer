@@ -1,0 +1,270 @@
+/* 会话列表 —— docs/design/direction-b.html「历史会话」屏移植；
+   三态（含呼吸点）与状态筛选为 spec §10.2 自方向 A 嫁接的增量。
+   .card/.btn/.page-head 在 globals.css；颜色走 tokens.css。 */
+
+.scol {
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.headRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* 状态筛选 chips */
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.chip {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-2);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 16px;
+  transition: 0.15s;
+}
+
+.chip:hover {
+  border-color: var(--orange-line);
+  color: var(--ink);
+}
+
+.chip.on {
+  color: var(--orange-ink);
+  background: var(--orange-soft);
+  border-color: var(--orange-line);
+}
+
+/* 会话卡行 */
+.slist {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.scard {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  transition: 0.18s;
+}
+
+.scard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(127, 91, 45, 0.15);
+}
+
+.sico {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--orange-soft);
+  color: var(--orange-deep);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.scard.done .sico {
+  background: var(--green-soft);
+  color: var(--green-deep);
+}
+
+.scard.int .sico {
+  background: var(--rust-soft);
+  color: var(--rust-ink);
+}
+
+.smain {
+  flex: 1;
+  min-width: 0;
+}
+
+.st {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.st b {
+  font-size: 15px;
+}
+
+.sm {
+  font-size: 12px;
+  color: var(--ink-2); /* ink-3 压白卡仅 2.94:1，meta 承载实质信息须过 AA */
+  margin-top: 3px;
+}
+
+/* 状态 chip：橘=进行中（行动）绿=已完成（达成）锈=已中断（待办未竟） */
+.stag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 99px;
+}
+
+.stag.ongoing {
+  color: var(--orange-ink);
+  background: var(--orange-soft);
+}
+
+.stag.finished {
+  color: var(--green-deep);
+  background: var(--green-soft);
+}
+
+.stag.interrupted {
+  color: var(--rust-ink);
+  background: var(--rust-soft);
+}
+
+/* 进行中呼吸点；reduced-motion 下静止 */
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: breathe 1.8s ease-out infinite;
+}
+
+@keyframes breathe {
+  0% {
+    box-shadow: 0 0 0 0 rgba(228, 113, 31, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(228, 113, 31, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(228, 113, 31, 0);
+  }
+}
+
+.sside {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* 已完成的综合分砖（5 分制，与报告页同阈值：≥4 绿 / ≥3 琥珀 / <3 锈） */
+.sscore {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.sscore.g {
+  background: var(--green-soft);
+  color: var(--green-deep);
+}
+
+.sscore.m {
+  background: var(--amber-soft);
+  color: var(--amber-ink);
+}
+
+.sscore.l {
+  background: var(--rust-soft);
+  color: var(--rust-ink);
+}
+
+/* 空态 / 加载 / 错误 */
+.empty {
+  margin-top: 8px;
+  padding: 46px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  text-align: center;
+}
+
+.empty p {
+  color: var(--ink-2);
+  font-size: 14px;
+}
+
+/* 筛选后无结果的轻提示（列表本身非空时） */
+.none {
+  color: var(--ink-2); /* ink-3 压暖底更低（≈2.7:1） */
+  font-size: 13px;
+  text-align: center;
+  padding: 36px 0;
+}
+
+.noticeCard {
+  margin-top: 8px;
+  max-width: 460px;
+  padding: 28px 30px;
+  text-align: center;
+}
+
+.noticeCard p {
+  color: var(--ink-2);
+  font-size: 13.5px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.noticeCard .err {
+  color: var(--rust-ink);
+}
+
+.noticeBtns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 响应式（基准稿 719px 断点） */
+@media (max-width: 719px) {
+  .scard {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 18px;
+  }
+
+  .sside {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .headRow {
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    animation: none;
+  }
+
+  .scard,
+  .scard:hover {
+    transform: none;
+    transition: none;
+  }
+}

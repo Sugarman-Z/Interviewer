@@ -1,0 +1,453 @@
+/* 输入向导 —— docs/design/direction-b.html「输入向导」屏移植。
+   颜色一律走全局 tokens.css；通用 .btn 家族在 globals.css。 */
+
+.wcol {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 56px;
+}
+
+.wcard {
+  padding: 30px 34px 26px;
+}
+
+/* 步骤指示器 */
+.steps {
+  display: flex;
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+/* 步骤间连线（挂在后一个步骤的左侧） */
+.step + .step::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: calc(50% + 26px);
+  width: calc(100% - 52px);
+  height: 2px;
+  background: var(--line-2);
+}
+
+.step.done::before {
+  background: var(--green-line);
+}
+
+.dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink-3);
+  font-weight: 700;
+  font-size: 14px;
+  z-index: 1;
+  transition: 0.2s;
+}
+
+.step.cur .dot {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(228, 113, 31, 0.35);
+}
+
+.step.done .dot {
+  background: var(--green-soft);
+  border-color: var(--green-line);
+  color: var(--green-deep);
+}
+
+.stepBtn {
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.slabel {
+  font-size: 12px;
+  color: var(--ink-2); /* 步骤标签承载进度信息；ink-3 压白卡 2.94:1（T8 收口） */
+  font-weight: 500;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.step.cur .slabel {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.slabel small {
+  font-size: 11px;
+  color: var(--ink-2); /* ink-3 压次级底 ≈2.5:1（T8 收口） */
+  background: var(--surface-muted);
+  padding: 1px 7px;
+  border-radius: 99px;
+}
+
+/* 面板与表单 */
+.wpanel {
+  animation: rise 0.25s ease;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fLabel {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.fLabel em {
+  color: var(--rust-ink);
+  font-style: normal;
+}
+
+.optNote {
+  color: var(--ink-2); /* ink-3 压白卡 2.94:1；「可选」标注影响用户决策（T8 收口） */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.inp,
+.tin {
+  width: 100%;
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-m);
+  padding: 12px 16px;
+  background: var(--surface-warm);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.inp:focus,
+.tin:focus {
+  outline: none;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px var(--orange-soft);
+}
+
+.tin {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.75;
+}
+
+.jdTin {
+  min-height: 170px;
+}
+
+.fHint {
+  font-size: 12px;
+  color: var(--ink-2); /* ink-3 压白卡 2.94:1，操作提示（T8 收口） */
+  margin-top: 8px;
+}
+
+.taR {
+  text-align: right;
+}
+
+.fErr {
+  font-size: 12px;
+  color: var(--rust-ink);
+  margin-top: 8px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.chips button {
+  padding: 7px 15px;
+  border-radius: 99px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-size: 13px;
+  color: var(--ink-2);
+  transition: 0.15s;
+}
+
+.chips button:hover {
+  border-color: var(--orange-line);
+  color: var(--ink);
+}
+
+.chips button.on {
+  background: var(--orange-soft);
+  border-color: var(--orange);
+  color: var(--orange-ink); /* orange-deep 压 orange-soft 仅 3.86:1，压橘底小字一律 orange-ink */
+  font-weight: 600;
+}
+
+.wbtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  gap: 12px;
+}
+
+/* 简历双轨 */
+.rgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  position: relative;
+}
+
+.or {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 4px 13px;
+  font-size: 12px;
+  color: var(--ink-2); /* ink-3 压白卡 2.94:1（T8 收口） */
+  z-index: 2;
+}
+
+.ropt {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.roptT {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+}
+
+.roptT svg {
+  color: var(--orange);
+}
+
+.roptD {
+  font-size: 12px;
+  color: var(--ink-2); /* ink-3 压白卡 2.94:1；格式/大小限制是有效信息（T8 收口） */
+}
+
+.ropt .tin {
+  flex: 1;
+  min-height: 172px;
+}
+
+.drop {
+  margin-top: 4px;
+  border: 1.5px dashed var(--orange-line);
+  background: var(--surface-warm);
+  border-radius: var(--r-m);
+  padding: 28px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  transition: 0.15s;
+  color: var(--orange);
+}
+
+.drop:hover,
+.drop.over {
+  border-color: var(--orange);
+  background: var(--orange-soft);
+}
+
+.drop b {
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.drop span {
+  font-size: 12px;
+  color: var(--ink-2); /* ink-3 压暖卡更低（T8 收口） */
+}
+
+/* 文件就绪行 */
+.fok {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--green-line);
+  background: var(--green-soft);
+  border-radius: var(--r-m);
+  padding: 12px 14px;
+  margin-top: 4px;
+}
+
+.fok > svg {
+  color: var(--green-deep);
+}
+
+.fokT {
+  flex: 1;
+  min-width: 0;
+}
+
+.fok b {
+  font-size: 13px;
+  display: block;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.fok span {
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.fx {
+  margin-left: auto;
+  color: var(--ink-2); /* 可交互图标按钮，图形对比须 ≥3:1；ink-3 仅 2.94（T8 收口） */
+  font-size: 18px;
+  line-height: 1;
+  padding: 4px;
+}
+
+.fx:hover {
+  color: var(--rust-ink);
+}
+
+/* 两种都未提供时的提示 */
+.noneHint {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  background: var(--surface-muted);
+  border-radius: var(--r-s);
+  padding: 9px 14px;
+}
+
+/* 双轨互斥切换告知：清除另一轨时不再是静默销毁 */
+.switchNote {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  background: var(--surface-muted);
+  border-radius: var(--r-s);
+  padding: 9px 14px;
+}
+
+/* 视觉隐藏（读屏播报用） */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 汇总条与提交 */
+.sum {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: var(--surface-warm);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-m);
+  padding: 14px 18px;
+  margin: 20px 0 4px;
+}
+
+.sumR {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.sumR span {
+  color: var(--ink-2); /* ink-3 压暖卡更低；汇总条字段名（T8 收口） */
+}
+
+.sumR b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.errBanner {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: var(--r-m);
+  background: var(--rust-soft);
+  color: var(--rust-ink);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footNote {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--ink-2); /* ink-3 压暖底 ≈2.7:1；隐私说明是承诺性文案（T8 收口） */
+  margin-top: 18px;
+}
+
+/* 响应式与动效克制 */
+@media (max-width: 719px) {
+  .wcard {
+    padding: 22px 18px;
+  }
+
+  .rgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .or {
+    position: static;
+    transform: none;
+    justify-self: center;
+  }
+
+  /* .btn 是 globals.css 的全局类，模块内须 :global 引用，否则被哈希化永不命中 */
+  .wbtns :global(.btn) {
+    flex: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wpanel {
+    animation: none;
+  }
+}

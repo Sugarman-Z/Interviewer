@@ -1,0 +1,45 @@
+{
+ "source": "issue",
+ "node": "IssueQuestion",
+ "chunks": [
+  {
+   "content": "",
+   "tool_call_chunks": [
+    {
+     "name": "IssuedQuestion",
+     "args": "{\"bank_qid\":\"bank-kafka-001\",\"done\":false,\"followup_hints\":[\"acks=all 与 acks=1 的取舍\", \"min.insync.replicas=1 的风险\", \"unclean.leader.election 的影响\", \"待核实：简历无行情网关部署拓扑细节\"],\"module\":\"project\",\"reason\":\"Kafka 是简历核心技术栈，首题先考消息不丢的高可用机制，信息量最大\",\"source_ref\":\"简历第1段 [cand-0001]：技术栈 FastAPI 加 Kafka，做交易系统行情网关\",\"source_type\":\"bank\",\"text\":\"我看到你的技术栈是 FastAPI 加 Kafka，做交易系统的行情网关。假设三节点 Kafka 集群里 leader 副本所在机器突然宕机，集群如何保证已 ack 的行情消息不丢？请讲讲 ISR、acks、min.insync.replicas 各自的作用。\",\"topic\":\"Kafka 高可用\"}",
+     "id": "call_4a3e6f176b974d36adaa3273",
+     "index": 0
+    }
+   ],
+   "node": "IssueQuestion"
+  },
+  {
+   "content": "",
+   "tool_call_chunks": [],
+   "node": "IssueQuestion"
+  },
+  {
+   "content": "",
+   "tool_call_chunks": [],
+   "node": "IssueQuestion"
+  }
+ ],
+ "agg_args": {
+  "bank_qid": "bank-kafka-001",
+  "done": false,
+  "followup_hints": [
+   "acks=all 与 acks=1 的取舍",
+   "min.insync.replicas=1 的风险",
+   "unclean.leader.election 的影响",
+   "待核实：简历无行情网关部署拓扑细节"
+  ],
+  "module": "project",
+  "reason": "Kafka 是简历核心技术栈，首题先考消息不丢的高可用机制，信息量最大",
+  "source_ref": "简历第1段 [cand-0001]：技术栈 FastAPI 加 Kafka，做交易系统行情网关",
+  "source_type": "bank",
+  "text": "我看到你的技术栈是 FastAPI 加 Kafka，做交易系统的行情网关。假设三节点 Kafka 集群里 leader 副本所在机器突然宕机，集群如何保证已 ack 的行情消息不丢？请讲讲 ISR、acks、min.insync.replicas 各自的作用。",
+  "topic": "Kafka 高可用"
+ },
+ "final_text": "我看到你的技术栈是 FastAPI 加 Kafka，做交易系统的行情网关。假设三节点 Kafka 集群里 leader 副本所在机器突然宕机，集群如何保证已 ack 的行情消息不丢？请讲讲 ISR、acks、min.insync.replicas 各自的作用。"
+}

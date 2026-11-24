@@ -1,0 +1,47 @@
+{
+ "_note": "SSE 事件序合同（SPEC-streaming-tech §2.2 的单一定义点）。pytest 侧 T3 读表断言（tests/test_web_stream.py），vitest 侧 T7 补读法（webapp/src/lib/mock/script.test.ts）——改任一 pattern 两端同红，方为 golden 纪律的流式版。pattern 记号：'stage:X' 指 stage 事件的 phase 值；'delta*' 指一个及以上连续 delta（真机多片、mock 整块各一片；零 chunk 降级形态不含该记号）；终局互斥且终结（question/final/error 三选一，之后连接关闭）。零 chunk 家族补注（provider 无 BaseChatModel 流式腿时）：任一形态去掉 delta* 与 on_token 触发的 stage（issuing/reporting），保留路由同帧直发的 stage（evaluating；开场轮的 issuing）——main/skip/followup/fused 同形收敛为 no_chunks，opening → [round, stage:issuing, question]，final → [round, stage:evaluating, final]（pytest 侧以 no_chunks 为代表锁定，其余同族推导）。",
+ "scenarios": [
+  {
+   "name": "opening",
+   "desc": "开场首答：AwaitIntro→IssueQuestion 直连不经 Evaluator——无 evaluating，issuing 由路由层与 round 同帧直发",
+   "pattern": ["round", "stage:issuing", "delta*", "question"],
+   "round_expect": "opening"
+  },
+  {
+   "name": "main",
+   "desc": "主问轮：评估→出题，两段 stage 齐全",
+   "pattern": ["round", "stage:evaluating", "stage:issuing", "delta*", "question"],
+   "round_expect": "N"
+  },
+  {
+   "name": "followup",
+   "desc": "追问轮：追问句产自评估调用（followup_text），无 issuing 段——evaluating 直接接逐字",
+   "pattern": ["round", "stage:evaluating", "delta*", "question"],
+   "round_expect": "N.k"
+  },
+  {
+   "name": "skip",
+   "desc": "跳过后换发：与主问轮同形（评估照跑，IssueQuestion 换发新主问）",
+   "pattern": ["round", "stage:evaluating", "stage:issuing", "delta*", "question"],
+   "round_expect": "N"
+  },
+  {
+   "name": "fused_followup",
+   "desc": "追问熔断边界：评估已产 followup_text（delta 已流出）但追问预算触顶换题——已流 delta 由终局 question 整题权威替换（tech §4.3 跳变兜底）",
+   "pattern": ["round", "stage:evaluating", "delta*", "stage:issuing", "delta*", "question"],
+   "round_expect": "N.k"
+  },
+  {
+   "name": "final",
+   "desc": "终场轮：评估→（模块小结无 stage）→报告，reporting 由 ReportWriter 首 chunk 近似触发；报告正文不流式（非目标）",
+   "pattern": ["round", "stage:evaluating", "stage:reporting", "final"],
+   "round_expect": "N"
+  },
+  {
+   "name": "no_chunks",
+   "desc": "无 chunk 降级（mock 无 BaseChatModel 流式腿）：stage 只有同帧直发的 evaluating，无 issuing/delta——US4 的服务端合同",
+   "pattern": ["round", "stage:evaluating", "question"],
+   "round_expect": "N"
+  }
+ ]
+}

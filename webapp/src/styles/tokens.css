@@ -1,0 +1,56 @@
+/* 陪面 design tokens —— 基准稿 docs/design/direction-b.html
+   语义纪律：橘=行动 · 绿=达成/正反馈 · 琥珀=中档 · 锈=薄弱/警示（不与橘抢戏） */
+:root {
+  /* 底色与表面 */
+  --bg: #faf6ef;
+  --bg-grad-top: #fbf8f1;
+  --surface: #ffffff;
+  --surface-warm: #fff9f1;
+  --surface-muted: #f3ebdc;
+
+  /* 主行动色 · 教练橘 */
+  --orange: #e4711f;
+  --orange-deep: #c2570c;
+  /* 加深至 orange-soft 上 ≈5.3:1（WCAG AA；orange-deep 压 orange-soft 仅 3.86）。
+     与 --amber-ink / --rust-ink 同理：橘作填充/描边用原色，压橘底的小字一律用 orange-ink */
+  --orange-ink: #9c4a08;
+  --orange-soft: #fcebd8;
+  --orange-line: #f2d3ac;
+
+  /* 功能色 */
+  --green: #3b8b5e;
+  --green-deep: #2e7549;
+  --green-soft: #e6f2e9;
+  --green-line: #c6e2cf;
+  --amber: #de9a26;
+  --amber-soft: #fbf0d9;
+  /* 加深至 amber-soft 上对比度 ≈4.9:1（WCAG AA；原 #a8721a 仅 3.65） */
+  --amber-ink: #8f5d10;
+  --rust: #c05a36;
+  --rust-soft: #f9e7dd;
+  /* 加深至 rust-soft 上 ≈4.9:1、白底 ≈5.9:1（WCAG AA；--rust 作文字色仅 3.7/4.4，
+     与 --amber-ink 同理：rust 作填充/描边，文字一律用 rust-ink） */
+  --rust-ink: #a34a2b;
+
+  /* 文字 · 暖墨三级 */
+  --ink: #33291d;
+  --ink-2: #6e6252;
+  --ink-3: #a2957f;
+
+  /* 线 */
+  --line: #e9ddc7;
+  --line-2: #f1e9d8;
+
+  /* 阴影（暖棕基调，不用黑投影） */
+  --sh-s: 0 2px 10px rgba(127, 91, 45, 0.07);
+  --sh-m: 0 12px 32px rgba(127, 91, 45, 0.11);
+
+  /* 圆角 */
+  --r-l: 20px;
+  --r-m: 14px;
+  --r-s: 10px;
+
+ /* 字体（系统栈起步） */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}

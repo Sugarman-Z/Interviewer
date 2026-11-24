@@ -1,0 +1,34 @@
+{
+  "position": "后端开发",
+  "status": "awaiting",
+  "max_questions": 10,
+  "transcript": [
+    {
+      "role": "interviewer",
+      "variant": "opening",
+      "text": "你好，我是本场「后端开发」模拟面试的面试官。整场大约 10 个问题，每答完一题我会视情况追问或换题。开始之前，请先用一两分钟做个自我介绍：教育背景、最近一段经历，以及你最有把握的方向。"
+    },
+    {
+      "role": "candidate",
+      "variant": "answer",
+      "text": "自我介绍：后端工程师，五年后端经验，主要做高并发服务与中间件，最有把握的方向是分布式系统。"
+    },
+    {
+      "role": "interviewer",
+      "variant": "question",
+      "text": "先从并发聊起。讲讲线程池的核心参数是怎么协同工作的：任务提交之后，内部的执行流程是怎样的？为什么需要拒绝策略？",
+      "topic": "并发与线程池",
+      "qnum": "1"
+    }
+  ],
+  "pending_question": {
+    "variant": "question",
+    "text": "先从并发聊起。讲讲线程池的核心参数是怎么协同工作的：任务提交之后，内部的执行流程是怎样的？为什么需要拒绝策略？",
+    "topic": "并发与线程池",
+    "qnum": "1"
+  },
+  "progress": {
+    "answered": 0,
+    "total": 10
+  }
+}

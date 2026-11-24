@@ -1,0 +1,5991 @@
+{
+  "generated_at": "2026-11-17T15:00:20",
+  "bank_size": 50,
+  "goldset_file": "bank_rag_goldset.json",
+  "goldset_bank_size": 50,
+  "k": [
+    1,
+    3,
+    5,
+    10,
+    20
+  ],
+  "runs_for_latency": 5,
+  "vendors": {
+    "local": {
+      "overall": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "recall@20": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.9629,
+        "latency_p50_ms": 7.99,
+        "n": 118,
+        "cold_start_ms": 667.81
+      },
+      "by_query_type": {
+        "verbatim": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 0.9447,
+          "latency_p50_ms": 7.98,
+          "n": 50
+        },
+        "keyword": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 0.9832,
+          "latency_p50_ms": 8.07,
+          "n": 50
+        },
+        "paraphrase": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 0.9572,
+          "latency_p50_ms": 7.89,
+          "n": 18
+        }
+      },
+      "offtopic": {
+        "n": 6,
+        "leaked": 4,
+        "leaked_queries": [
+          {
+            "query": "量子纠缠是怎么回事",
+            "hit_ids": [
+              "bank-be-001",
+              "bank-be-012",
+              "bank-fs-001",
+              "bank-agent-008",
+              "bank-fs-005",
+              "bank-be-006",
+              "bank-be-009",
+              "bank-be-010",
+              "bank-agent-006",
+              "bank-agent-014",
+              "bank-be-002",
+              "bank-fs-003",
+              "bank-agent-017",
+              "bank-be-011",
+              "bank-fs-008",
+              "bank-be-004",
+              "bank-proj-004",
+              "bank-fs-007",
+              "bank-agent-020",
+              "bank-agent-011"
+            ]
+          },
+          {
+            "query": "莫扎特的歌剧有哪些",
+            "hit_ids": [
+              "bank-be-001",
+              "bank-agent-004",
+              "bank-cache-002",
+              "bank-agent-018",
+              "bank-be-010",
+              "bank-agent-010",
+              "bank-agent-002",
+              "bank-agent-001",
+              "bank-be-002",
+              "bank-agent-005",
+              "bank-fs-002",
+              "bank-be-007",
+              "bank-fs-010",
+              "bank-agent-003",
+              "bank-proj-001",
+              "bank-be-005"
+            ]
+          },
+          {
+            "query": "红烧肉怎么做好吃",
+            "hit_ids": [
+              "bank-fs-001",
+              "bank-be-004",
+              "bank-be-009",
+              "bank-fs-006",
+              "bank-be-010",
+              "bank-agent-006",
+              "bank-be-012",
+              "bank-agent-008",
+              "bank-fs-005",
+              "bank-be-006",
+              "bank-agent-014",
+              "bank-be-002",
+              "bank-fs-003",
+              "bank-agent-017",
+              "bank-be-011",
+              "bank-fs-008",
+              "bank-proj-004",
+              "bank-fs-007",
+              "bank-agent-020",
+              "bank-agent-011"
+            ]
+          },
+          {
+            "query": "光合作用的原理",
+            "hit_ids": [
+              "bank-kafka-001",
+              "bank-fs-009",
+              "bank-fs-001",
+              "bank-agent-008",
+              "bank-agent-010"
+            ]
+          }
+        ],
+        "leak_rate": 0.6667
+      }
+    },
+    "dense": {
+      "overall": {
+        "recall@1": 0.9068,
+        "recall@3": 0.9661,
+        "recall@5": 0.9746,
+        "recall@10": 0.9746,
+        "recall@20": 0.9746,
+        "mrr@10": 0.9357,
+        "ndcg@10": 0.8904,
+        "latency_p50_ms": 11.47,
+        "n": 118,
+        "cold_start_ms": 2421.58
+      },
+      "by_query_type": {
+        "verbatim": {
+          "recall@1": 0.98,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "mrr@10": 0.99,
+          "ndcg@10": 0.907,
+          "latency_p50_ms": 11.7,
+          "n": 50
+        },
+        "keyword": {
+          "recall@1": 0.8,
+          "recall@3": 0.92,
+          "recall@5": 0.94,
+          "recall@10": 0.94,
+          "recall@20": 0.94,
+          "mrr@10": 0.8583,
+          "ndcg@10": 0.8653,
+          "latency_p50_ms": 11.73,
+          "n": 50
+        },
+        "paraphrase": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 0.9137,
+          "latency_p50_ms": 10.49,
+          "n": 18
+        }
+      },
+      "offtopic": {
+        "n": 6,
+        "leaked": 0,
+        "leaked_queries": [],
+        "leak_rate": 0.0
+      }
+    },
+    "hybrid": {
+      "overall": {
+        "recall@1": 0.9746,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "recall@20": 1.0,
+        "mrr@10": 0.9873,
+        "ndcg@10": 0.9557,
+        "latency_p50_ms": 21.36,
+        "n": 118,
+        "cold_start_ms": 2417.45
+      },
+      "by_query_type": {
+        "verbatim": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 0.9446,
+          "latency_p50_ms": 21.12,
+          "n": 50
+        },
+        "keyword": {
+          "recall@1": 0.94,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "mrr@10": 0.97,
+          "ndcg@10": 0.9748,
+          "latency_p50_ms": 21.29,
+          "n": 50
+        },
+        "paraphrase": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "mrr@10": 1.0,
+          "ndcg@10": 0.9334,
+          "latency_p50_ms": 21.76,
+          "n": 18
+        }
+      },
+      "offtopic": {
+        "n": 6,
+        "leaked": 4,
+        "leaked_queries": [
+          {
+            "query": "量子纠缠是怎么回事",
+            "hit_ids": [
+              "bank-be-001",
+              "bank-be-012",
+              "bank-fs-001",
+              "bank-agent-008",
+              "bank-fs-005",
+              "bank-be-006",
+              "bank-be-009",
+              "bank-be-010",
+              "bank-agent-006",
+              "bank-agent-014",
+              "bank-be-002",
+              "bank-fs-003",
+              "bank-agent-017",
+              "bank-be-011",
+              "bank-fs-008",
+              "bank-be-004",
+              "bank-proj-004",
+              "bank-fs-007",
+              "bank-agent-020",
+              "bank-agent-011"
+            ]
+          },
+          {
+            "query": "莫扎特的歌剧有哪些",
+            "hit_ids": [
+              "bank-be-001",
+              "bank-agent-004",
+              "bank-cache-002",
+              "bank-agent-018",
+              "bank-be-010",
+              "bank-agent-010",
+              "bank-agent-002",
+              "bank-agent-001",
+              "bank-be-002",
+              "bank-agent-005",
+              "bank-fs-002",
+              "bank-be-007",
+              "bank-fs-010",
+              "bank-agent-003",
+              "bank-proj-001",
+              "bank-be-005"
+            ]
+          },
+          {
+            "query": "红烧肉怎么做好吃",
+            "hit_ids": [
+              "bank-fs-001",
+              "bank-be-004",
+              "bank-be-009",
+              "bank-fs-006",
+              "bank-be-010",
+              "bank-agent-006",
+              "bank-be-012",
+              "bank-agent-008",
+              "bank-fs-005",
+              "bank-be-006",
+              "bank-agent-014",
+              "bank-be-002",
+              "bank-fs-003",
+              "bank-agent-017",
+              "bank-be-011",
+              "bank-fs-008",
+              "bank-proj-004",
+              "bank-fs-007",
+              "bank-agent-020",
+              "bank-agent-011"
+            ]
+          },
+          {
+            "query": "光合作用的原理",
+            "hit_ids": [
+              "bank-kafka-001",
+              "bank-fs-009",
+              "bank-fs-001",
+              "bank-agent-008",
+              "bank-agent-010"
+            ]
+          }
+        ],
+        "leak_rate": 0.6667
+      }
+    }
+  },
+  "per_query": {
+    "local": [
+      {
+        "query": "Agent 状态管理",
+        "gold_id": "bank-agent-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-001",
+          "bank-fs-002",
+          "bank-agent-018",
+          "bank-agent-011",
+          "bank-agent-012",
+          "bank-agent-017",
+          "bank-fs-007",
+          "bank-agent-013",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-020",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-016",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "langgraph agent",
+        "gold_id": "bank-agent-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-001",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-012",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-agent-018",
+          "bank-agent-020",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-016",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "图路由与循环控制",
+        "gold_id": "bank-agent-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-002",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "langgraph 图路由与循环控制",
+        "gold_id": "bank-agent-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-002",
+          "bank-agent-004",
+          "bank-agent-003",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "人机中断恢复",
+        "gold_id": "bank-agent-003",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-003",
+          "bank-proj-003"
+        ]
+      },
+      {
+        "query": "langgraph 人机中断恢复",
+        "gold_id": "bank-agent-003",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-001",
+          "bank-proj-003"
+        ]
+      },
+      {
+        "query": "工具调用循环",
+        "gold_id": "bank-agent-004",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-004",
+          "bank-agent-020",
+          "bank-agent-005",
+          "bank-agent-002",
+          "bank-be-011",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "工具调用 agent",
+        "gold_id": "bank-agent-004",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-004",
+          "bank-agent-020",
+          "bank-agent-005",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-be-011",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-018",
+          "bank-agent-015",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-016"
+        ]
+      },
+      {
+        "query": "工具接口设计",
+        "gold_id": "bank-agent-005",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-005",
+          "bank-agent-020",
+          "bank-agent-004",
+          "bank-be-008",
+          "bank-be-010",
+          "bank-fs-005",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-be-003",
+          "bank-agent-013",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-agent-015",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005"
+        ]
+      },
+      {
+        "query": "工具调用 工具接口设计",
+        "gold_id": "bank-agent-005",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-005",
+          "bank-agent-004",
+          "bank-agent-020",
+          "bank-be-008",
+          "bank-be-010",
+          "bank-agent-017",
+          "bank-fs-005",
+          "bank-be-011",
+          "bank-agent-012",
+          "bank-be-003",
+          "bank-agent-013",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-agent-015",
+          "bank-be-009",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005"
+        ]
+      },
+      {
+        "query": "BM25 与中文分词",
+        "gold_id": "bank-agent-006",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-006",
+          "bank-agent-007"
+        ]
+      },
+      {
+        "query": "rag 与中文分词",
+        "gold_id": "bank-agent-006",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-006",
+          "bank-agent-008",
+          "bank-agent-009",
+          "bank-agent-007"
+        ]
+      },
+      {
+        "query": "混合检索与 RRF",
+        "gold_id": "bank-agent-007",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-007",
+          "bank-agent-008",
+          "bank-agent-016",
+          "bank-agent-005",
+          "bank-agent-015",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "rag RRF",
+        "gold_id": "bank-agent-007",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-007",
+          "bank-agent-008",
+          "bank-agent-009",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "RAG 检索评测",
+        "gold_id": "bank-agent-008",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-008",
+          "bank-agent-007",
+          "bank-agent-009",
+          "bank-agent-016",
+          "bank-agent-006",
+          "bank-agent-014",
+          "bank-agent-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "rag 评测",
+        "gold_id": "bank-agent-008",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-008",
+          "bank-agent-009",
+          "bank-agent-007",
+          "bank-agent-006",
+          "bank-agent-014",
+          "bank-agent-016"
+        ]
+      },
+      {
+        "query": "RAG 幻觉防御",
+        "gold_id": "bank-agent-009",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-009",
+          "bank-agent-008",
+          "bank-agent-015",
+          "bank-agent-007",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "rag 安全",
+        "gold_id": "bank-agent-009",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-009",
+          "bank-agent-008",
+          "bank-agent-015",
+          "bank-agent-007",
+          "bank-agent-006",
+          "bank-agent-002"
+        ]
+      },
+      {
+        "query": "结构化输出可靠性",
+        "gold_id": "bank-agent-010",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-010",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-be-005",
+          "bank-agent-001",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "结构化输出",
+        "gold_id": "bank-agent-010",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-010",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-001",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "提示词契约管理",
+        "gold_id": "bank-agent-011",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-011",
+          "bank-agent-018",
+          "bank-fs-002",
+          "bank-agent-015",
+          "bank-fs-005",
+          "bank-agent-001",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "提示词",
+        "gold_id": "bank-agent-011",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-011",
+          "bank-agent-015",
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "Agent 记忆设计",
+        "gold_id": "bank-agent-012",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-012",
+          "bank-agent-017",
+          "bank-agent-001",
+          "bank-be-008",
+          "bank-agent-005",
+          "bank-agent-003",
+          "bank-agent-019",
+          "bank-agent-002",
+          "bank-agent-013",
+          "bank-agent-016",
+          "bank-agent-018",
+          "bank-agent-020",
+          "bank-agent-014",
+          "bank-be-002",
+          "bank-be-011",
+          "bank-agent-004",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-009",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "记忆 agent",
+        "gold_id": "bank-agent-012",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-018",
+          "bank-agent-020",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-016",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "多智能体分工",
+        "gold_id": "bank-agent-013",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-013"
+        ]
+      },
+      {
+        "query": "多智能体 agent",
+        "gold_id": "bank-agent-013",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-013",
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-agent-017",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-018",
+          "bank-agent-020",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-016",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "LLM-as-Judge 评审",
+        "gold_id": "bank-agent-014",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-014",
+          "bank-agent-004",
+          "bank-agent-017",
+          "bank-agent-005",
+          "bank-agent-010"
+        ]
+      },
+      {
+        "query": "评测 agent 评审",
+        "gold_id": "bank-agent-014",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-014",
+          "bank-agent-008",
+          "bank-agent-016",
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-018",
+          "bank-agent-020",
+          "bank-agent-019",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "提示注入防御",
+        "gold_id": "bank-agent-015",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-015",
+          "bank-agent-011",
+          "bank-agent-009",
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "安全",
+        "gold_id": "bank-agent-015",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-015",
+          "bank-agent-009",
+          "bank-agent-002"
+        ]
+      },
+      {
+        "query": "检索留痕归因",
+        "gold_id": "bank-agent-016",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-016",
+          "bank-agent-007",
+          "bank-agent-008",
+          "bank-agent-005",
+          "bank-agent-015",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "agent 检索留痕归因",
+        "gold_id": "bank-agent-016",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-016",
+          "bank-agent-007",
+          "bank-agent-008",
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-agent-017",
+          "bank-agent-005",
+          "bank-agent-013",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-018",
+          "bank-agent-020",
+          "bank-agent-015",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-006",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "降级梯设计",
+        "gold_id": "bank-agent-017",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-017",
+          "bank-be-008",
+          "bank-agent-012",
+          "bank-agent-005",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "agent 降级梯设计",
+        "gold_id": "bank-agent-017",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-be-008",
+          "bank-agent-005",
+          "bank-agent-003",
+          "bank-agent-019",
+          "bank-agent-002",
+          "bank-agent-013",
+          "bank-agent-016",
+          "bank-agent-018",
+          "bank-agent-020",
+          "bank-agent-014",
+          "bank-be-002",
+          "bank-be-011",
+          "bank-agent-004",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-009",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "长上下文管理",
+        "gold_id": "bank-agent-018",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-018",
+          "bank-fs-002",
+          "bank-agent-011",
+          "bank-agent-015",
+          "bank-agent-001",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "agent 长上下文管理",
+        "gold_id": "bank-agent-018",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-018",
+          "bank-fs-002",
+          "bank-agent-001",
+          "bank-agent-015",
+          "bank-agent-011",
+          "bank-agent-012",
+          "bank-agent-017",
+          "bank-fs-007",
+          "bank-agent-013",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-020",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-016",
+          "bank-agent-004",
+          "bank-agent-005"
+        ]
+      },
+      {
+        "query": "流式输出设计",
+        "gold_id": "bank-agent-019",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-019",
+          "bank-agent-010",
+          "bank-be-008",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-agent-005",
+          "bank-agent-014",
+          "bank-agent-015",
+          "bank-be-002",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "agent 流式输出设计",
+        "gold_id": "bank-agent-019",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-019",
+          "bank-agent-010",
+          "bank-agent-012",
+          "bank-agent-017",
+          "bank-agent-001",
+          "bank-be-008",
+          "bank-agent-014",
+          "bank-agent-005",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-013",
+          "bank-agent-015",
+          "bank-agent-016",
+          "bank-agent-018",
+          "bank-agent-020",
+          "bank-be-002",
+          "bank-be-011",
+          "bank-agent-004",
+          "bank-be-009",
+          "bank-be-010"
+        ]
+      },
+      {
+        "query": "MCP 工具生态",
+        "gold_id": "bank-agent-020",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-020",
+          "bank-agent-005",
+          "bank-agent-004",
+          "bank-agent-013",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "工具调用 工具生态",
+        "gold_id": "bank-agent-020",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-020",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-be-011",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "Kafka 高可用",
+        "gold_id": "bank-kafka-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-kafka-001",
+          "bank-cache-002",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-be-012",
+          "bank-agent-010",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "kafka 消息队列 高可用",
+        "gold_id": "bank-kafka-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-kafka-001",
+          "bank-be-012",
+          "bank-cache-002",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-001",
+          "bank-agent-010",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "登录态与鉴权",
+        "gold_id": "bank-fs-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-001"
+        ]
+      },
+      {
+        "query": "鉴权 前端",
+        "gold_id": "bank-fs-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-001",
+          "bank-fs-010",
+          "bank-fs-002",
+          "bank-fs-005",
+          "bank-fs-003"
+        ]
+      },
+      {
+        "query": "前端状态管理",
+        "gold_id": "bank-fs-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-002",
+          "bank-agent-001",
+          "bank-fs-010",
+          "bank-agent-011",
+          "bank-fs-005",
+          "bank-agent-018",
+          "bank-fs-003",
+          "bank-fs-001",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "状态管理 前端",
+        "gold_id": "bank-fs-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-002",
+          "bank-agent-001",
+          "bank-fs-010",
+          "bank-agent-011",
+          "bank-fs-005",
+          "bank-agent-018",
+          "bank-fs-003",
+          "bank-fs-001",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "首屏性能优化",
+        "gold_id": "bank-fs-003",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-003",
+          "bank-fs-004"
+        ]
+      },
+      {
+        "query": "性能 前端",
+        "gold_id": "bank-fs-003",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-003",
+          "bank-fs-010",
+          "bank-fs-002",
+          "bank-fs-005",
+          "bank-fs-004",
+          "bank-fs-001"
+        ]
+      },
+      {
+        "query": "重排与重绘",
+        "gold_id": "bank-fs-004",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-004",
+          "bank-be-009"
+        ]
+      },
+      {
+        "query": "渲染 性能",
+        "gold_id": "bank-fs-004",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-004",
+          "bank-fs-003"
+        ]
+      },
+      {
+        "query": "前后端接口契约",
+        "gold_id": "bank-fs-005",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-005",
+          "bank-be-010",
+          "bank-agent-005",
+          "bank-agent-011",
+          "bank-be-008",
+          "bank-be-003"
+        ]
+      },
+      {
+        "query": "工程化 前后端接口契约",
+        "gold_id": "bank-fs-005",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-005",
+          "bank-be-010",
+          "bank-agent-005",
+          "bank-fs-010",
+          "bank-fs-009",
+          "bank-fs-006",
+          "bank-fs-008",
+          "bank-fs-007",
+          "bank-agent-011",
+          "bank-be-008",
+          "bank-be-003",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "CI/CD 发布流程",
+        "gold_id": "bank-fs-006",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-006",
+          "bank-be-011",
+          "bank-fs-010",
+          "bank-proj-003",
+          "bank-fs-009"
+        ]
+      },
+      {
+        "query": "部署 工程化",
+        "gold_id": "bank-fs-006",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-006",
+          "bank-fs-007",
+          "bank-fs-010",
+          "bank-fs-009",
+          "bank-fs-008",
+          "bank-fs-005",
+          "bank-be-005",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "多环境配置管理",
+        "gold_id": "bank-fs-007",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-007",
+          "bank-fs-002",
+          "bank-agent-011",
+          "bank-agent-001",
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "工程化 多环境配置管理",
+        "gold_id": "bank-fs-007",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-007",
+          "bank-fs-002",
+          "bank-agent-011",
+          "bank-fs-010",
+          "bank-fs-009",
+          "bank-fs-006",
+          "bank-fs-008",
+          "bank-fs-005",
+          "bank-agent-001",
+          "bank-agent-018",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "测试金字塔",
+        "gold_id": "bank-fs-008",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-008",
+          "bank-fs-009",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "测试 测试金字塔",
+        "gold_id": "bank-fs-008",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-008",
+          "bank-fs-009",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "E2E 测试稳定性",
+        "gold_id": "bank-fs-009",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-009",
+          "bank-fs-008",
+          "bank-fs-007",
+          "bank-agent-010"
+        ]
+      },
+      {
+        "query": "测试 工程化",
+        "gold_id": "bank-fs-009",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-009",
+          "bank-fs-008",
+          "bank-fs-007",
+          "bank-fs-010",
+          "bank-fs-006",
+          "bank-fs-005",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "微前端拆分",
+        "gold_id": "bank-fs-010",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-010",
+          "bank-fs-002",
+          "bank-fs-005",
+          "bank-fs-003",
+          "bank-fs-001"
+        ]
+      },
+      {
+        "query": "工程化 前端",
+        "gold_id": "bank-fs-010",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-010",
+          "bank-fs-005",
+          "bank-fs-002",
+          "bank-fs-009",
+          "bank-fs-006",
+          "bank-fs-008",
+          "bank-fs-007",
+          "bank-fs-003",
+          "bank-fs-001",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "幂等性设计",
+        "gold_id": "bank-be-008",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-008",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-agent-005",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "幂等 api设计",
+        "gold_id": "bank-be-008",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-008",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-agent-005",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "超时与重试",
+        "gold_id": "bank-be-009",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-009",
+          "bank-fs-004",
+          "bank-agent-017",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "高可用 超时与重试",
+        "gold_id": "bank-be-009",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-009",
+          "bank-kafka-001",
+          "bank-cache-002",
+          "bank-be-010",
+          "bank-fs-004",
+          "bank-agent-017",
+          "bank-be-008",
+          "bank-agent-010",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "接口限流",
+        "gold_id": "bank-be-010",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-010",
+          "bank-agent-005",
+          "bank-fs-005",
+          "bank-be-008",
+          "bank-be-003"
+        ]
+      },
+      {
+        "query": "api设计 接口限流",
+        "gold_id": "bank-be-010",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-010",
+          "bank-be-011",
+          "bank-be-008",
+          "bank-agent-005",
+          "bank-fs-005",
+          "bank-be-009",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-be-003",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "API 版本演进",
+        "gold_id": "bank-be-011",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-011",
+          "bank-be-008",
+          "bank-be-009",
+          "bank-be-010"
+        ]
+      },
+      {
+        "query": "api设计",
+        "gold_id": "bank-be-011",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-011",
+          "bank-be-008",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-agent-005",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "消息积压处理",
+        "gold_id": "bank-be-012",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-012",
+          "bank-kafka-001",
+          "bank-proj-003",
+          "bank-agent-008",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "kafka 消息积压处理",
+        "gold_id": "bank-be-012",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-012",
+          "bank-kafka-001",
+          "bank-proj-003",
+          "bank-agent-008",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "事务隔离级别",
+        "gold_id": "bank-be-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-001",
+          "bank-be-007"
+        ]
+      },
+      {
+        "query": "数据库 事务",
+        "gold_id": "bank-be-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-001",
+          "bank-be-006",
+          "bank-be-007",
+          "bank-be-004",
+          "bank-be-002",
+          "bank-be-003",
+          "bank-cache-002",
+          "bank-cache-001",
+          "bank-fs-002",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "联合索引设计",
+        "gold_id": "bank-be-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-002",
+          "bank-be-008",
+          "bank-be-003",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-agent-005",
+          "bank-agent-019",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "数据库 索引",
+        "gold_id": "bank-be-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-002",
+          "bank-be-006",
+          "bank-be-003",
+          "bank-be-001",
+          "bank-be-004",
+          "bank-be-007",
+          "bank-cache-002",
+          "bank-cache-001",
+          "bank-fs-002",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "慢 SQL 排查",
+        "gold_id": "bank-be-003",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-003",
+          "bank-be-006",
+          "bank-fs-003",
+          "bank-fs-004",
+          "bank-agent-016"
+        ]
+      },
+      {
+        "query": "SQL",
+        "gold_id": "bank-be-003",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-003"
+        ]
+      },
+      {
+        "query": "悲观锁与乐观锁",
+        "gold_id": "bank-be-004",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-004"
+        ]
+      },
+      {
+        "query": "并发 悲观锁与乐观锁",
+        "gold_id": "bank-be-004",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-004",
+          "bank-be-005",
+          "bank-be-006"
+        ]
+      },
+      {
+        "query": "分布式锁",
+        "gold_id": "bank-be-005",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-005",
+          "bank-be-010"
+        ]
+      },
+      {
+        "query": "redis 并发",
+        "gold_id": "bank-be-005",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-005",
+          "bank-be-004",
+          "bank-be-006",
+          "bank-cache-002",
+          "bank-cache-001"
+        ]
+      },
+      {
+        "query": "数据库连接池",
+        "gold_id": "bank-be-006",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-006",
+          "bank-be-001",
+          "bank-be-004",
+          "bank-be-007",
+          "bank-be-002",
+          "bank-be-003",
+          "bank-cache-002",
+          "bank-cache-001",
+          "bank-fs-002",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "数据库 并发",
+        "gold_id": "bank-be-006",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-006",
+          "bank-be-004",
+          "bank-be-001",
+          "bank-be-007",
+          "bank-be-002",
+          "bank-be-003",
+          "bank-be-005",
+          "bank-cache-002",
+          "bank-cache-001",
+          "bank-fs-002",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "分库分表",
+        "gold_id": "bank-be-007",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-007"
+        ]
+      },
+      {
+        "query": "数据库 分库分表",
+        "gold_id": "bank-be-007",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-007",
+          "bank-be-006",
+          "bank-be-001",
+          "bank-be-004",
+          "bank-be-002",
+          "bank-be-003",
+          "bank-cache-002",
+          "bank-cache-001",
+          "bank-fs-002",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "缓存一致性",
+        "gold_id": "bank-cache-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-001",
+          "bank-cache-002"
+        ]
+      },
+      {
+        "query": "redis 缓存 一致性",
+        "gold_id": "bank-cache-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-001",
+          "bank-cache-002",
+          "bank-be-005"
+        ]
+      },
+      {
+        "query": "缓存击穿与雪崩",
+        "gold_id": "bank-cache-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-002",
+          "bank-cache-001",
+          "bank-be-009"
+        ]
+      },
+      {
+        "query": "redis 缓存 高可用",
+        "gold_id": "bank-cache-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-002",
+          "bank-cache-001",
+          "bank-kafka-001",
+          "bank-be-005",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-010",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "项目难点复盘",
+        "gold_id": "bank-proj-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-001",
+          "bank-proj-003",
+          "bank-proj-005",
+          "bank-fs-008",
+          "bank-agent-011",
+          "bank-fs-002"
+        ]
+      },
+      {
+        "query": "项目深挖 复盘 通用",
+        "gold_id": "bank-proj-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-001",
+          "bank-proj-003",
+          "bank-proj-005",
+          "bank-proj-002",
+          "bank-fs-008",
+          "bank-agent-011",
+          "bank-fs-002"
+        ]
+      },
+      {
+        "query": "技术方案分歧",
+        "gold_id": "bank-proj-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-002",
+          "bank-proj-005",
+          "bank-proj-001",
+          "bank-fs-009",
+          "bank-cache-002",
+          "bank-fs-001",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "协作 沟通 通用",
+        "gold_id": "bank-proj-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-002",
+          "bank-proj-004",
+          "bank-proj-005",
+          "bank-proj-003",
+          "bank-proj-001",
+          "bank-agent-013"
+        ]
+      },
+      {
+        "query": "线上事故复盘",
+        "gold_id": "bank-proj-003",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-003",
+          "bank-proj-001",
+          "bank-proj-005",
+          "bank-be-003"
+        ]
+      },
+      {
+        "query": "复盘 协作",
+        "gold_id": "bank-proj-003",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-003",
+          "bank-proj-001",
+          "bank-proj-005",
+          "bank-proj-004",
+          "bank-proj-002",
+          "bank-agent-013"
+        ]
+      },
+      {
+        "query": "跨团队推动",
+        "gold_id": "bank-proj-004",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-004",
+          "bank-proj-002"
+        ]
+      },
+      {
+        "query": "沟通 协作",
+        "gold_id": "bank-proj-004",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-004",
+          "bank-proj-002",
+          "bank-proj-005",
+          "bank-proj-003",
+          "bank-agent-013"
+        ]
+      },
+      {
+        "query": "技术债取舍",
+        "gold_id": "bank-proj-005",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-005",
+          "bank-proj-002",
+          "bank-fs-009",
+          "bank-proj-001"
+        ]
+      },
+      {
+        "query": "复盘 技术债取舍",
+        "gold_id": "bank-proj-005",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-005",
+          "bank-proj-003",
+          "bank-proj-001",
+          "bank-proj-002",
+          "bank-fs-009"
+        ]
+      },
+      {
+        "query": "leader 宕机了怎么保证已确认的消息不丢",
+        "gold_id": "bank-kafka-001",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-kafka-001",
+          "bank-be-012",
+          "bank-fs-001",
+          "bank-agent-014",
+          "bank-agent-003",
+          "bank-be-008",
+          "bank-be-001",
+          "bank-be-003",
+          "bank-agent-001",
+          "bank-be-005",
+          "bank-agent-008",
+          "bank-fs-005",
+          "bank-be-006",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-006",
+          "bank-be-002",
+          "bank-fs-003",
+          "bank-agent-017",
+          "bank-be-011"
+        ]
+      },
+      {
+        "query": "先更新数据库还是先删缓存，为什么",
+        "gold_id": "bank-cache-001",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-001",
+          "bank-cache-002",
+          "bank-be-006",
+          "bank-be-001",
+          "bank-be-004",
+          "bank-proj-005",
+          "bank-be-007",
+          "bank-be-003",
+          "bank-be-002",
+          "bank-fs-002",
+          "bank-fs-008",
+          "bank-fs-004",
+          "bank-agent-007",
+          "bank-agent-002",
+          "bank-proj-001",
+          "bank-agent-006",
+          "bank-be-008",
+          "bank-agent-013",
+          "bank-proj-003",
+          "bank-fs-006"
+        ]
+      },
+      {
+        "query": "热点 key 过期瞬间大量请求打到数据库怎么办",
+        "gold_id": "bank-cache-002",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-002",
+          "bank-be-006",
+          "bank-be-001",
+          "bank-be-004",
+          "bank-cache-001",
+          "bank-be-010",
+          "bank-be-002",
+          "bank-be-007",
+          "bank-be-003",
+          "bank-be-008",
+          "bank-fs-001",
+          "bank-fs-002",
+          "bank-be-012",
+          "bank-agent-008",
+          "bank-fs-005",
+          "bank-be-009",
+          "bank-agent-006",
+          "bank-agent-014",
+          "bank-fs-003",
+          "bank-agent-017"
+        ]
+      },
+      {
+        "query": "多轮对话的字段该放图状态还是消息列表",
+        "gold_id": "bank-agent-001",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-001",
+          "bank-fs-002",
+          "bank-be-012",
+          "bank-kafka-001",
+          "bank-agent-006",
+          "bank-proj-005",
+          "bank-agent-019",
+          "bank-agent-018",
+          "bank-agent-002",
+          "bank-be-011",
+          "bank-fs-005"
+        ]
+      },
+      {
+        "query": "agent 跑一半停下来等用户确认再继续怎么做",
+        "gold_id": "bank-agent-003",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-003",
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-agent-016",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-be-003",
+          "bank-agent-018",
+          "bank-agent-020",
+          "bank-agent-002",
+          "bank-be-002",
+          "bank-fs-001",
+          "bank-be-008",
+          "bank-agent-019",
+          "bank-be-004",
+          "bank-be-009",
+          "bank-fs-006",
+          "bank-be-010",
+          "bank-agent-014",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "中文检索为什么不能直接按空格分词",
+        "gold_id": "bank-agent-006",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-006",
+          "bank-agent-007",
+          "bank-fs-008",
+          "bank-agent-008",
+          "bank-agent-016",
+          "bank-cache-001",
+          "bank-fs-004",
+          "bank-proj-001",
+          "bank-agent-015",
+          "bank-fs-002",
+          "bank-agent-005",
+          "bank-be-007",
+          "bank-agent-013",
+          "bank-proj-003",
+          "bank-fs-006",
+          "bank-be-006",
+          "bank-cache-002",
+          "bank-be-003",
+          "bank-be-004",
+          "bank-agent-020"
+        ]
+      },
+      {
+        "query": "关键词和向量两路检索的分数怎么合并",
+        "gold_id": "bank-agent-007",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-007",
+          "bank-agent-008",
+          "bank-agent-016",
+          "bank-agent-005",
+          "bank-fs-006",
+          "bank-agent-006",
+          "bank-agent-015",
+          "bank-be-012",
+          "bank-fs-001",
+          "bank-fs-005",
+          "bank-be-006",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-014",
+          "bank-be-002",
+          "bank-fs-003",
+          "bank-agent-017",
+          "bank-be-011",
+          "bank-fs-008",
+          "bank-be-004"
+        ]
+      },
+      {
+        "query": "怎么防止模型谎报题库来源",
+        "gold_id": "bank-agent-009",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-009",
+          "bank-be-012",
+          "bank-agent-013",
+          "bank-agent-017",
+          "bank-agent-019",
+          "bank-agent-005",
+          "bank-fs-001",
+          "bank-agent-008",
+          "bank-fs-005",
+          "bank-be-006",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-006",
+          "bank-agent-014",
+          "bank-be-002",
+          "bank-fs-003",
+          "bank-be-011",
+          "bank-fs-008",
+          "bank-be-004",
+          "bank-proj-004"
+        ]
+      },
+      {
+        "query": "mysql 可重复读下幻读解决了吗",
+        "gold_id": "bank-be-001",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-001",
+          "bank-agent-020"
+        ]
+      },
+      {
+        "query": "并发扣库存该用悲观锁还是乐观锁",
+        "gold_id": "bank-be-004",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-004",
+          "bank-be-005",
+          "bank-be-006",
+          "bank-proj-005",
+          "bank-agent-002"
+        ]
+      },
+      {
+        "query": "多个实例怎么保证定时任务只跑一份",
+        "gold_id": "bank-be-005",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-005",
+          "bank-agent-013",
+          "bank-agent-014",
+          "bank-fs-001",
+          "bank-be-008",
+          "bank-fs-005",
+          "bank-agent-003",
+          "bank-kafka-001",
+          "bank-be-012",
+          "bank-agent-008",
+          "bank-be-006",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-006",
+          "bank-be-002",
+          "bank-fs-003",
+          "bank-agent-017",
+          "bank-be-011",
+          "bank-fs-008",
+          "bank-be-004"
+        ]
+      },
+      {
+        "query": "支付接口被重复调用怎么保证只扣一次钱",
+        "gold_id": "bank-be-008",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-008",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-be-010",
+          "bank-fs-005",
+          "bank-agent-014",
+          "bank-fs-001",
+          "bank-be-001",
+          "bank-be-011",
+          "bank-agent-020",
+          "bank-proj-004",
+          "bank-be-009",
+          "bank-agent-017",
+          "bank-be-003",
+          "bank-proj-003",
+          "bank-agent-003",
+          "bank-kafka-001",
+          "bank-be-005",
+          "bank-be-012",
+          "bank-agent-008"
+        ]
+      },
+      {
+        "query": "消费组积压了几百万条消息怎么处理",
+        "gold_id": "bank-be-012",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-012",
+          "bank-agent-008",
+          "bank-kafka-001",
+          "bank-fs-010",
+          "bank-proj-003",
+          "bank-agent-001",
+          "bank-fs-001",
+          "bank-fs-005",
+          "bank-be-006",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-006",
+          "bank-agent-014",
+          "bank-be-002",
+          "bank-fs-003",
+          "bank-agent-017",
+          "bank-be-011",
+          "bank-fs-008",
+          "bank-be-004",
+          "bank-proj-004"
+        ]
+      },
+      {
+        "query": "首屏加载太慢怎么排查优化",
+        "gold_id": "bank-fs-003",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-003",
+          "bank-be-003",
+          "bank-be-006",
+          "bank-agent-016",
+          "bank-agent-017",
+          "bank-fs-004",
+          "bank-be-012",
+          "bank-fs-001",
+          "bank-agent-008",
+          "bank-fs-005",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-006",
+          "bank-agent-014",
+          "bank-be-002",
+          "bank-be-011",
+          "bank-fs-008",
+          "bank-be-004",
+          "bank-proj-004",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "动画每帧改宽度为什么卡",
+        "gold_id": "bank-fs-004",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-004",
+          "bank-fs-008",
+          "bank-cache-001",
+          "bank-agent-007",
+          "bank-proj-001",
+          "bank-fs-002",
+          "bank-agent-006",
+          "bank-be-007",
+          "bank-agent-013",
+          "bank-proj-003",
+          "bank-fs-006",
+          "bank-be-006",
+          "bank-cache-002",
+          "bank-be-003",
+          "bank-be-004",
+          "bank-agent-020",
+          "bank-agent-011",
+          "bank-agent-012",
+          "bank-fs-010",
+          "bank-proj-002"
+        ]
+      },
+      {
+        "query": "自动化测试各层怎么配比",
+        "gold_id": "bank-fs-008",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-008",
+          "bank-fs-009",
+          "bank-agent-019",
+          "bank-fs-007",
+          "bank-be-012",
+          "bank-fs-001",
+          "bank-agent-008",
+          "bank-fs-005",
+          "bank-be-006",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-006",
+          "bank-agent-014",
+          "bank-be-002",
+          "bank-fs-003",
+          "bank-agent-017",
+          "bank-be-011",
+          "bank-be-004",
+          "bank-proj-004",
+          "bank-agent-020"
+        ]
+      },
+      {
+        "query": "讲一次你处理的线上故障",
+        "gold_id": "bank-proj-003",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-003",
+          "bank-proj-004",
+          "bank-be-012",
+          "bank-be-003",
+          "bank-proj-005",
+          "bank-agent-008",
+          "bank-be-009",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "用户反馈出的题不贴简历怎么排查",
+        "gold_id": "bank-agent-016",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-016",
+          "bank-be-003",
+          "bank-be-006",
+          "bank-agent-017",
+          "bank-be-002",
+          "bank-agent-018",
+          "bank-proj-001",
+          "bank-fs-003",
+          "bank-agent-003",
+          "bank-be-008",
+          "bank-fs-004",
+          "bank-be-012",
+          "bank-fs-001",
+          "bank-agent-008",
+          "bank-fs-005",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-006",
+          "bank-agent-014",
+          "bank-be-011"
+        ]
+      }
+    ],
+    "dense": [
+      {
+        "query": "Agent 状态管理",
+        "gold_id": "bank-agent-001",
+        "query_type": "verbatim",
+        "rank": 2,
+        "hit_ids": [
+          "bank-fs-002",
+          "bank-agent-001",
+          "bank-fs-001",
+          "bank-fs-006",
+          "bank-agent-013"
+        ]
+      },
+      {
+        "query": "langgraph agent",
+        "gold_id": "bank-agent-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "图路由与循环控制",
+        "gold_id": "bank-agent-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-002",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "langgraph 图路由与循环控制",
+        "gold_id": "bank-agent-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-002",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "人机中断恢复",
+        "gold_id": "bank-agent-003",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-003",
+          "bank-proj-003"
+        ]
+      },
+      {
+        "query": "langgraph 人机中断恢复",
+        "gold_id": "bank-agent-003",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-003"
+        ]
+      },
+      {
+        "query": "工具调用循环",
+        "gold_id": "bank-agent-004",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-004",
+          "bank-agent-005"
+        ]
+      },
+      {
+        "query": "工具调用 agent",
+        "gold_id": "bank-agent-004",
+        "query_type": "keyword",
+        "rank": 3,
+        "hit_ids": [
+          "bank-agent-020",
+          "bank-agent-005",
+          "bank-agent-004",
+          "bank-agent-017",
+          "bank-agent-018",
+          "bank-agent-013",
+          "bank-agent-003",
+          "bank-be-011",
+          "bank-agent-015",
+          "bank-agent-019",
+          "bank-fs-006"
+        ]
+      },
+      {
+        "query": "工具接口设计",
+        "gold_id": "bank-agent-005",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-005",
+          "bank-agent-020",
+          "bank-fs-005"
+        ]
+      },
+      {
+        "query": "工具调用 工具接口设计",
+        "gold_id": "bank-agent-005",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-005",
+          "bank-agent-004",
+          "bank-agent-020"
+        ]
+      },
+      {
+        "query": "BM25 与中文分词",
+        "gold_id": "bank-agent-006",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-006",
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "rag 与中文分词",
+        "gold_id": "bank-agent-006",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "混合检索与 RRF",
+        "gold_id": "bank-agent-007",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-007",
+          "bank-agent-008",
+          "bank-be-002",
+          "bank-agent-006",
+          "bank-agent-014"
+        ]
+      },
+      {
+        "query": "rag RRF",
+        "gold_id": "bank-agent-007",
+        "query_type": "keyword",
+        "rank": null,
+        "hit_ids": []
+      },
+      {
+        "query": "RAG 检索评测",
+        "gold_id": "bank-agent-008",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-008",
+          "bank-agent-014",
+          "bank-agent-007",
+          "bank-fs-009",
+          "bank-agent-016",
+          "bank-be-003"
+        ]
+      },
+      {
+        "query": "rag 评测",
+        "gold_id": "bank-agent-008",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-008",
+          "bank-agent-014",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "RAG 幻觉防御",
+        "gold_id": "bank-agent-009",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-009"
+        ]
+      },
+      {
+        "query": "rag 安全",
+        "gold_id": "bank-agent-009",
+        "query_type": "keyword",
+        "rank": null,
+        "hit_ids": []
+      },
+      {
+        "query": "结构化输出可靠性",
+        "gold_id": "bank-agent-010",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-010",
+          "bank-agent-014",
+          "bank-agent-019"
+        ]
+      },
+      {
+        "query": "结构化输出",
+        "gold_id": "bank-agent-010",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-010",
+          "bank-agent-019"
+        ]
+      },
+      {
+        "query": "提示词契约管理",
+        "gold_id": "bank-agent-011",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-011",
+          "bank-fs-005",
+          "bank-agent-018",
+          "bank-proj-004"
+        ]
+      },
+      {
+        "query": "提示词",
+        "gold_id": "bank-agent-011",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-011",
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "Agent 记忆设计",
+        "gold_id": "bank-agent-012",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-012"
+        ]
+      },
+      {
+        "query": "记忆 agent",
+        "gold_id": "bank-agent-012",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-012",
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "多智能体分工",
+        "gold_id": "bank-agent-013",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-013"
+        ]
+      },
+      {
+        "query": "多智能体 agent",
+        "gold_id": "bank-agent-013",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-013",
+          "bank-agent-020"
+        ]
+      },
+      {
+        "query": "LLM-as-Judge 评审",
+        "gold_id": "bank-agent-014",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-014",
+          "bank-agent-008",
+          "bank-agent-020"
+        ]
+      },
+      {
+        "query": "评测 agent 评审",
+        "gold_id": "bank-agent-014",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-014",
+          "bank-agent-008",
+          "bank-agent-020",
+          "bank-agent-016"
+        ]
+      },
+      {
+        "query": "提示注入防御",
+        "gold_id": "bank-agent-015",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-015",
+          "bank-agent-009"
+        ]
+      },
+      {
+        "query": "安全",
+        "gold_id": "bank-agent-015",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "检索留痕归因",
+        "gold_id": "bank-agent-016",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-016"
+        ]
+      },
+      {
+        "query": "agent 检索留痕归因",
+        "gold_id": "bank-agent-016",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-016",
+          "bank-fs-001",
+          "bank-agent-005",
+          "bank-agent-018",
+          "bank-be-003",
+          "bank-agent-015",
+          "bank-agent-009",
+          "bank-be-002",
+          "bank-agent-003",
+          "bank-agent-020",
+          "bank-agent-014"
+        ]
+      },
+      {
+        "query": "降级梯设计",
+        "gold_id": "bank-agent-017",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-017"
+        ]
+      },
+      {
+        "query": "agent 降级梯设计",
+        "gold_id": "bank-agent-017",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-017"
+        ]
+      },
+      {
+        "query": "长上下文管理",
+        "gold_id": "bank-agent-018",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "agent 长上下文管理",
+        "gold_id": "bank-agent-018",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-018",
+          "bank-agent-001",
+          "bank-agent-013"
+        ]
+      },
+      {
+        "query": "流式输出设计",
+        "gold_id": "bank-agent-019",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-019",
+          "bank-be-010",
+          "bank-agent-010"
+        ]
+      },
+      {
+        "query": "agent 流式输出设计",
+        "gold_id": "bank-agent-019",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-019",
+          "bank-be-010",
+          "bank-agent-005",
+          "bank-agent-010",
+          "bank-agent-018",
+          "bank-fs-006",
+          "bank-agent-017",
+          "bank-agent-020",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "MCP 工具生态",
+        "gold_id": "bank-agent-020",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-020"
+        ]
+      },
+      {
+        "query": "工具调用 工具生态",
+        "gold_id": "bank-agent-020",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-020",
+          "bank-agent-004",
+          "bank-agent-005"
+        ]
+      },
+      {
+        "query": "Kafka 高可用",
+        "gold_id": "bank-kafka-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-kafka-001"
+        ]
+      },
+      {
+        "query": "kafka 消息队列 高可用",
+        "gold_id": "bank-kafka-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-kafka-001",
+          "bank-be-012"
+        ]
+      },
+      {
+        "query": "登录态与鉴权",
+        "gold_id": "bank-fs-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-001"
+        ]
+      },
+      {
+        "query": "鉴权 前端",
+        "gold_id": "bank-fs-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-001",
+          "bank-fs-010",
+          "bank-fs-003"
+        ]
+      },
+      {
+        "query": "前端状态管理",
+        "gold_id": "bank-fs-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-002",
+          "bank-agent-001",
+          "bank-fs-010",
+          "bank-fs-001",
+          "bank-fs-005",
+          "bank-fs-003"
+        ]
+      },
+      {
+        "query": "状态管理 前端",
+        "gold_id": "bank-fs-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-002",
+          "bank-agent-001",
+          "bank-fs-010",
+          "bank-fs-001",
+          "bank-fs-005",
+          "bank-fs-003"
+        ]
+      },
+      {
+        "query": "首屏性能优化",
+        "gold_id": "bank-fs-003",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-003"
+        ]
+      },
+      {
+        "query": "性能 前端",
+        "gold_id": "bank-fs-003",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-003",
+          "bank-fs-010",
+          "bank-fs-005",
+          "bank-fs-002"
+        ]
+      },
+      {
+        "query": "重排与重绘",
+        "gold_id": "bank-fs-004",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-004"
+        ]
+      },
+      {
+        "query": "渲染 性能",
+        "gold_id": "bank-fs-004",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-004",
+          "bank-fs-003"
+        ]
+      },
+      {
+        "query": "前后端接口契约",
+        "gold_id": "bank-fs-005",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-005",
+          "bank-fs-010"
+        ]
+      },
+      {
+        "query": "工程化 前后端接口契约",
+        "gold_id": "bank-fs-005",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-005",
+          "bank-fs-010",
+          "bank-fs-006",
+          "bank-agent-005",
+          "bank-agent-011"
+        ]
+      },
+      {
+        "query": "CI/CD 发布流程",
+        "gold_id": "bank-fs-006",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-006",
+          "bank-be-011",
+          "bank-agent-018",
+          "bank-fs-005",
+          "bank-be-008",
+          "bank-agent-020",
+          "bank-be-005",
+          "bank-be-007"
+        ]
+      },
+      {
+        "query": "部署 工程化",
+        "gold_id": "bank-fs-006",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-006",
+          "bank-fs-007",
+          "bank-fs-005",
+          "bank-fs-008",
+          "bank-fs-010"
+        ]
+      },
+      {
+        "query": "多环境配置管理",
+        "gold_id": "bank-fs-007",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-007",
+          "bank-agent-013",
+          "bank-fs-002"
+        ]
+      },
+      {
+        "query": "工程化 多环境配置管理",
+        "gold_id": "bank-fs-007",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-007",
+          "bank-fs-006"
+        ]
+      },
+      {
+        "query": "测试金字塔",
+        "gold_id": "bank-fs-008",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-008",
+          "bank-agent-008"
+        ]
+      },
+      {
+        "query": "测试 测试金字塔",
+        "gold_id": "bank-fs-008",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-008",
+          "bank-agent-008"
+        ]
+      },
+      {
+        "query": "E2E 测试稳定性",
+        "gold_id": "bank-fs-009",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-009",
+          "bank-agent-014",
+          "bank-agent-008",
+          "bank-fs-008",
+          "bank-agent-020",
+          "bank-agent-009"
+        ]
+      },
+      {
+        "query": "测试 工程化",
+        "gold_id": "bank-fs-009",
+        "query_type": "keyword",
+        "rank": 3,
+        "hit_ids": [
+          "bank-fs-008",
+          "bank-fs-007",
+          "bank-fs-009",
+          "bank-fs-006",
+          "bank-agent-008"
+        ]
+      },
+      {
+        "query": "微前端拆分",
+        "gold_id": "bank-fs-010",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-010",
+          "bank-fs-005",
+          "bank-be-007",
+          "bank-fs-003",
+          "bank-fs-002"
+        ]
+      },
+      {
+        "query": "工程化 前端",
+        "gold_id": "bank-fs-010",
+        "query_type": "keyword",
+        "rank": 2,
+        "hit_ids": [
+          "bank-fs-005",
+          "bank-fs-010",
+          "bank-fs-008",
+          "bank-fs-006",
+          "bank-fs-003"
+        ]
+      },
+      {
+        "query": "幂等性设计",
+        "gold_id": "bank-be-008",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "幂等 api设计",
+        "gold_id": "bank-be-008",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-008",
+          "bank-be-011"
+        ]
+      },
+      {
+        "query": "超时与重试",
+        "gold_id": "bank-be-009",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-009"
+        ]
+      },
+      {
+        "query": "高可用 超时与重试",
+        "gold_id": "bank-be-009",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-009"
+        ]
+      },
+      {
+        "query": "接口限流",
+        "gold_id": "bank-be-010",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-010"
+        ]
+      },
+      {
+        "query": "api设计 接口限流",
+        "gold_id": "bank-be-010",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-010",
+          "bank-be-011",
+          "bank-be-008",
+          "bank-agent-005",
+          "bank-agent-019",
+          "bank-fs-006",
+          "bank-be-009"
+        ]
+      },
+      {
+        "query": "API 版本演进",
+        "gold_id": "bank-be-011",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-011"
+        ]
+      },
+      {
+        "query": "api设计",
+        "gold_id": "bank-be-011",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-011",
+          "bank-be-008",
+          "bank-be-010",
+          "bank-agent-005"
+        ]
+      },
+      {
+        "query": "消息积压处理",
+        "gold_id": "bank-be-012",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-012"
+        ]
+      },
+      {
+        "query": "kafka 消息积压处理",
+        "gold_id": "bank-be-012",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-012",
+          "bank-kafka-001"
+        ]
+      },
+      {
+        "query": "事务隔离级别",
+        "gold_id": "bank-be-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-001"
+        ]
+      },
+      {
+        "query": "数据库 事务",
+        "gold_id": "bank-be-001",
+        "query_type": "keyword",
+        "rank": 4,
+        "hit_ids": [
+          "bank-be-006",
+          "bank-be-007",
+          "bank-fs-006",
+          "bank-be-001",
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "联合索引设计",
+        "gold_id": "bank-be-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-002"
+        ]
+      },
+      {
+        "query": "数据库 索引",
+        "gold_id": "bank-be-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-002",
+          "bank-be-003",
+          "bank-be-006",
+          "bank-agent-016",
+          "bank-be-004",
+          "bank-be-007",
+          "bank-agent-008",
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "慢 SQL 排查",
+        "gold_id": "bank-be-003",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-003"
+        ]
+      },
+      {
+        "query": "SQL",
+        "gold_id": "bank-be-003",
+        "query_type": "keyword",
+        "rank": null,
+        "hit_ids": []
+      },
+      {
+        "query": "悲观锁与乐观锁",
+        "gold_id": "bank-be-004",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-004"
+        ]
+      },
+      {
+        "query": "并发 悲观锁与乐观锁",
+        "gold_id": "bank-be-004",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-004"
+        ]
+      },
+      {
+        "query": "分布式锁",
+        "gold_id": "bank-be-005",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-005",
+          "bank-be-004"
+        ]
+      },
+      {
+        "query": "redis 并发",
+        "gold_id": "bank-be-005",
+        "query_type": "keyword",
+        "rank": 2,
+        "hit_ids": [
+          "bank-cache-001",
+          "bank-be-005",
+          "bank-cache-002",
+          "bank-fs-006",
+          "bank-kafka-001",
+          "bank-be-004",
+          "bank-be-006",
+          "bank-be-007"
+        ]
+      },
+      {
+        "query": "数据库连接池",
+        "gold_id": "bank-be-006",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-006",
+          "bank-fs-006"
+        ]
+      },
+      {
+        "query": "数据库 并发",
+        "gold_id": "bank-be-006",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-006",
+          "bank-fs-006",
+          "bank-be-007",
+          "bank-be-004",
+          "bank-cache-001",
+          "bank-be-002",
+          "bank-agent-018",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "分库分表",
+        "gold_id": "bank-be-007",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-007",
+          "bank-be-006"
+        ]
+      },
+      {
+        "query": "数据库 分库分表",
+        "gold_id": "bank-be-007",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-007",
+          "bank-be-006",
+          "bank-fs-006",
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "缓存一致性",
+        "gold_id": "bank-cache-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-001",
+          "bank-cache-002"
+        ]
+      },
+      {
+        "query": "redis 缓存 一致性",
+        "gold_id": "bank-cache-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-001",
+          "bank-cache-002",
+          "bank-be-005",
+          "bank-fs-006",
+          "bank-be-006",
+          "bank-fs-009",
+          "bank-be-004",
+          "bank-kafka-001",
+          "bank-agent-017",
+          "bank-fs-002",
+          "bank-be-001",
+          "bank-agent-010",
+          "bank-be-003",
+          "bank-agent-020",
+          "bank-agent-011",
+          "bank-be-007",
+          "bank-be-011",
+          "bank-agent-015",
+          "bank-fs-007",
+          "bank-agent-003"
+        ]
+      },
+      {
+        "query": "缓存击穿与雪崩",
+        "gold_id": "bank-cache-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-002",
+          "bank-be-009",
+          "bank-cache-001"
+        ]
+      },
+      {
+        "query": "redis 缓存 高可用",
+        "gold_id": "bank-cache-002",
+        "query_type": "keyword",
+        "rank": 2,
+        "hit_ids": [
+          "bank-cache-001",
+          "bank-cache-002",
+          "bank-kafka-001",
+          "bank-be-005",
+          "bank-be-006",
+          "bank-agent-017",
+          "bank-fs-002"
+        ]
+      },
+      {
+        "query": "项目难点复盘",
+        "gold_id": "bank-proj-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-001",
+          "bank-proj-003",
+          "bank-proj-005",
+          "bank-agent-011",
+          "bank-be-009",
+          "bank-be-007",
+          "bank-fs-008"
+        ]
+      },
+      {
+        "query": "项目深挖 复盘 通用",
+        "gold_id": "bank-proj-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-001",
+          "bank-proj-003"
+        ]
+      },
+      {
+        "query": "技术方案分歧",
+        "gold_id": "bank-proj-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-002",
+          "bank-agent-013",
+          "bank-proj-001",
+          "bank-agent-018",
+          "bank-fs-010",
+          "bank-fs-007",
+          "bank-fs-006",
+          "bank-be-010",
+          "bank-proj-005",
+          "bank-agent-010",
+          "bank-proj-004",
+          "bank-be-011",
+          "bank-fs-008",
+          "bank-agent-005",
+          "bank-agent-019",
+          "bank-agent-017",
+          "bank-be-006",
+          "bank-fs-005",
+          "bank-agent-006",
+          "bank-agent-014"
+        ]
+      },
+      {
+        "query": "协作 沟通 通用",
+        "gold_id": "bank-proj-002",
+        "query_type": "keyword",
+        "rank": 2,
+        "hit_ids": [
+          "bank-proj-004",
+          "bank-proj-002"
+        ]
+      },
+      {
+        "query": "线上事故复盘",
+        "gold_id": "bank-proj-003",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-003"
+        ]
+      },
+      {
+        "query": "复盘 协作",
+        "gold_id": "bank-proj-003",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-003",
+          "bank-proj-001"
+        ]
+      },
+      {
+        "query": "跨团队推动",
+        "gold_id": "bank-proj-004",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-004"
+        ]
+      },
+      {
+        "query": "沟通 协作",
+        "gold_id": "bank-proj-004",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-004",
+          "bank-proj-002"
+        ]
+      },
+      {
+        "query": "技术债取舍",
+        "gold_id": "bank-proj-005",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-005"
+        ]
+      },
+      {
+        "query": "复盘 技术债取舍",
+        "gold_id": "bank-proj-005",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-005",
+          "bank-proj-001",
+          "bank-proj-003"
+        ]
+      },
+      {
+        "query": "leader 宕机了怎么保证已确认的消息不丢",
+        "gold_id": "bank-kafka-001",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-kafka-001",
+          "bank-agent-017",
+          "bank-fs-001",
+          "bank-agent-003",
+          "bank-be-005",
+          "bank-agent-015",
+          "bank-cache-001",
+          "bank-agent-011",
+          "bank-agent-018",
+          "bank-fs-006",
+          "bank-agent-012",
+          "bank-be-009",
+          "bank-agent-009",
+          "bank-proj-004",
+          "bank-agent-004",
+          "bank-be-003",
+          "bank-fs-009",
+          "bank-be-001",
+          "bank-fs-005",
+          "bank-agent-013"
+        ]
+      },
+      {
+        "query": "先更新数据库还是先删缓存，为什么",
+        "gold_id": "bank-cache-001",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-001",
+          "bank-be-006",
+          "bank-be-007",
+          "bank-be-003",
+          "bank-fs-006",
+          "bank-fs-002",
+          "bank-cache-002",
+          "bank-be-004",
+          "bank-agent-003",
+          "bank-proj-005",
+          "bank-agent-011",
+          "bank-fs-003",
+          "bank-agent-017",
+          "bank-be-011",
+          "bank-be-001",
+          "bank-be-002",
+          "bank-agent-018",
+          "bank-fs-007",
+          "bank-fs-010",
+          "bank-be-005"
+        ]
+      },
+      {
+        "query": "热点 key 过期瞬间大量请求打到数据库怎么办",
+        "gold_id": "bank-cache-002",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-002",
+          "bank-be-006",
+          "bank-be-007",
+          "bank-fs-006",
+          "bank-be-005",
+          "bank-be-003",
+          "bank-fs-001",
+          "bank-agent-003",
+          "bank-be-009",
+          "bank-agent-011",
+          "bank-be-008",
+          "bank-agent-009",
+          "bank-agent-017",
+          "bank-agent-015",
+          "bank-fs-003",
+          "bank-cache-001",
+          "bank-be-004",
+          "bank-fs-002",
+          "bank-agent-016",
+          "bank-proj-001"
+        ]
+      },
+      {
+        "query": "多轮对话的字段该放图状态还是消息列表",
+        "gold_id": "bank-agent-001",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-001",
+          "bank-fs-006",
+          "bank-be-012",
+          "bank-agent-011",
+          "bank-be-011",
+          "bank-fs-002",
+          "bank-agent-019",
+          "bank-agent-018",
+          "bank-be-006",
+          "bank-agent-006",
+          "bank-be-001",
+          "bank-fs-003",
+          "bank-be-010",
+          "bank-be-007",
+          "bank-agent-013",
+          "bank-fs-007",
+          "bank-fs-005",
+          "bank-agent-005",
+          "bank-fs-001",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "agent 跑一半停下来等用户确认再继续怎么做",
+        "gold_id": "bank-agent-003",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-003",
+          "bank-fs-001",
+          "bank-agent-017",
+          "bank-cache-001",
+          "bank-be-007",
+          "bank-agent-005",
+          "bank-agent-015",
+          "bank-fs-006",
+          "bank-be-005",
+          "bank-fs-005",
+          "bank-be-009",
+          "bank-fs-002",
+          "bank-be-008",
+          "bank-fs-009",
+          "bank-agent-013",
+          "bank-agent-019",
+          "bank-agent-018",
+          "bank-agent-016",
+          "bank-agent-014",
+          "bank-proj-004"
+        ]
+      },
+      {
+        "query": "中文检索为什么不能直接按空格分词",
+        "gold_id": "bank-agent-006",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-006",
+          "bank-agent-011",
+          "bank-be-007",
+          "bank-agent-018",
+          "bank-agent-016",
+          "bank-agent-008",
+          "bank-be-002",
+          "bank-agent-015",
+          "bank-agent-014",
+          "bank-agent-010",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-007",
+          "bank-be-003"
+        ]
+      },
+      {
+        "query": "关键词和向量两路检索的分数怎么合并",
+        "gold_id": "bank-agent-007",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-007",
+          "bank-agent-008",
+          "bank-be-007",
+          "bank-agent-006",
+          "bank-be-002",
+          "bank-agent-002",
+          "bank-be-003",
+          "bank-fs-006",
+          "bank-be-008",
+          "bank-be-004"
+        ]
+      },
+      {
+        "query": "怎么防止模型谎报题库来源",
+        "gold_id": "bank-agent-009",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-009",
+          "bank-agent-016",
+          "bank-agent-011",
+          "bank-be-006"
+        ]
+      },
+      {
+        "query": "mysql 可重复读下幻读解决了吗",
+        "gold_id": "bank-be-001",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-001",
+          "bank-agent-009",
+          "bank-cache-001",
+          "bank-be-004",
+          "bank-be-003",
+          "bank-agent-006",
+          "bank-cache-002",
+          "bank-be-005",
+          "bank-agent-003",
+          "bank-agent-015",
+          "bank-be-009",
+          "bank-be-007",
+          "bank-be-012",
+          "bank-be-011",
+          "bank-fs-002",
+          "bank-be-008",
+          "bank-agent-012",
+          "bank-agent-018",
+          "bank-kafka-001",
+          "bank-agent-017"
+        ]
+      },
+      {
+        "query": "并发扣库存该用悲观锁还是乐观锁",
+        "gold_id": "bank-be-004",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-004",
+          "bank-be-005",
+          "bank-cache-001",
+          "bank-be-006",
+          "bank-cache-002"
+        ]
+      },
+      {
+        "query": "多个实例怎么保证定时任务只跑一份",
+        "gold_id": "bank-be-005",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-005",
+          "bank-be-009",
+          "bank-agent-013",
+          "bank-agent-004",
+          "bank-be-007",
+          "bank-fs-009",
+          "bank-agent-017",
+          "bank-fs-007",
+          "bank-be-006",
+          "bank-agent-003",
+          "bank-agent-011",
+          "bank-be-010",
+          "bank-proj-004"
+        ]
+      },
+      {
+        "query": "支付接口被重复调用怎么保证只扣一次钱",
+        "gold_id": "bank-be-008",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-008",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-be-010",
+          "bank-proj-003",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-be-007",
+          "bank-be-004",
+          "bank-agent-003",
+          "bank-fs-005",
+          "bank-fs-010",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "消费组积压了几百万条消息怎么处理",
+        "gold_id": "bank-be-012",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-012",
+          "bank-be-007"
+        ]
+      },
+      {
+        "query": "首屏加载太慢怎么排查优化",
+        "gold_id": "bank-fs-003",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-003",
+          "bank-be-003",
+          "bank-be-006",
+          "bank-be-009",
+          "bank-fs-004",
+          "bank-agent-011",
+          "bank-be-007",
+          "bank-cache-001",
+          "bank-fs-006",
+          "bank-fs-007",
+          "bank-agent-017",
+          "bank-be-011",
+          "bank-be-002",
+          "bank-agent-003",
+          "bank-agent-016",
+          "bank-fs-008",
+          "bank-be-010",
+          "bank-fs-002"
+        ]
+      },
+      {
+        "query": "动画每帧改宽度为什么卡",
+        "gold_id": "bank-fs-004",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-004",
+          "bank-fs-006",
+          "bank-be-011",
+          "bank-be-009"
+        ]
+      },
+      {
+        "query": "自动化测试各层怎么配比",
+        "gold_id": "bank-fs-008",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-008",
+          "bank-fs-009",
+          "bank-fs-007",
+          "bank-agent-008",
+          "bank-fs-003",
+          "bank-agent-014",
+          "bank-agent-019",
+          "bank-be-009",
+          "bank-agent-010",
+          "bank-agent-017",
+          "bank-fs-006",
+          "bank-agent-013",
+          "bank-agent-007",
+          "bank-agent-011"
+        ]
+      },
+      {
+        "query": "讲一次你处理的线上故障",
+        "gold_id": "bank-proj-003",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-003",
+          "bank-agent-003",
+          "bank-be-011",
+          "bank-agent-015",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-004",
+          "bank-be-010"
+        ]
+      },
+      {
+        "query": "用户反馈出的题不贴简历怎么排查",
+        "gold_id": "bank-agent-016",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-016",
+          "bank-be-002",
+          "bank-be-007",
+          "bank-proj-001",
+          "bank-be-003",
+          "bank-agent-018",
+          "bank-agent-011",
+          "bank-be-006",
+          "bank-agent-009",
+          "bank-agent-017",
+          "bank-be-004",
+          "bank-proj-004",
+          "bank-fs-003",
+          "bank-fs-007",
+          "bank-agent-008",
+          "bank-fs-006",
+          "bank-agent-015",
+          "bank-fs-009"
+        ]
+      }
+    ],
+    "hybrid": [
+      {
+        "query": "Agent 状态管理",
+        "gold_id": "bank-agent-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-001",
+          "bank-fs-002",
+          "bank-agent-013",
+          "bank-agent-018",
+          "bank-fs-001",
+          "bank-agent-011",
+          "bank-fs-006",
+          "bank-agent-012",
+          "bank-agent-017",
+          "bank-fs-007",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-020",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-016",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "langgraph agent",
+        "gold_id": "bank-agent-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-001",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-012",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-agent-018",
+          "bank-agent-020",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-016",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "图路由与循环控制",
+        "gold_id": "bank-agent-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-002",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "langgraph 图路由与循环控制",
+        "gold_id": "bank-agent-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-002",
+          "bank-agent-001",
+          "bank-agent-004",
+          "bank-agent-003"
+        ]
+      },
+      {
+        "query": "人机中断恢复",
+        "gold_id": "bank-agent-003",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-003",
+          "bank-proj-003"
+        ]
+      },
+      {
+        "query": "langgraph 人机中断恢复",
+        "gold_id": "bank-agent-003",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-001",
+          "bank-proj-003"
+        ]
+      },
+      {
+        "query": "工具调用循环",
+        "gold_id": "bank-agent-004",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-agent-020",
+          "bank-agent-002",
+          "bank-be-011",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "工具调用 agent",
+        "gold_id": "bank-agent-004",
+        "query_type": "keyword",
+        "rank": 2,
+        "hit_ids": [
+          "bank-agent-020",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-agent-018",
+          "bank-agent-003",
+          "bank-be-011",
+          "bank-agent-015",
+          "bank-agent-019",
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-agent-002",
+          "bank-fs-006",
+          "bank-agent-014",
+          "bank-agent-016"
+        ]
+      },
+      {
+        "query": "工具接口设计",
+        "gold_id": "bank-agent-005",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-005",
+          "bank-agent-020",
+          "bank-fs-005",
+          "bank-agent-004",
+          "bank-be-008",
+          "bank-be-010",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-be-003",
+          "bank-agent-013",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-agent-015",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005"
+        ]
+      },
+      {
+        "query": "工具调用 工具接口设计",
+        "gold_id": "bank-agent-005",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-005",
+          "bank-agent-004",
+          "bank-agent-020",
+          "bank-be-008",
+          "bank-be-010",
+          "bank-agent-017",
+          "bank-fs-005",
+          "bank-be-011",
+          "bank-agent-012",
+          "bank-be-003",
+          "bank-agent-013",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-agent-015",
+          "bank-be-009",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005"
+        ]
+      },
+      {
+        "query": "BM25 与中文分词",
+        "gold_id": "bank-agent-006",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-006",
+          "bank-agent-007",
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "rag 与中文分词",
+        "gold_id": "bank-agent-006",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-006",
+          "bank-agent-008",
+          "bank-agent-009",
+          "bank-agent-007"
+        ]
+      },
+      {
+        "query": "混合检索与 RRF",
+        "gold_id": "bank-agent-007",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-007",
+          "bank-agent-008",
+          "bank-agent-006",
+          "bank-agent-016",
+          "bank-be-002",
+          "bank-agent-005",
+          "bank-agent-015",
+          "bank-agent-014"
+        ]
+      },
+      {
+        "query": "rag RRF",
+        "gold_id": "bank-agent-007",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-007",
+          "bank-agent-008",
+          "bank-agent-009",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "RAG 检索评测",
+        "gold_id": "bank-agent-008",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-008",
+          "bank-agent-007",
+          "bank-agent-014",
+          "bank-agent-016",
+          "bank-agent-009",
+          "bank-fs-009",
+          "bank-agent-006",
+          "bank-be-003",
+          "bank-agent-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "rag 评测",
+        "gold_id": "bank-agent-008",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-008",
+          "bank-agent-014",
+          "bank-agent-006",
+          "bank-agent-009",
+          "bank-agent-007",
+          "bank-agent-016"
+        ]
+      },
+      {
+        "query": "RAG 幻觉防御",
+        "gold_id": "bank-agent-009",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-009",
+          "bank-agent-008",
+          "bank-agent-015",
+          "bank-agent-007",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "rag 安全",
+        "gold_id": "bank-agent-009",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-009",
+          "bank-agent-008",
+          "bank-agent-015",
+          "bank-agent-007",
+          "bank-agent-006",
+          "bank-agent-002"
+        ]
+      },
+      {
+        "query": "结构化输出可靠性",
+        "gold_id": "bank-agent-010",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-010",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-be-005",
+          "bank-agent-001",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "结构化输出",
+        "gold_id": "bank-agent-010",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-010",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-001",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "提示词契约管理",
+        "gold_id": "bank-agent-011",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-011",
+          "bank-agent-018",
+          "bank-fs-005",
+          "bank-fs-002",
+          "bank-agent-015",
+          "bank-proj-004",
+          "bank-agent-001",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "提示词",
+        "gold_id": "bank-agent-011",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-011",
+          "bank-agent-018",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "Agent 记忆设计",
+        "gold_id": "bank-agent-012",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-012",
+          "bank-agent-017",
+          "bank-agent-001",
+          "bank-be-008",
+          "bank-agent-005",
+          "bank-agent-003",
+          "bank-agent-019",
+          "bank-agent-002",
+          "bank-agent-013",
+          "bank-agent-016",
+          "bank-agent-018",
+          "bank-agent-020",
+          "bank-agent-014",
+          "bank-be-002",
+          "bank-be-011",
+          "bank-agent-004",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-009",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "记忆 agent",
+        "gold_id": "bank-agent-012",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-012",
+          "bank-agent-018",
+          "bank-agent-001",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-020",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-016",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "多智能体分工",
+        "gold_id": "bank-agent-013",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-013"
+        ]
+      },
+      {
+        "query": "多智能体 agent",
+        "gold_id": "bank-agent-013",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-013",
+          "bank-agent-020",
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-agent-017",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-018",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-016",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "LLM-as-Judge 评审",
+        "gold_id": "bank-agent-014",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-014",
+          "bank-agent-004",
+          "bank-agent-008",
+          "bank-agent-017",
+          "bank-agent-020",
+          "bank-agent-005",
+          "bank-agent-010"
+        ]
+      },
+      {
+        "query": "评测 agent 评审",
+        "gold_id": "bank-agent-014",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-014",
+          "bank-agent-008",
+          "bank-agent-016",
+          "bank-agent-020",
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-018",
+          "bank-agent-019",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "提示注入防御",
+        "gold_id": "bank-agent-015",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-015",
+          "bank-agent-009",
+          "bank-agent-011",
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "安全",
+        "gold_id": "bank-agent-015",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-015",
+          "bank-agent-009",
+          "bank-agent-002"
+        ]
+      },
+      {
+        "query": "检索留痕归因",
+        "gold_id": "bank-agent-016",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-016",
+          "bank-agent-007",
+          "bank-agent-008",
+          "bank-agent-005",
+          "bank-agent-015",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "agent 检索留痕归因",
+        "gold_id": "bank-agent-016",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-016",
+          "bank-agent-005",
+          "bank-agent-018",
+          "bank-agent-003",
+          "bank-agent-015",
+          "bank-agent-020",
+          "bank-agent-014",
+          "bank-agent-007",
+          "bank-fs-001",
+          "bank-agent-008",
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-be-003",
+          "bank-agent-017",
+          "bank-agent-009",
+          "bank-agent-013",
+          "bank-be-002",
+          "bank-agent-002",
+          "bank-agent-019",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "降级梯设计",
+        "gold_id": "bank-agent-017",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-017",
+          "bank-be-008",
+          "bank-agent-012",
+          "bank-agent-005",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "agent 降级梯设计",
+        "gold_id": "bank-agent-017",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-be-008",
+          "bank-agent-005",
+          "bank-agent-003",
+          "bank-agent-019",
+          "bank-agent-002",
+          "bank-agent-013",
+          "bank-agent-016",
+          "bank-agent-018",
+          "bank-agent-020",
+          "bank-agent-014",
+          "bank-be-002",
+          "bank-be-011",
+          "bank-agent-004",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-009",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "长上下文管理",
+        "gold_id": "bank-agent-018",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-018",
+          "bank-fs-002",
+          "bank-agent-011",
+          "bank-agent-015",
+          "bank-agent-001",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "agent 长上下文管理",
+        "gold_id": "bank-agent-018",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-018",
+          "bank-agent-001",
+          "bank-agent-013",
+          "bank-fs-002",
+          "bank-agent-015",
+          "bank-agent-011",
+          "bank-agent-012",
+          "bank-agent-017",
+          "bank-fs-007",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-020",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-016",
+          "bank-agent-004",
+          "bank-agent-005"
+        ]
+      },
+      {
+        "query": "流式输出设计",
+        "gold_id": "bank-agent-019",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-019",
+          "bank-agent-010",
+          "bank-be-010",
+          "bank-be-008",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-agent-005",
+          "bank-agent-014",
+          "bank-agent-015",
+          "bank-be-002",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "agent 流式输出设计",
+        "gold_id": "bank-agent-019",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-019",
+          "bank-agent-010",
+          "bank-agent-005",
+          "bank-agent-017",
+          "bank-agent-001",
+          "bank-agent-018",
+          "bank-be-010",
+          "bank-agent-020",
+          "bank-agent-012",
+          "bank-be-008",
+          "bank-fs-006",
+          "bank-agent-014",
+          "bank-agent-003",
+          "bank-agent-002",
+          "bank-agent-013",
+          "bank-agent-015",
+          "bank-agent-016",
+          "bank-be-002",
+          "bank-be-011",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "MCP 工具生态",
+        "gold_id": "bank-agent-020",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-020",
+          "bank-agent-005",
+          "bank-agent-004",
+          "bank-agent-013",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "工具调用 工具生态",
+        "gold_id": "bank-agent-020",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-020",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-be-011",
+          "bank-agent-017",
+          "bank-agent-013",
+          "bank-agent-015"
+        ]
+      },
+      {
+        "query": "Kafka 高可用",
+        "gold_id": "bank-kafka-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-kafka-001",
+          "bank-cache-002",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-be-012",
+          "bank-agent-010",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "kafka 消息队列 高可用",
+        "gold_id": "bank-kafka-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-kafka-001",
+          "bank-be-012",
+          "bank-cache-002",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-001",
+          "bank-agent-010",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "登录态与鉴权",
+        "gold_id": "bank-fs-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-001"
+        ]
+      },
+      {
+        "query": "鉴权 前端",
+        "gold_id": "bank-fs-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-001",
+          "bank-fs-010",
+          "bank-fs-003",
+          "bank-fs-002",
+          "bank-fs-005"
+        ]
+      },
+      {
+        "query": "前端状态管理",
+        "gold_id": "bank-fs-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-002",
+          "bank-agent-001",
+          "bank-fs-010",
+          "bank-fs-005",
+          "bank-fs-001",
+          "bank-fs-003",
+          "bank-agent-011",
+          "bank-agent-018",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "状态管理 前端",
+        "gold_id": "bank-fs-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-002",
+          "bank-agent-001",
+          "bank-fs-010",
+          "bank-fs-005",
+          "bank-fs-001",
+          "bank-fs-003",
+          "bank-agent-011",
+          "bank-agent-018",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "首屏性能优化",
+        "gold_id": "bank-fs-003",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-003",
+          "bank-fs-004"
+        ]
+      },
+      {
+        "query": "性能 前端",
+        "gold_id": "bank-fs-003",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-003",
+          "bank-fs-010",
+          "bank-fs-002",
+          "bank-fs-005",
+          "bank-fs-004",
+          "bank-fs-001"
+        ]
+      },
+      {
+        "query": "重排与重绘",
+        "gold_id": "bank-fs-004",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-004",
+          "bank-be-009"
+        ]
+      },
+      {
+        "query": "渲染 性能",
+        "gold_id": "bank-fs-004",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-004",
+          "bank-fs-003"
+        ]
+      },
+      {
+        "query": "前后端接口契约",
+        "gold_id": "bank-fs-005",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-005",
+          "bank-be-010",
+          "bank-fs-010",
+          "bank-agent-005",
+          "bank-agent-011",
+          "bank-be-008",
+          "bank-be-003"
+        ]
+      },
+      {
+        "query": "工程化 前后端接口契约",
+        "gold_id": "bank-fs-005",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-005",
+          "bank-fs-010",
+          "bank-agent-005",
+          "bank-fs-006",
+          "bank-agent-011",
+          "bank-be-010",
+          "bank-fs-009",
+          "bank-fs-008",
+          "bank-fs-007",
+          "bank-be-008",
+          "bank-be-003",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "CI/CD 发布流程",
+        "gold_id": "bank-fs-006",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-006",
+          "bank-be-011",
+          "bank-fs-010",
+          "bank-agent-018",
+          "bank-proj-003",
+          "bank-fs-005",
+          "bank-fs-009",
+          "bank-be-008",
+          "bank-agent-020",
+          "bank-be-005",
+          "bank-be-007"
+        ]
+      },
+      {
+        "query": "部署 工程化",
+        "gold_id": "bank-fs-006",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-006",
+          "bank-fs-007",
+          "bank-fs-010",
+          "bank-fs-005",
+          "bank-fs-008",
+          "bank-fs-009",
+          "bank-be-005",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "多环境配置管理",
+        "gold_id": "bank-fs-007",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-007",
+          "bank-fs-002",
+          "bank-agent-013",
+          "bank-agent-011",
+          "bank-agent-001",
+          "bank-agent-018"
+        ]
+      },
+      {
+        "query": "工程化 多环境配置管理",
+        "gold_id": "bank-fs-007",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-007",
+          "bank-fs-006",
+          "bank-fs-002",
+          "bank-agent-011",
+          "bank-fs-010",
+          "bank-fs-009",
+          "bank-fs-008",
+          "bank-fs-005",
+          "bank-agent-001",
+          "bank-agent-018",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "测试金字塔",
+        "gold_id": "bank-fs-008",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-008",
+          "bank-fs-009",
+          "bank-agent-008",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "测试 测试金字塔",
+        "gold_id": "bank-fs-008",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-008",
+          "bank-fs-009",
+          "bank-agent-008",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "E2E 测试稳定性",
+        "gold_id": "bank-fs-009",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-009",
+          "bank-fs-008",
+          "bank-agent-014",
+          "bank-fs-007",
+          "bank-agent-008",
+          "bank-agent-010",
+          "bank-agent-020",
+          "bank-agent-009"
+        ]
+      },
+      {
+        "query": "测试 工程化",
+        "gold_id": "bank-fs-009",
+        "query_type": "keyword",
+        "rank": 2,
+        "hit_ids": [
+          "bank-fs-008",
+          "bank-fs-009",
+          "bank-fs-007",
+          "bank-fs-006",
+          "bank-fs-010",
+          "bank-agent-008",
+          "bank-fs-005",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "微前端拆分",
+        "gold_id": "bank-fs-010",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-010",
+          "bank-fs-005",
+          "bank-fs-002",
+          "bank-fs-003",
+          "bank-be-007",
+          "bank-fs-001"
+        ]
+      },
+      {
+        "query": "工程化 前端",
+        "gold_id": "bank-fs-010",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-010",
+          "bank-fs-005",
+          "bank-fs-008",
+          "bank-fs-006",
+          "bank-fs-003",
+          "bank-fs-002",
+          "bank-fs-009",
+          "bank-fs-007",
+          "bank-fs-001",
+          "bank-agent-004"
+        ]
+      },
+      {
+        "query": "幂等性设计",
+        "gold_id": "bank-be-008",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-008",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-agent-005",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "幂等 api设计",
+        "gold_id": "bank-be-008",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-008",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-agent-005",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "超时与重试",
+        "gold_id": "bank-be-009",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-009",
+          "bank-fs-004",
+          "bank-agent-017",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "高可用 超时与重试",
+        "gold_id": "bank-be-009",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-009",
+          "bank-kafka-001",
+          "bank-cache-002",
+          "bank-be-010",
+          "bank-fs-004",
+          "bank-agent-017",
+          "bank-be-008",
+          "bank-agent-010",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "接口限流",
+        "gold_id": "bank-be-010",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-010",
+          "bank-agent-005",
+          "bank-fs-005",
+          "bank-be-008",
+          "bank-be-003"
+        ]
+      },
+      {
+        "query": "api设计 接口限流",
+        "gold_id": "bank-be-010",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-010",
+          "bank-be-011",
+          "bank-be-008",
+          "bank-agent-005",
+          "bank-be-009",
+          "bank-agent-019",
+          "bank-fs-005",
+          "bank-fs-006",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-be-003",
+          "bank-be-002",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "API 版本演进",
+        "gold_id": "bank-be-011",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-011",
+          "bank-be-008",
+          "bank-be-009",
+          "bank-be-010"
+        ]
+      },
+      {
+        "query": "api设计",
+        "gold_id": "bank-be-011",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-011",
+          "bank-be-008",
+          "bank-be-010",
+          "bank-agent-005",
+          "bank-be-009",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-be-002",
+          "bank-agent-019",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "消息积压处理",
+        "gold_id": "bank-be-012",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-012",
+          "bank-kafka-001",
+          "bank-proj-003",
+          "bank-agent-008",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "kafka 消息积压处理",
+        "gold_id": "bank-be-012",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-012",
+          "bank-kafka-001",
+          "bank-proj-003",
+          "bank-agent-008",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "事务隔离级别",
+        "gold_id": "bank-be-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-001",
+          "bank-be-007"
+        ]
+      },
+      {
+        "query": "数据库 事务",
+        "gold_id": "bank-be-001",
+        "query_type": "keyword",
+        "rank": 2,
+        "hit_ids": [
+          "bank-be-006",
+          "bank-be-001",
+          "bank-be-007",
+          "bank-fs-006",
+          "bank-be-004",
+          "bank-be-002",
+          "bank-agent-018",
+          "bank-be-003",
+          "bank-cache-002",
+          "bank-cache-001",
+          "bank-fs-002",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "联合索引设计",
+        "gold_id": "bank-be-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-002",
+          "bank-be-008",
+          "bank-be-003",
+          "bank-agent-017",
+          "bank-agent-012",
+          "bank-agent-005",
+          "bank-agent-019",
+          "bank-be-011",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-agent-002",
+          "bank-agent-016",
+          "bank-be-005",
+          "bank-agent-001"
+        ]
+      },
+      {
+        "query": "数据库 索引",
+        "gold_id": "bank-be-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-002",
+          "bank-be-006",
+          "bank-be-003",
+          "bank-be-004",
+          "bank-be-007",
+          "bank-be-001",
+          "bank-agent-016",
+          "bank-cache-002",
+          "bank-agent-008",
+          "bank-cache-001",
+          "bank-agent-018",
+          "bank-fs-002",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "慢 SQL 排查",
+        "gold_id": "bank-be-003",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-003",
+          "bank-be-006",
+          "bank-fs-003",
+          "bank-fs-004",
+          "bank-agent-016"
+        ]
+      },
+      {
+        "query": "SQL",
+        "gold_id": "bank-be-003",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-003"
+        ]
+      },
+      {
+        "query": "悲观锁与乐观锁",
+        "gold_id": "bank-be-004",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-004"
+        ]
+      },
+      {
+        "query": "并发 悲观锁与乐观锁",
+        "gold_id": "bank-be-004",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-004",
+          "bank-be-005",
+          "bank-be-006"
+        ]
+      },
+      {
+        "query": "分布式锁",
+        "gold_id": "bank-be-005",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-005",
+          "bank-be-010",
+          "bank-be-004"
+        ]
+      },
+      {
+        "query": "redis 并发",
+        "gold_id": "bank-be-005",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-005",
+          "bank-cache-001",
+          "bank-cache-002",
+          "bank-be-004",
+          "bank-be-006",
+          "bank-fs-006",
+          "bank-kafka-001",
+          "bank-be-007"
+        ]
+      },
+      {
+        "query": "数据库连接池",
+        "gold_id": "bank-be-006",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-006",
+          "bank-be-001",
+          "bank-fs-006",
+          "bank-be-004",
+          "bank-be-007",
+          "bank-be-002",
+          "bank-be-003",
+          "bank-cache-002",
+          "bank-cache-001",
+          "bank-fs-002",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "数据库 并发",
+        "gold_id": "bank-be-006",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-006",
+          "bank-be-004",
+          "bank-be-007",
+          "bank-be-002",
+          "bank-cache-001",
+          "bank-fs-006",
+          "bank-be-001",
+          "bank-be-003",
+          "bank-be-005",
+          "bank-agent-018",
+          "bank-cache-002",
+          "bank-fs-007",
+          "bank-fs-002",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "分库分表",
+        "gold_id": "bank-be-007",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-007",
+          "bank-be-006"
+        ]
+      },
+      {
+        "query": "数据库 分库分表",
+        "gold_id": "bank-be-007",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-007",
+          "bank-be-006",
+          "bank-be-001",
+          "bank-fs-006",
+          "bank-be-004",
+          "bank-agent-018",
+          "bank-be-002",
+          "bank-be-003",
+          "bank-cache-002",
+          "bank-cache-001",
+          "bank-fs-002",
+          "bank-be-008"
+        ]
+      },
+      {
+        "query": "缓存一致性",
+        "gold_id": "bank-cache-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-001",
+          "bank-cache-002"
+        ]
+      },
+      {
+        "query": "redis 缓存 一致性",
+        "gold_id": "bank-cache-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-001",
+          "bank-cache-002",
+          "bank-be-005",
+          "bank-fs-006",
+          "bank-be-006",
+          "bank-fs-009",
+          "bank-be-004",
+          "bank-kafka-001",
+          "bank-agent-017",
+          "bank-fs-002",
+          "bank-be-001",
+          "bank-agent-010",
+          "bank-be-003",
+          "bank-agent-020",
+          "bank-agent-011",
+          "bank-be-007",
+          "bank-be-011",
+          "bank-agent-015",
+          "bank-fs-007",
+          "bank-agent-003"
+        ]
+      },
+      {
+        "query": "缓存击穿与雪崩",
+        "gold_id": "bank-cache-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-002",
+          "bank-cache-001",
+          "bank-be-009"
+        ]
+      },
+      {
+        "query": "redis 缓存 高可用",
+        "gold_id": "bank-cache-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-002",
+          "bank-cache-001",
+          "bank-kafka-001",
+          "bank-be-005",
+          "bank-be-009",
+          "bank-be-006",
+          "bank-be-010",
+          "bank-agent-017",
+          "bank-agent-010",
+          "bank-fs-002",
+          "bank-agent-006"
+        ]
+      },
+      {
+        "query": "项目难点复盘",
+        "gold_id": "bank-proj-001",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-001",
+          "bank-proj-003",
+          "bank-proj-005",
+          "bank-agent-011",
+          "bank-fs-008",
+          "bank-be-009",
+          "bank-fs-002",
+          "bank-be-007"
+        ]
+      },
+      {
+        "query": "项目深挖 复盘 通用",
+        "gold_id": "bank-proj-001",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-001",
+          "bank-proj-003",
+          "bank-proj-005",
+          "bank-proj-002",
+          "bank-fs-008",
+          "bank-agent-011",
+          "bank-fs-002"
+        ]
+      },
+      {
+        "query": "技术方案分歧",
+        "gold_id": "bank-proj-002",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-002",
+          "bank-proj-001",
+          "bank-proj-005",
+          "bank-agent-013",
+          "bank-fs-009",
+          "bank-agent-018",
+          "bank-cache-002",
+          "bank-fs-010",
+          "bank-fs-001",
+          "bank-fs-007",
+          "bank-agent-016",
+          "bank-fs-006",
+          "bank-be-005",
+          "bank-be-010",
+          "bank-agent-015",
+          "bank-agent-010",
+          "bank-proj-004",
+          "bank-be-011",
+          "bank-fs-008",
+          "bank-agent-005"
+        ]
+      },
+      {
+        "query": "协作 沟通 通用",
+        "gold_id": "bank-proj-002",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-002",
+          "bank-proj-004",
+          "bank-proj-005",
+          "bank-proj-003",
+          "bank-proj-001",
+          "bank-agent-013"
+        ]
+      },
+      {
+        "query": "线上事故复盘",
+        "gold_id": "bank-proj-003",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-003",
+          "bank-proj-001",
+          "bank-proj-005",
+          "bank-be-003"
+        ]
+      },
+      {
+        "query": "复盘 协作",
+        "gold_id": "bank-proj-003",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-003",
+          "bank-proj-001",
+          "bank-proj-005",
+          "bank-proj-004",
+          "bank-proj-002",
+          "bank-agent-013"
+        ]
+      },
+      {
+        "query": "跨团队推动",
+        "gold_id": "bank-proj-004",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-004",
+          "bank-proj-002"
+        ]
+      },
+      {
+        "query": "沟通 协作",
+        "gold_id": "bank-proj-004",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-004",
+          "bank-proj-002",
+          "bank-proj-005",
+          "bank-proj-003",
+          "bank-agent-013"
+        ]
+      },
+      {
+        "query": "技术债取舍",
+        "gold_id": "bank-proj-005",
+        "query_type": "verbatim",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-005",
+          "bank-proj-002",
+          "bank-fs-009",
+          "bank-proj-001"
+        ]
+      },
+      {
+        "query": "复盘 技术债取舍",
+        "gold_id": "bank-proj-005",
+        "query_type": "keyword",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-005",
+          "bank-proj-003",
+          "bank-proj-001",
+          "bank-proj-002",
+          "bank-fs-009"
+        ]
+      },
+      {
+        "query": "leader 宕机了怎么保证已确认的消息不丢",
+        "gold_id": "bank-kafka-001",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-kafka-001",
+          "bank-fs-001",
+          "bank-agent-003",
+          "bank-be-005",
+          "bank-agent-017",
+          "bank-be-003",
+          "bank-be-001",
+          "bank-be-009",
+          "bank-fs-005",
+          "bank-be-012",
+          "bank-agent-014",
+          "bank-be-008",
+          "bank-agent-015",
+          "bank-cache-001",
+          "bank-agent-011",
+          "bank-agent-001",
+          "bank-agent-018",
+          "bank-fs-006",
+          "bank-agent-008",
+          "bank-agent-012"
+        ]
+      },
+      {
+        "query": "先更新数据库还是先删缓存，为什么",
+        "gold_id": "bank-cache-001",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-001",
+          "bank-be-006",
+          "bank-cache-002",
+          "bank-be-007",
+          "bank-be-003",
+          "bank-be-004",
+          "bank-proj-005",
+          "bank-fs-002",
+          "bank-be-001",
+          "bank-fs-006",
+          "bank-be-002",
+          "bank-agent-003",
+          "bank-fs-008",
+          "bank-agent-011",
+          "bank-fs-004",
+          "bank-fs-003",
+          "bank-agent-007",
+          "bank-agent-017",
+          "bank-agent-002",
+          "bank-be-011"
+        ]
+      },
+      {
+        "query": "热点 key 过期瞬间大量请求打到数据库怎么办",
+        "gold_id": "bank-cache-002",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-cache-002",
+          "bank-be-006",
+          "bank-be-007",
+          "bank-be-003",
+          "bank-fs-001",
+          "bank-be-004",
+          "bank-cache-001",
+          "bank-be-008",
+          "bank-be-009",
+          "bank-fs-002",
+          "bank-agent-017",
+          "bank-fs-003",
+          "bank-be-001",
+          "bank-fs-006",
+          "bank-be-005",
+          "bank-be-010",
+          "bank-be-002",
+          "bank-agent-003",
+          "bank-agent-011",
+          "bank-agent-009"
+        ]
+      },
+      {
+        "query": "多轮对话的字段该放图状态还是消息列表",
+        "gold_id": "bank-agent-001",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-001",
+          "bank-be-012",
+          "bank-fs-002",
+          "bank-agent-019",
+          "bank-agent-006",
+          "bank-be-011",
+          "bank-agent-018",
+          "bank-fs-005",
+          "bank-fs-006",
+          "bank-kafka-001",
+          "bank-agent-011",
+          "bank-proj-005",
+          "bank-agent-002",
+          "bank-be-006",
+          "bank-be-001",
+          "bank-fs-003",
+          "bank-be-010",
+          "bank-be-007",
+          "bank-agent-013",
+          "bank-fs-007"
+        ]
+      },
+      {
+        "query": "agent 跑一半停下来等用户确认再继续怎么做",
+        "gold_id": "bank-agent-003",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-003",
+          "bank-agent-017",
+          "bank-fs-001",
+          "bank-agent-013",
+          "bank-agent-016",
+          "bank-agent-018",
+          "bank-fs-006",
+          "bank-be-008",
+          "bank-be-009",
+          "bank-agent-019",
+          "bank-agent-014",
+          "bank-agent-012",
+          "bank-agent-001",
+          "bank-cache-001",
+          "bank-be-007",
+          "bank-agent-005",
+          "bank-be-003",
+          "bank-agent-015",
+          "bank-agent-020",
+          "bank-be-005"
+        ]
+      },
+      {
+        "query": "中文检索为什么不能直接按空格分词",
+        "gold_id": "bank-agent-006",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-006",
+          "bank-agent-008",
+          "bank-agent-016",
+          "bank-agent-007",
+          "bank-be-007",
+          "bank-agent-015",
+          "bank-be-003",
+          "bank-agent-011",
+          "bank-fs-008",
+          "bank-agent-018",
+          "bank-cache-001",
+          "bank-fs-004",
+          "bank-be-002",
+          "bank-proj-001",
+          "bank-agent-014",
+          "bank-fs-002",
+          "bank-agent-010",
+          "bank-agent-005",
+          "bank-agent-003",
+          "bank-agent-009"
+        ]
+      },
+      {
+        "query": "关键词和向量两路检索的分数怎么合并",
+        "gold_id": "bank-agent-007",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-007",
+          "bank-agent-008",
+          "bank-agent-006",
+          "bank-fs-006",
+          "bank-be-002",
+          "bank-be-004",
+          "bank-agent-016",
+          "bank-be-007",
+          "bank-agent-005",
+          "bank-agent-002",
+          "bank-agent-015",
+          "bank-be-003",
+          "bank-be-012",
+          "bank-fs-001",
+          "bank-be-008",
+          "bank-fs-005",
+          "bank-be-006",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-014"
+        ]
+      },
+      {
+        "query": "怎么防止模型谎报题库来源",
+        "gold_id": "bank-agent-009",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-009",
+          "bank-be-006",
+          "bank-be-012",
+          "bank-agent-016",
+          "bank-agent-013",
+          "bank-agent-011",
+          "bank-agent-017",
+          "bank-agent-019",
+          "bank-agent-005",
+          "bank-fs-001",
+          "bank-agent-008",
+          "bank-fs-005",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-006",
+          "bank-agent-014",
+          "bank-be-002",
+          "bank-fs-003",
+          "bank-be-011",
+          "bank-fs-008"
+        ]
+      },
+      {
+        "query": "mysql 可重复读下幻读解决了吗",
+        "gold_id": "bank-be-001",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-001",
+          "bank-agent-020",
+          "bank-agent-009",
+          "bank-cache-001",
+          "bank-be-004",
+          "bank-be-003",
+          "bank-agent-006",
+          "bank-cache-002",
+          "bank-be-005",
+          "bank-agent-003",
+          "bank-agent-015",
+          "bank-be-009",
+          "bank-be-007",
+          "bank-be-012",
+          "bank-be-011",
+          "bank-fs-002",
+          "bank-be-008",
+          "bank-agent-012",
+          "bank-agent-018",
+          "bank-kafka-001"
+        ]
+      },
+      {
+        "query": "并发扣库存该用悲观锁还是乐观锁",
+        "gold_id": "bank-be-004",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-004",
+          "bank-be-005",
+          "bank-be-006",
+          "bank-cache-001",
+          "bank-proj-005",
+          "bank-agent-002",
+          "bank-cache-002"
+        ]
+      },
+      {
+        "query": "多个实例怎么保证定时任务只跑一份",
+        "gold_id": "bank-be-005",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-005",
+          "bank-agent-013",
+          "bank-be-009",
+          "bank-agent-003",
+          "bank-be-006",
+          "bank-agent-017",
+          "bank-be-010",
+          "bank-agent-014",
+          "bank-fs-001",
+          "bank-agent-004",
+          "bank-be-008",
+          "bank-be-007",
+          "bank-fs-005",
+          "bank-fs-009",
+          "bank-kafka-001",
+          "bank-fs-007",
+          "bank-be-012",
+          "bank-agent-008",
+          "bank-agent-011",
+          "bank-proj-004"
+        ]
+      },
+      {
+        "query": "支付接口被重复调用怎么保证只扣一次钱",
+        "gold_id": "bank-be-008",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-008",
+          "bank-agent-004",
+          "bank-agent-005",
+          "bank-be-010",
+          "bank-be-011",
+          "bank-fs-005",
+          "bank-be-009",
+          "bank-proj-003",
+          "bank-agent-003",
+          "bank-agent-014",
+          "bank-fs-001",
+          "bank-be-001",
+          "bank-be-007",
+          "bank-be-004",
+          "bank-agent-020",
+          "bank-proj-004",
+          "bank-fs-010",
+          "bank-agent-017",
+          "bank-agent-015",
+          "bank-be-003"
+        ]
+      },
+      {
+        "query": "消费组积压了几百万条消息怎么处理",
+        "gold_id": "bank-be-012",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-be-012",
+          "bank-agent-008",
+          "bank-be-007",
+          "bank-kafka-001",
+          "bank-fs-010",
+          "bank-proj-003",
+          "bank-agent-001",
+          "bank-fs-001",
+          "bank-fs-005",
+          "bank-be-006",
+          "bank-be-009",
+          "bank-be-010",
+          "bank-agent-006",
+          "bank-agent-014",
+          "bank-be-002",
+          "bank-fs-003",
+          "bank-agent-017",
+          "bank-be-011",
+          "bank-fs-008",
+          "bank-be-004"
+        ]
+      },
+      {
+        "query": "首屏加载太慢怎么排查优化",
+        "gold_id": "bank-fs-003",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-003",
+          "bank-be-003",
+          "bank-be-006",
+          "bank-fs-004",
+          "bank-be-009",
+          "bank-agent-017",
+          "bank-agent-016",
+          "bank-be-011",
+          "bank-be-002",
+          "bank-be-010",
+          "bank-fs-007",
+          "bank-fs-008",
+          "bank-agent-011",
+          "bank-be-012",
+          "bank-be-007",
+          "bank-fs-001",
+          "bank-cache-001",
+          "bank-agent-008",
+          "bank-fs-006",
+          "bank-fs-005"
+        ]
+      },
+      {
+        "query": "动画每帧改宽度为什么卡",
+        "gold_id": "bank-fs-004",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-004",
+          "bank-fs-006",
+          "bank-fs-008",
+          "bank-cache-001",
+          "bank-be-011",
+          "bank-agent-007",
+          "bank-be-009",
+          "bank-proj-001",
+          "bank-fs-002",
+          "bank-agent-006",
+          "bank-be-007",
+          "bank-agent-013",
+          "bank-proj-003",
+          "bank-be-006",
+          "bank-cache-002",
+          "bank-be-003",
+          "bank-be-004",
+          "bank-agent-020",
+          "bank-agent-011",
+          "bank-agent-012"
+        ]
+      },
+      {
+        "query": "自动化测试各层怎么配比",
+        "gold_id": "bank-fs-008",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-fs-008",
+          "bank-fs-009",
+          "bank-fs-007",
+          "bank-agent-019",
+          "bank-agent-008",
+          "bank-be-009",
+          "bank-agent-014",
+          "bank-fs-003",
+          "bank-agent-017",
+          "bank-be-012",
+          "bank-fs-001",
+          "bank-fs-005",
+          "bank-be-006",
+          "bank-agent-010",
+          "bank-be-010",
+          "bank-fs-006",
+          "bank-agent-006",
+          "bank-agent-013",
+          "bank-agent-007",
+          "bank-be-002"
+        ]
+      },
+      {
+        "query": "讲一次你处理的线上故障",
+        "gold_id": "bank-proj-003",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-proj-003",
+          "bank-proj-004",
+          "bank-agent-003",
+          "bank-be-012",
+          "bank-be-011",
+          "bank-be-003",
+          "bank-agent-015",
+          "bank-proj-005",
+          "bank-agent-009",
+          "bank-agent-008",
+          "bank-agent-002",
+          "bank-be-009",
+          "bank-agent-004",
+          "bank-be-008",
+          "bank-be-010"
+        ]
+      },
+      {
+        "query": "用户反馈出的题不贴简历怎么排查",
+        "gold_id": "bank-agent-016",
+        "query_type": "paraphrase",
+        "rank": 1,
+        "hit_ids": [
+          "bank-agent-016",
+          "bank-be-003",
+          "bank-be-002",
+          "bank-be-006",
+          "bank-proj-001",
+          "bank-agent-018",
+          "bank-agent-017",
+          "bank-fs-003",
+          "bank-agent-008",
+          "bank-be-007",
+          "bank-agent-011",
+          "bank-agent-003",
+          "bank-agent-009",
+          "bank-be-008",
+          "bank-fs-004",
+          "bank-be-004",
+          "bank-be-012",
+          "bank-proj-004",
+          "bank-fs-001",
+          "bank-fs-007"
+        ]
+      }
+    ]
+  }
+}

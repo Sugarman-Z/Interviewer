@@ -1,0 +1,43 @@
+# 运行时数据（会话记录/错题本/checkpoint/向量库）——只忽略仓库根的 data/；
+# scripts/data/ 是评测沉淀（金标/冒烟/eval 结果），必须入库。
+# 例外：data/glossary.yaml 是术语词表源文件（lint/promote/金标三方消费），
+# 必须入库——目录被整目录排除时子文件无法再破例，所以用 /data/* 而不是 /data/
+/data/*
+!/data/glossary.yaml
+
+# 密钥
+.env
+
+# 简历材料（隐私，不入库）
+/resume/
+
+# 个人学习笔记（私人学习材料不入库；项目文档在 docs/ 其余路径）
+/docs/notes/
+
+# 个人工作文档与求职材料（本地留痕，不入库）
+PROJECT_MEMORY.md
+GLOSSARY.md
+/tasks/
+/docs/TODO.md
+/docs/CAPABILITY-MAP.md
+/docs/interview.md
+/docs/interview-qa.md
+/docs/research/2026-11-20-resume-length-survey.md
+/static/test_introduction.txt
+/.vscode/
+
+# 设计文档与调研（本地留档；测试对拍依赖的 contract 契约样本除外）
+/docs/*
+!/docs/contract/
+
+# next dev 自动生成的 agent 说明文件
+webapp/AGENTS.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/

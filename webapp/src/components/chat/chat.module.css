@@ -1,0 +1,681 @@
+/* 面试聊天 —— docs/design/direction-b.html「面试聊天」屏移植（恢复 + 消息流；
+   输入区为 T5 占位）。颜色走全局 tokens.css；.card/.btn 在 globals.css。 */
+
+/* 高度不写死：main 是 flex 列（globals.css），footer 在本路由隐藏，
+   chatpage 吃满剩余视口，顶栏实际多高（含边框/换行）都自动适配 */
+.chatpage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-width: 830px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 顶栏信息条（岗位 + 进度） */
+.chatTop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 18px;
+  margin-top: 14px;
+  border-radius: var(--r-m);
+  flex-wrap: wrap;
+}
+
+.postag {
+  background: var(--orange-soft);
+  color: var(--orange-ink); /* orange-deep 压 orange-soft 仅 3.86:1 */
+  font-weight: 600;
+  font-size: 12px;
+  padding: 5px 13px;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+.prog {
+  flex: 1;
+  min-width: 150px;
+}
+
+.progTxt {
+  font-size: 12px;
+  color: var(--ink-2);
+  margin-bottom: 5px;
+}
+
+.progTxt b {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* 每题计时器（等宽数字，换题归零） */
+.timer {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+  background: var(--surface-muted);
+  border-radius: 99px;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
+
+.bar {
+  height: 6px;
+  background: var(--surface-muted);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  /* 渐变亮端为橘的浅色延伸，不另立 token */
+  background: linear-gradient(90deg, #ec8a3c, var(--orange));
+  border-radius: 99px;
+  transition: width 0.6s ease;
+}
+
+/* 消息流 */
+.tlWrap {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.tl {
+  flex: 1;
+  overflow-y: auto;
+  padding: 22px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scroll-behavior: smooth;
+}
+
+/* 播报容器（role=log）：只装已落定的行。与滚动容器 .tl 拆开（T8 人工走查
+   追查二）：流式行放同一滚动流内、log 外的尾位——打字直接发生在最终展示
+   位，播完换装零位移；逐字突变仍在播报容器之外（T6 评审拍板语义不变） */
+.tlLog {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* footer 槽位（等待/流式气泡）：log 的兄弟节点、同一滚动流的尾位——
+   与正式消息行同距（.tl 的 16px gap）、同缩进（吃 .tl 的 6px 内边距），
+   等待/打字即出现在下一行消息将落位的地方 */
+.tlFooter {
+  flex: none;
+}
+
+.tl::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tl::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 8px;
+}
+
+.sysline {
+  align-self: center;
+  font-size: 12px;
+  color: var(--ink-2); /* ink-3 压次级底 ≈2.5:1，「已跳过」等系统条是实质信息（T8 收口） */
+  background: var(--surface-muted);
+  padding: 4px 14px;
+  border-radius: 99px;
+  text-align: center;
+}
+
+.msg {
+  display: flex;
+  gap: 12px;
+  max-width: 82%;
+  animation: pop 0.32s ease;
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 播完窗口收拍换装：正式行与流式行同位同文，挂载时跳过 pop（同位同文再
+   播一次淡入会闪）。class 由 MessageTurn 在挂载拍锁定（摘除不补播） */
+.noPop {
+  animation: none;
+}
+
+.msg.ai {
+  align-self: flex-start;
+}
+
+.msg.me {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.ava {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--orange-soft);
+  border: 1px solid var(--orange-line);
+  color: var(--orange-deep);
+  display: grid;
+  place-items: center;
+  flex: none;
+  margin-top: 2px;
+}
+
+/* 候选人头像（.msg.me 的右侧圆）：中性底 + 「我」字标，与教练的暖橙区分
+   （T8 人工走查追查一）。对比度同 .timer 先例：ink-2 压 surface-muted */
+.avaMe {
+  background: var(--surface-muted);
+  border-color: var(--line-2);
+  color: var(--ink-2);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.bub {
+  padding: 12px 16px;
+  border-radius: 4px 18px 18px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  box-shadow: var(--sh-s);
+}
+
+.msg.me .bub {
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 18px 4px 18px 18px;
+  box-shadow: 0 8px 20px rgba(228, 113, 31, 0.25);
+}
+
+/* 跳过：弱化的右侧气泡（虚线、去底色） */
+.msg.me .skipBub {
+  background: transparent;
+  border: 1.5px dashed var(--line);
+  color: var(--ink-2); /* ink-3 压页底 ≈2.7:1（T8 收口） */
+  box-shadow: none;
+}
+
+.bub p {
+  white-space: pre-wrap;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+/* 题面头部：chip 与徽标 */
+.qhead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.qtag {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--orange-ink); /* orange-deep 压 orange-soft 仅 3.86:1 */
+  background: var(--orange-soft);
+  padding: 2px 9px;
+  border-radius: 99px;
+  letter-spacing: 0.5px;
+}
+
+.qtag.alt {
+  color: var(--green-deep);
+  background: var(--green-soft);
+}
+
+.fbadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--orange);
+  padding: 2.5px 9px;
+  border-radius: 99px;
+  letter-spacing: 1px;
+}
+
+/* 追问：缩进 + 连线 + 暖卡底 */
+.msg.follow {
+  margin-left: 48px;
+  position: relative;
+}
+
+.msg.follow::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 10px;
+  width: 12px;
+  height: 2px;
+  background: var(--orange-line);
+  border-radius: 2px;
+}
+
+.msg.follow::after {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: -17px;
+  width: 2px;
+  height: 29px;
+  background: var(--orange-line);
+  border-radius: 2px;
+}
+
+.msg.follow .ava {
+  width: 30px;
+  height: 30px;
+}
+
+.msg.follow .bub {
+  background: var(--surface-warm);
+  border-color: var(--orange-line);
+}
+
+/* 恢复/等待中的呼吸点气泡 */
+.msg.ai.loading .bub {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 200px;
+}
+
+.ldots {
+  display: flex;
+  gap: 6px;
+  padding: 3px 0;
+}
+
+.ldots i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+  animation: breathe 1.2s infinite ease-in-out;
+}
+
+.ldots i:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.ldots i:nth-child(3) {
+  animation-delay: 0.36s;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(0.75);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+.ltext {
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+/* 流式气泡（方案 A 打字机）
+   正文 p 不另设字号/行高：换装（播完→正式行）瞬间文字度量必须与 .bub p
+   逐像素一致（14.5px/1.75 全部继承自 body）——另设字号会在收拍瞬间文字回流跳变 */
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: var(--orange);
+  animation: blink 0.9s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* 底部：输入区 / 收场引导 / 错误 */
+.composer {
+  margin: 14px 0 18px;
+  padding: 14px 16px 10px;
+}
+
+/* 可见锁定态（等待期间）：整卡降透明度、指针收敛 */
+.composer.lock {
+  opacity: 0.72;
+}
+
+.composer.lock .ta {
+  opacity: 0.55;
+}
+
+.cbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.ta {
+  width: 100%;
+  border: none;
+  resize: none;
+  background: transparent;
+  min-height: 54px;
+  max-height: 140px;
+  outline: none;
+  line-height: 1.7;
+  font-size: 14.5px;
+}
+
+.ta::placeholder {
+  color: var(--ink-2); /* ink-3 压白卡 2.94:1（T8 收口；placeholder 是空态唯一可见文案） */
+}
+
+.ta:disabled {
+  cursor: not-allowed;
+}
+
+.crow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* 麦克风禁用占位 + tooltip（语音接缝） */
+.mic {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--surface-muted);
+  color: var(--ink-3);
+  display: grid;
+  place-items: center;
+  cursor: not-allowed;
+  border: 1px solid var(--line-2);
+}
+
+.micTip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(2px);
+  background: var(--ink);
+  color: #fbf7ef;
+  font-size: 12px;
+  padding: 5px 11px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.18s;
+}
+
+.mic:hover .micTip,
+.mic:focus-visible .micTip {
+  opacity: 1;
+  transform: translateX(-50%);
+}
+
+.send {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 9px 24px;
+  border-radius: 99px;
+  box-shadow: 0 8px 18px rgba(228, 113, 31, 0.28);
+  transition: 0.18s;
+}
+
+.send:hover:not(:disabled) {
+  background: var(--orange-deep);
+}
+
+.send:disabled {
+  background: var(--surface-muted);
+  color: var(--ink-3);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.ctools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding: 6px 6px 0;
+}
+
+.skip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--ink-2); /* 可交互按钮文字，ink-3 压白卡 2.94:1 不过 AA（T8 收口） */
+  padding: 6px 9px;
+  border-radius: 8px;
+  transition: 0.15s;
+}
+
+.skip:hover:not(:disabled) {
+  color: var(--rust-ink);
+  background: var(--rust-soft);
+}
+
+.skip:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.chint {
+  font-size: 11px;
+  color: var(--ink-2); /* ink-3 压白卡 2.94:1；快捷键提示是操作说明（T8 收口） */
+}
+
+/* 「回到底部」浮钮（上翻暂停自动滚动时出现） */
+.jumpBtn {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--orange-deep);
+  background: var(--surface);
+  border: 1px solid var(--orange-line);
+  box-shadow: var(--sh-s);
+  border-radius: 99px;
+  padding: 7px 14px;
+  transition: 0.15s;
+}
+
+.jumpBtn:hover {
+  background: var(--orange-soft);
+}
+
+/* 发送失败横幅（等待态第 4 级的可重试出口） */
+.errBanner {
+  margin: 0 0 10px;
+  padding: 12px 16px;
+  border-radius: var(--r-m);
+  background: var(--rust-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.errBannerMain {
+  color: var(--rust-ink);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.errBannerSub {
+  color: var(--ink-2);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.errBanner :global(.btn) {
+  margin-top: 4px;
+}
+
+.doneBar {
+  margin: 14px 0 18px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.doneBar > p {
+  flex: 1;
+  min-width: 200px;
+  font-size: 13.5px;
+  color: var(--ink-2);
+}
+
+.doneBtns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.errCard {
+  margin: 40px auto;
+  max-width: 440px;
+  padding: 26px 28px;
+  text-align: center;
+}
+
+.errCard > p {
+  color: var(--rust-ink);
+  font-size: 13.5px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.errBtns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 响应式与动效克制 */
+
+/* 视觉隐藏（sr-only h1 等读屏专用元素） */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 860px) {
+  .msg {
+    max-width: 88%;
+  }
+}
+
+@media (max-width: 719px) {
+  .chatTop {
+    gap: 10px;
+  }
+
+ /* 岗位名长时允许折行，375px 不横向溢出；break-word 兜住不可断的长英文串 */
+  .postag {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .msg {
+    max-width: 92%;
+  }
+
+  .msg.follow {
+    margin-left: 30px;
+  }
+
+  .msg.follow::before {
+    left: -10px;
+    width: 8px;
+  }
+
+  .msg.follow::after {
+    left: -10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .msg {
+    animation: none;
+  }
+
+  .ldots i {
+    animation: none;
+    opacity: 0.6;
+  }
+
+  .cursor {
+    animation: none;
+  }
+
+  .bar i,
+  .tl {
+    transition: none;
+    scroll-behavior: auto;
+  }
+
+ /* tooltip 浮出带 2px 位移过渡，属位移动效 */
+  .micTip {
+    transition: none;
+  }
+}

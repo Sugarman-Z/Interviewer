@@ -1,0 +1,5834 @@
+{
+  "generated_at": "2026-11-17",
+  "bank_size": 200,
+  "buckets": {
+    "verbatim": 200,
+    "keyword": 200,
+    "paraphrase": 18,
+    "offtopic": 6,
+    "synonym": 362
+  },
+  "items": [
+    {
+      "query": "文档切块策略",
+      "gold_id": "bank-agent-021",
+      "acceptable_ids": [
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 文档切块策略",
+      "gold_id": "bank-agent-021",
+      "acceptable_ids": [
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Embedding 模型选型",
+      "gold_id": "bank-agent-022",
+      "acceptable_ids": [
+        "bank-agent-023"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 向量检索 模型选型",
+      "gold_id": "bank-agent-022",
+      "acceptable_ids": [
+        "bank-agent-023"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Top-k 与相似度阈值",
+      "gold_id": "bank-agent-023",
+      "acceptable_ids": [
+        "bank-agent-022"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 向量检索",
+      "gold_id": "bank-agent-023",
+      "acceptable_ids": [
+        "bank-agent-022"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Rerank 重排",
+      "gold_id": "bank-agent-024",
+      "acceptable_ids": [
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 重排",
+      "gold_id": "bank-agent-024",
+      "acceptable_ids": [
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "多路召回",
+      "gold_id": "bank-agent-025",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 多路召回",
+      "gold_id": "bank-agent-025",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "元数据过滤检索",
+      "gold_id": "bank-agent-026",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 元数据过滤检索",
+      "gold_id": "bank-agent-026",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "增量索引更新",
+      "gold_id": "bank-agent-027",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 增量索引更新",
+      "gold_id": "bank-agent-027",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "语义缓存",
+      "gold_id": "bank-agent-028",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 缓存",
+      "gold_id": "bank-agent-028",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "答案引用溯源",
+      "gold_id": "bank-agent-029",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 答案引用溯源",
+      "gold_id": "bank-agent-029",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "RAG 失败模式分析",
+      "gold_id": "bank-agent-030",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-008",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 评测 失败模式分析",
+      "gold_id": "bank-agent-030",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-008",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "父子块索引",
+      "gold_id": "bank-agent-031",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 父子块索引",
+      "gold_id": "bank-agent-031",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "表格与结构化数据",
+      "gold_id": "bank-agent-032",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-034"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 表格与结构化数据",
+      "gold_id": "bank-agent-032",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-034"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "多文档答案聚合",
+      "gold_id": "bank-agent-033",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 多文档答案聚合",
+      "gold_id": "bank-agent-033",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "知识库冷启动",
+      "gold_id": "bank-agent-034",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 知识库",
+      "gold_id": "bank-agent-034",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "RAG 与微调选型",
+      "gold_id": "bank-agent-035",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 模型选型",
+      "gold_id": "bank-agent-035",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "子图与状态作用域",
+      "gold_id": "bank-agent-051",
+      "acceptable_ids": [
+        "bank-agent-052",
+        "bank-agent-001",
+        "bank-agent-002",
+        "bank-agent-003"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "langgraph 子图与状态作用域",
+      "gold_id": "bank-agent-051",
+      "acceptable_ids": [
+        "bank-agent-052",
+        "bank-agent-001",
+        "bank-agent-002",
+        "bank-agent-003"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Checkpoint 持久化",
+      "gold_id": "bank-agent-052",
+      "acceptable_ids": [
+        "bank-agent-051",
+        "bank-agent-001",
+        "bank-agent-002",
+        "bank-agent-003"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "Checkpoint",
+      "gold_id": "bank-agent-052",
+      "acceptable_ids": [
+        "bank-agent-051",
+        "bank-agent-001",
+        "bank-agent-002",
+        "bank-agent-003"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "并发与异步调度",
+      "gold_id": "bank-agent-053",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 并发",
+      "gold_id": "bank-agent-053",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Agent 错误分类处理",
+      "gold_id": "bank-agent-054",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 高可用 错误分类处理",
+      "gold_id": "bank-agent-054",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "沙箱与代码执行",
+      "gold_id": "bank-agent-055",
+      "acceptable_ids": [
+        "bank-agent-057"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "安全 沙箱与代码执行",
+      "gold_id": "bank-agent-055",
+      "acceptable_ids": [
+        "bank-agent-057"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "人工审批关卡",
+      "gold_id": "bank-agent-056",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 人工审批关卡",
+      "gold_id": "bank-agent-056",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "工具权限最小化",
+      "gold_id": "bank-agent-057",
+      "acceptable_ids": [
+        "bank-agent-055"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "安全 工具权限最小化",
+      "gold_id": "bank-agent-057",
+      "acceptable_ids": [
+        "bank-agent-055"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "规划与反思模式",
+      "gold_id": "bank-agent-058",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 规划与反思模式",
+      "gold_id": "bank-agent-058",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "对话历史摘要",
+      "gold_id": "bank-agent-059",
+      "acceptable_ids": [
+        "bank-agent-018"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 对话历史摘要",
+      "gold_id": "bank-agent-059",
+      "acceptable_ids": [
+        "bank-agent-018"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "批处理与吞吐",
+      "gold_id": "bank-agent-060",
+      "acceptable_ids": [
+        "bank-agent-042"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 批处理与吞吐",
+      "gold_id": "bank-agent-060",
+      "acceptable_ids": [
+        "bank-agent-042"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "输出护栏设计",
+      "gold_id": "bank-agent-061",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "结构化输出 输出护栏设计",
+      "gold_id": "bank-agent-061",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "本地模型部署",
+      "gold_id": "bank-agent-062",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "部署 模型选型",
+      "gold_id": "bank-agent-062",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "多模态输入处理",
+      "gold_id": "bank-agent-063",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 多模态输入处理",
+      "gold_id": "bank-agent-063",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Agent 安全审计",
+      "gold_id": "bank-agent-064",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "安全",
+      "gold_id": "bank-agent-064",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "框架选型对比",
+      "gold_id": "bank-agent-065",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 框架选型对比",
+      "gold_id": "bank-agent-065",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Agent 状态管理",
+      "gold_id": "bank-agent-001",
+      "acceptable_ids": [
+        "bank-agent-051",
+        "bank-agent-052",
+        "bank-agent-002",
+        "bank-agent-003"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "langgraph agent",
+      "gold_id": "bank-agent-001",
+      "acceptable_ids": [
+        "bank-agent-051",
+        "bank-agent-052",
+        "bank-agent-002",
+        "bank-agent-003"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "图路由与循环控制",
+      "gold_id": "bank-agent-002",
+      "acceptable_ids": [
+        "bank-agent-051",
+        "bank-agent-052",
+        "bank-agent-001",
+        "bank-agent-003"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "langgraph 图路由与循环控制",
+      "gold_id": "bank-agent-002",
+      "acceptable_ids": [
+        "bank-agent-051",
+        "bank-agent-052",
+        "bank-agent-001",
+        "bank-agent-003"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "人机中断恢复",
+      "gold_id": "bank-agent-003",
+      "acceptable_ids": [
+        "bank-agent-051",
+        "bank-agent-052",
+        "bank-agent-001",
+        "bank-agent-002"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "langgraph 人机中断恢复",
+      "gold_id": "bank-agent-003",
+      "acceptable_ids": [
+        "bank-agent-051",
+        "bank-agent-052",
+        "bank-agent-001",
+        "bank-agent-002"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "工具调用循环",
+      "gold_id": "bank-agent-004",
+      "acceptable_ids": [
+        "bank-agent-005",
+        "bank-agent-020"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "工具调用 agent",
+      "gold_id": "bank-agent-004",
+      "acceptable_ids": [
+        "bank-agent-005",
+        "bank-agent-020"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "工具接口设计",
+      "gold_id": "bank-agent-005",
+      "acceptable_ids": [
+        "bank-agent-004",
+        "bank-agent-020"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "工具调用 工具接口设计",
+      "gold_id": "bank-agent-005",
+      "acceptable_ids": [
+        "bank-agent-004",
+        "bank-agent-020"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "BM25 与中文分词",
+      "gold_id": "bank-agent-006",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 与中文分词",
+      "gold_id": "bank-agent-006",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "混合检索与 RRF",
+      "gold_id": "bank-agent-007",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag RRF",
+      "gold_id": "bank-agent-007",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "RAG 检索评测",
+      "gold_id": "bank-agent-008",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 评测",
+      "gold_id": "bank-agent-008",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "RAG 幻觉防御",
+      "gold_id": "bank-agent-009",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 安全",
+      "gold_id": "bank-agent-009",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "结构化输出可靠性",
+      "gold_id": "bank-agent-010",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "结构化输出",
+      "gold_id": "bank-agent-010",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "提示词契约管理",
+      "gold_id": "bank-agent-011",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "提示词",
+      "gold_id": "bank-agent-011",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Agent 记忆设计",
+      "gold_id": "bank-agent-012",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "记忆 agent",
+      "gold_id": "bank-agent-012",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "多智能体分工",
+      "gold_id": "bank-agent-013",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "多智能体 agent",
+      "gold_id": "bank-agent-013",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "LLM-as-Judge 评审",
+      "gold_id": "bank-agent-014",
+      "acceptable_ids": [
+        "bank-agent-016"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "评测 agent 评审",
+      "gold_id": "bank-agent-014",
+      "acceptable_ids": [
+        "bank-agent-016"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "提示注入防御",
+      "gold_id": "bank-agent-015",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "安全 提示注入防御",
+      "gold_id": "bank-agent-015",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "检索留痕归因",
+      "gold_id": "bank-agent-016",
+      "acceptable_ids": [
+        "bank-agent-014"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 检索留痕归因",
+      "gold_id": "bank-agent-016",
+      "acceptable_ids": [
+        "bank-agent-014"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "降级梯设计",
+      "gold_id": "bank-agent-017",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 降级梯设计",
+      "gold_id": "bank-agent-017",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "长上下文管理",
+      "gold_id": "bank-agent-018",
+      "acceptable_ids": [
+        "bank-agent-059"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 长上下文管理",
+      "gold_id": "bank-agent-018",
+      "acceptable_ids": [
+        "bank-agent-059"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "流式输出设计",
+      "gold_id": "bank-agent-019",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 流式输出设计",
+      "gold_id": "bank-agent-019",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "MCP 工具生态",
+      "gold_id": "bank-agent-020",
+      "acceptable_ids": [
+        "bank-agent-004",
+        "bank-agent-005"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "工具调用 工具生态",
+      "gold_id": "bank-agent-020",
+      "acceptable_ids": [
+        "bank-agent-004",
+        "bank-agent-005"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "答案质量评测集",
+      "gold_id": "bank-agent-036",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-047"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "评测 答案质量评测集",
+      "gold_id": "bank-agent-036",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-047"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "评分器校准",
+      "gold_id": "bank-agent-037",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "评测 评分器校准",
+      "gold_id": "bank-agent-037",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "回归评测门禁",
+      "gold_id": "bank-agent-038",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "评测 工程化",
+      "gold_id": "bank-agent-038",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "在线反馈闭环",
+      "gold_id": "bank-agent-039",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "评测 在线反馈闭环",
+      "gold_id": "bank-agent-039",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "合成测试数据",
+      "gold_id": "bank-agent-040",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "评测 合成测试数据",
+      "gold_id": "bank-agent-040",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Agent 可观测性",
+      "gold_id": "bank-agent-041",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 监控 可观测性",
+      "gold_id": "bank-agent-041",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Token 成本核算",
+      "gold_id": "bank-agent-042",
+      "acceptable_ids": [
+        "bank-agent-060"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 成本",
+      "gold_id": "bank-agent-042",
+      "acceptable_ids": [
+        "bank-agent-060"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "端到端延迟拆解",
+      "gold_id": "bank-agent-043",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "agent 端到端延迟拆解",
+      "gold_id": "bank-agent-043",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "模型档位选型",
+      "gold_id": "bank-agent-044",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "模型选型 成本",
+      "gold_id": "bank-agent-044",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "采样参数调优",
+      "gold_id": "bank-agent-045",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "提示词 采样参数调优",
+      "gold_id": "bank-agent-045",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Prompt 缓存策略",
+      "gold_id": "bank-agent-046",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "提示词 缓存策略",
+      "gold_id": "bank-agent-046",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "幻觉事后检测",
+      "gold_id": "bank-agent-047",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-036"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "rag 幻觉事后检测",
+      "gold_id": "bank-agent-047",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-036"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "评测指标设计",
+      "gold_id": "bank-agent-048",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "评测 评测指标设计",
+      "gold_id": "bank-agent-048",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "灰度与 A/B 测试",
+      "gold_id": "bank-agent-049",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "评测 部署 测试",
+      "gold_id": "bank-agent-049",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "评测数据泄漏防范",
+      "gold_id": "bank-agent-050",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "评测 安全",
+      "gold_id": "bank-agent-050",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Kafka 高可用",
+      "gold_id": "bank-kafka-001",
+      "acceptable_ids": [
+        "bank-be-012"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "kafka 消息队列 高可用",
+      "gold_id": "bank-kafka-001",
+      "acceptable_ids": [
+        "bank-be-012"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "事件循环机制",
+      "gold_id": "bank-fs-011",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "javascript 事件循环机制",
+      "gold_id": "bank-fs-011",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "闭包与应用",
+      "gold_id": "bank-fs-012",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "javascript 闭包与应用",
+      "gold_id": "bank-fs-012",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "原型与继承",
+      "gold_id": "bank-fs-013",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "javascript 原型与继承",
+      "gold_id": "bank-fs-013",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "this 绑定规则",
+      "gold_id": "bank-fs-014",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "javascript",
+      "gold_id": "bank-fs-014",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Promise 状态机",
+      "gold_id": "bank-fs-015",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "javascript 状态机",
+      "gold_id": "bank-fs-015",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "ES 新特性日常",
+      "gold_id": "bank-fs-016",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "javascript 新特性日常",
+      "gold_id": "bank-fs-016",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "深浅拷贝",
+      "gold_id": "bank-fs-017",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "javascript 深浅拷贝",
+      "gold_id": "bank-fs-017",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "防抖与节流",
+      "gold_id": "bank-fs-018",
+      "acceptable_ids": [
+        "bank-fs-036"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "javascript 防抖与节流",
+      "gold_id": "bank-fs-018",
+      "acceptable_ids": [
+        "bank-fs-036"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "登录态与鉴权",
+      "gold_id": "bank-fs-001",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "鉴权 前端",
+      "gold_id": "bank-fs-001",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "前端状态管理",
+      "gold_id": "bank-fs-002",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "状态管理 前端",
+      "gold_id": "bank-fs-002",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "首屏性能优化",
+      "gold_id": "bank-fs-003",
+      "acceptable_ids": [
+        "bank-fs-033",
+        "bank-fs-034"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "性能 前端",
+      "gold_id": "bank-fs-003",
+      "acceptable_ids": [
+        "bank-fs-033",
+        "bank-fs-034"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "重排与重绘",
+      "gold_id": "bank-fs-004",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "渲染 性能",
+      "gold_id": "bank-fs-004",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "前后端接口契约",
+      "gold_id": "bank-fs-005",
+      "acceptable_ids": [
+        "bank-fs-010"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "工程化 前后端接口契约",
+      "gold_id": "bank-fs-005",
+      "acceptable_ids": [
+        "bank-fs-010"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "CI/CD 发布流程",
+      "gold_id": "bank-fs-006",
+      "acceptable_ids": [
+        "bank-fs-007"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "部署 工程化",
+      "gold_id": "bank-fs-006",
+      "acceptable_ids": [
+        "bank-fs-007"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "多环境配置管理",
+      "gold_id": "bank-fs-007",
+      "acceptable_ids": [
+        "bank-fs-006"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "工程化 多环境配置管理",
+      "gold_id": "bank-fs-007",
+      "acceptable_ids": [
+        "bank-fs-006"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "测试金字塔",
+      "gold_id": "bank-fs-008",
+      "acceptable_ids": [
+        "bank-fs-009"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "测试 测试金字塔",
+      "gold_id": "bank-fs-008",
+      "acceptable_ids": [
+        "bank-fs-009"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "E2E 测试稳定性",
+      "gold_id": "bank-fs-009",
+      "acceptable_ids": [
+        "bank-fs-008"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "测试 工程化",
+      "gold_id": "bank-fs-009",
+      "acceptable_ids": [
+        "bank-fs-008"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "微前端拆分",
+      "gold_id": "bank-fs-010",
+      "acceptable_ids": [
+        "bank-fs-005"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "工程化 前端",
+      "gold_id": "bank-fs-010",
+      "acceptable_ids": [
+        "bank-fs-005"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "构建工具原理",
+      "gold_id": "bank-fs-039",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "工程化 构建工具原理",
+      "gold_id": "bank-fs-039",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "包体分析与 Tree Shaking",
+      "gold_id": "bank-fs-040",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "工程化 性能",
+      "gold_id": "bank-fs-040",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "TypeScript 类型治理",
+      "gold_id": "bank-fs-041",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "typescript 工程化",
+      "gold_id": "bank-fs-041",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Git 协作流",
+      "gold_id": "bank-fs-042",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "工程化 协作流",
+      "gold_id": "bank-fs-042",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "代码评审实践",
+      "gold_id": "bank-fs-043",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "工程化 代码质量",
+      "gold_id": "bank-fs-043",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "容器化基础",
+      "gold_id": "bank-fs-044",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "部署 运维",
+      "gold_id": "bank-fs-044",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Monorepo 治理",
+      "gold_id": "bank-fs-045",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "工程化",
+      "gold_id": "bank-fs-045",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "懒加载与代码分割",
+      "gold_id": "bank-fs-033",
+      "acceptable_ids": [
+        "bank-fs-003",
+        "bank-fs-034"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "性能 懒加载与代码分割",
+      "gold_id": "bank-fs-033",
+      "acceptable_ids": [
+        "bank-fs-003",
+        "bank-fs-034"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "长列表虚拟化",
+      "gold_id": "bank-fs-034",
+      "acceptable_ids": [
+        "bank-fs-003",
+        "bank-fs-033"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "性能 长列表虚拟化",
+      "gold_id": "bank-fs-034",
+      "acceptable_ids": [
+        "bank-fs-003",
+        "bank-fs-033"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "图片与静态资源",
+      "gold_id": "bank-fs-035",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "性能 图片与静态资源",
+      "gold_id": "bank-fs-035",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "前端内存泄漏",
+      "gold_id": "bank-fs-036",
+      "acceptable_ids": [
+        "bank-fs-018"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "性能 前端内存泄漏",
+      "gold_id": "bank-fs-036",
+      "acceptable_ids": [
+        "bank-fs-018"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Web 性能指标",
+      "gold_id": "bank-fs-037",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "性能 监控",
+      "gold_id": "bank-fs-037",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "前端错误监控",
+      "gold_id": "bank-fs-038",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "监控 前端",
+      "gold_id": "bank-fs-038",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "盒模型",
+      "gold_id": "bank-fs-019",
+      "acceptable_ids": [
+        "bank-fs-022"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "css 盒模型",
+      "gold_id": "bank-fs-019",
+      "acceptable_ids": [
+        "bank-fs-022"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Flex 与 Grid 选型",
+      "gold_id": "bank-fs-020",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "css 选型",
+      "gold_id": "bank-fs-020",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "BFC 布局",
+      "gold_id": "bank-fs-021",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "css",
+      "gold_id": "bank-fs-021",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "响应式布局",
+      "gold_id": "bank-fs-022",
+      "acceptable_ids": [
+        "bank-fs-019"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "css 响应式布局",
+      "gold_id": "bank-fs-022",
+      "acceptable_ids": [
+        "bank-fs-019"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "浏览器缓存策略",
+      "gold_id": "bank-fs-023",
+      "acceptable_ids": [
+        "bank-fs-024"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "前端 浏览器缓存策略",
+      "gold_id": "bank-fs-023",
+      "acceptable_ids": [
+        "bank-fs-024"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "跨域解决方案",
+      "gold_id": "bank-fs-024",
+      "acceptable_ids": [
+        "bank-fs-023"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "前端 跨域解决方案",
+      "gold_id": "bank-fs-024",
+      "acceptable_ids": [
+        "bank-fs-023"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "渲染管线全流程",
+      "gold_id": "bank-fs-025",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "前端 渲染",
+      "gold_id": "bank-fs-025",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "框架响应式原理",
+      "gold_id": "bank-fs-026",
+      "acceptable_ids": [
+        "bank-fs-029",
+        "bank-fs-032"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "框架 前端",
+      "gold_id": "bank-fs-026",
+      "acceptable_ids": [
+        "bank-fs-029",
+        "bank-fs-032"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "虚拟 DOM 与 Diff",
+      "gold_id": "bank-fs-027",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "框架 渲染",
+      "gold_id": "bank-fs-027",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Hooks 使用陷阱",
+      "gold_id": "bank-fs-028",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "框架 javascript",
+      "gold_id": "bank-fs-028",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "组件通信方式",
+      "gold_id": "bank-fs-029",
+      "acceptable_ids": [
+        "bank-fs-026",
+        "bank-fs-032"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "框架 组件通信方式",
+      "gold_id": "bank-fs-029",
+      "acceptable_ids": [
+        "bank-fs-026",
+        "bank-fs-032"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "组件设计原则",
+      "gold_id": "bank-fs-030",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "框架 组件设计原则",
+      "gold_id": "bank-fs-030",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "SSR 与水合",
+      "gold_id": "bank-fs-031",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "框架 与水合",
+      "gold_id": "bank-fs-031",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "表单状态与校验",
+      "gold_id": "bank-fs-032",
+      "acceptable_ids": [
+        "bank-fs-026",
+        "bank-fs-029"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "框架 表单状态与校验",
+      "gold_id": "bank-fs-032",
+      "acceptable_ids": [
+        "bank-fs-026",
+        "bank-fs-029"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "分布式事务",
+      "gold_id": "bank-be-038",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "分布式 事务",
+      "gold_id": "bank-be-038",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "CAP 与最终一致",
+      "gold_id": "bank-be-039",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "分布式 与最终一致",
+      "gold_id": "bank-be-039",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "一致性哈希",
+      "gold_id": "bank-be-040",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "分布式 一致性哈希",
+      "gold_id": "bank-be-040",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "服务注册与发现",
+      "gold_id": "bank-be-041",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "微服务 服务注册与发现",
+      "gold_id": "bank-be-041",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "熔断与降级",
+      "gold_id": "bank-be-042",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "微服务 熔断与降级",
+      "gold_id": "bank-be-042",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "链路追踪",
+      "gold_id": "bank-be-043",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "微服务 监控",
+      "gold_id": "bank-be-043",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "配置中心",
+      "gold_id": "bank-be-044",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "微服务 部署",
+      "gold_id": "bank-be-044",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "分布式 ID 生成",
+      "gold_id": "bank-be-045",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "分布式",
+      "gold_id": "bank-be-045",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "秒杀系统设计",
+      "gold_id": "bank-be-046",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "系统设计 高可用",
+      "gold_id": "bank-be-046",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "延迟任务实现",
+      "gold_id": "bank-be-047",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "系统设计 延迟任务实现",
+      "gold_id": "bank-be-047",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "SQL 注入防御",
+      "gold_id": "bank-be-048",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "安全 注入防御",
+      "gold_id": "bank-be-048",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "XSS 与 CSRF",
+      "gold_id": "bank-be-049",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "安全 CSRF",
+      "gold_id": "bank-be-049",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "JWT 与 OAuth2",
+      "gold_id": "bank-be-050",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "安全 OAuth2",
+      "gold_id": "bank-be-050",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "线上排查工具箱",
+      "gold_id": "bank-be-051",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "运维 linux",
+      "gold_id": "bank-be-051",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "监控与告警治理",
+      "gold_id": "bank-be-052",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "运维 监控",
+      "gold_id": "bank-be-052",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "幂等性设计",
+      "gold_id": "bank-be-008",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "幂等 api设计",
+      "gold_id": "bank-be-008",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "超时与重试",
+      "gold_id": "bank-be-009",
+      "acceptable_ids": [
+        "bank-be-010"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "高可用 超时与重试",
+      "gold_id": "bank-be-009",
+      "acceptable_ids": [
+        "bank-be-010"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "接口限流",
+      "gold_id": "bank-be-010",
+      "acceptable_ids": [
+        "bank-be-009"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "api设计 接口限流",
+      "gold_id": "bank-be-010",
+      "acceptable_ids": [
+        "bank-be-009"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "API 版本演进",
+      "gold_id": "bank-be-011",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "api设计",
+      "gold_id": "bank-be-011",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "消息积压处理",
+      "gold_id": "bank-be-012",
+      "acceptable_ids": [
+        "bank-kafka-001"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "kafka 消息积压处理",
+      "gold_id": "bank-be-012",
+      "acceptable_ids": [
+        "bank-kafka-001"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "事务隔离级别",
+      "gold_id": "bank-be-001",
+      "acceptable_ids": [
+        "bank-be-007",
+        "bank-be-028",
+        "bank-be-030"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "数据库 事务",
+      "gold_id": "bank-be-001",
+      "acceptable_ids": [
+        "bank-be-007",
+        "bank-be-028",
+        "bank-be-030"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "联合索引设计",
+      "gold_id": "bank-be-002",
+      "acceptable_ids": [
+        "bank-be-003",
+        "bank-be-029"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "数据库 联合索引设计",
+      "gold_id": "bank-be-002",
+      "acceptable_ids": [
+        "bank-be-003",
+        "bank-be-029"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "慢 SQL 排查",
+      "gold_id": "bank-be-003",
+      "acceptable_ids": [
+        "bank-be-002",
+        "bank-be-029"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "SQL",
+      "gold_id": "bank-be-003",
+      "acceptable_ids": [
+        "bank-be-002",
+        "bank-be-029"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "悲观锁与乐观锁",
+      "gold_id": "bank-be-004",
+      "acceptable_ids": [
+        "bank-be-006"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "并发 悲观锁与乐观锁",
+      "gold_id": "bank-be-004",
+      "acceptable_ids": [
+        "bank-be-006"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "分布式锁",
+      "gold_id": "bank-be-005",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "redis 分布式锁",
+      "gold_id": "bank-be-005",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "数据库连接池",
+      "gold_id": "bank-be-006",
+      "acceptable_ids": [
+        "bank-be-004"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "数据库 并发",
+      "gold_id": "bank-be-006",
+      "acceptable_ids": [
+        "bank-be-004"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "分库分表",
+      "gold_id": "bank-be-007",
+      "acceptable_ids": [
+        "bank-be-001",
+        "bank-be-028",
+        "bank-be-030"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "数据库 分库分表",
+      "gold_id": "bank-be-007",
+      "acceptable_ids": [
+        "bank-be-001",
+        "bank-be-028",
+        "bank-be-030"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "MVCC 实现",
+      "gold_id": "bank-be-028",
+      "acceptable_ids": [
+        "bank-be-001",
+        "bank-be-007",
+        "bank-be-030"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "MVCC",
+      "gold_id": "bank-be-028",
+      "acceptable_ids": [
+        "bank-be-001",
+        "bank-be-007",
+        "bank-be-030"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "索引失效场景",
+      "gold_id": "bank-be-029",
+      "acceptable_ids": [
+        "bank-be-002",
+        "bank-be-003"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "数据库 索引",
+      "gold_id": "bank-be-029",
+      "acceptable_ids": [
+        "bank-be-002",
+        "bank-be-003"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Redo 与 Binlog",
+      "gold_id": "bank-be-030",
+      "acceptable_ids": [
+        "bank-be-001",
+        "bank-be-007",
+        "bank-be-028"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "数据库 Binlog",
+      "gold_id": "bank-be-030",
+      "acceptable_ids": [
+        "bank-be-001",
+        "bank-be-007",
+        "bank-be-028"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "主从与读写分离",
+      "gold_id": "bank-be-031",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "数据库 主从与读写分离",
+      "gold_id": "bank-be-031",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Redis 数据结构选型",
+      "gold_id": "bank-be-032",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "redis 数据结构",
+      "gold_id": "bank-be-032",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Redis 持久化",
+      "gold_id": "bank-be-033",
+      "acceptable_ids": [
+        "bank-be-034",
+        "bank-cache-002"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "redis 高可用 持久化",
+      "gold_id": "bank-be-033",
+      "acceptable_ids": [
+        "bank-be-034",
+        "bank-cache-002"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Redis 高可用架构",
+      "gold_id": "bank-be-034",
+      "acceptable_ids": [
+        "bank-be-033",
+        "bank-cache-002"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "redis 高可用",
+      "gold_id": "bank-be-034",
+      "acceptable_ids": [
+        "bank-be-033",
+        "bank-cache-002"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "NoSQL 选型",
+      "gold_id": "bank-be-035",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "NoSQL",
+      "gold_id": "bank-be-035",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "倒排索引与搜索",
+      "gold_id": "bank-be-036",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "搜索 数据库",
+      "gold_id": "bank-be-036",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "数据库迁移",
+      "gold_id": "bank-be-037",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "数据库 工程化",
+      "gold_id": "bank-be-037",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "HTTP 方法与状态码",
+      "gold_id": "bank-be-021",
+      "acceptable_ids": [
+        "bank-be-023"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "http 网络 方法与状态码",
+      "gold_id": "bank-be-021",
+      "acceptable_ids": [
+        "bank-be-023"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "HTTPS 与证书",
+      "gold_id": "bank-be-022",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "http 与证书",
+      "gold_id": "bank-be-022",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "HTTP 版本演进",
+      "gold_id": "bank-be-023",
+      "acceptable_ids": [
+        "bank-be-021"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "http 网络",
+      "gold_id": "bank-be-023",
+      "acceptable_ids": [
+        "bank-be-021"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "TCP 可靠传输",
+      "gold_id": "bank-be-024",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "网络 操作系统",
+      "gold_id": "bank-be-024",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "RESTful 资源建模",
+      "gold_id": "bank-be-025",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "api设计 资源建模",
+      "gold_id": "bank-be-025",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "长连接与推送",
+      "gold_id": "bank-be-026",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "网络 长连接与推送",
+      "gold_id": "bank-be-026",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "DNS 与 CDN",
+      "gold_id": "bank-be-027",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "网络",
+      "gold_id": "bank-be-027",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "进程线程协程",
+      "gold_id": "bank-be-013",
+      "acceptable_ids": [
+        "bank-be-018"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "并发 操作系统",
+      "gold_id": "bank-be-013",
+      "acceptable_ids": [
+        "bank-be-018"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Python GIL",
+      "gold_id": "bank-be-014",
+      "acceptable_ids": [
+        "bank-be-015"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "python 并发",
+      "gold_id": "bank-be-014",
+      "acceptable_ids": [
+        "bank-be-015"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "异步编程模型",
+      "gold_id": "bank-be-015",
+      "acceptable_ids": [
+        "bank-be-014"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "python 异步编程模型",
+      "gold_id": "bank-be-015",
+      "acceptable_ids": [
+        "bank-be-014"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "Python 内存管理",
+      "gold_id": "bank-be-016",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "python",
+      "gold_id": "bank-be-016",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "异常处理设计",
+      "gold_id": "bank-be-017",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "代码质量",
+      "gold_id": "bank-be-017",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "死锁四条件",
+      "gold_id": "bank-be-018",
+      "acceptable_ids": [
+        "bank-be-013"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "并发 死锁四条件",
+      "gold_id": "bank-be-018",
+      "acceptable_ids": [
+        "bank-be-013"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "JSON 序列化坑",
+      "gold_id": "bank-be-019",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "api设计 序列化坑",
+      "gold_id": "bank-be-019",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "设计模式取舍",
+      "gold_id": "bank-be-020",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "代码质量 设计模式取舍",
+      "gold_id": "bank-be-020",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "缓存一致性",
+      "gold_id": "bank-cache-001",
+      "acceptable_ids": [
+        "bank-cache-002"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "redis 缓存 一致性",
+      "gold_id": "bank-cache-001",
+      "acceptable_ids": [
+        "bank-cache-002"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "缓存击穿与雪崩",
+      "gold_id": "bank-cache-002",
+      "acceptable_ids": [
+        "bank-be-033",
+        "bank-be-034",
+        "bank-cache-001"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "redis 缓存击穿与雪崩",
+      "gold_id": "bank-cache-002",
+      "acceptable_ids": [
+        "bank-be-033",
+        "bank-be-034",
+        "bank-cache-001"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "需求变更应对",
+      "gold_id": "bank-proj-014",
+      "acceptable_ids": [
+        "bank-proj-017",
+        "bank-proj-002",
+        "bank-proj-004"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "协作 需求变更应对",
+      "gold_id": "bank-proj-014",
+      "acceptable_ids": [
+        "bank-proj-017",
+        "bank-proj-002",
+        "bank-proj-004"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "跨职能协作",
+      "gold_id": "bank-proj-015",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "协作 跨职能协作",
+      "gold_id": "bank-proj-015",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "带教新人",
+      "gold_id": "bank-proj-016",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "协作 领导力",
+      "gold_id": "bank-proj-016",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "团队冲突调解",
+      "gold_id": "bank-proj-017",
+      "acceptable_ids": [
+        "bank-proj-014",
+        "bank-proj-002",
+        "bank-proj-004"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "协作 团队冲突调解",
+      "gold_id": "bank-proj-017",
+      "acceptable_ids": [
+        "bank-proj-014",
+        "bank-proj-002",
+        "bank-proj-004"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "向上沟通",
+      "gold_id": "bank-proj-018",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "沟通 领导力",
+      "gold_id": "bank-proj-018",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "远程异步协作",
+      "gold_id": "bank-proj-019",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "协作",
+      "gold_id": "bank-proj-019",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "说服与被说服",
+      "gold_id": "bank-proj-020",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "沟通 说服与被说服",
+      "gold_id": "bank-proj-020",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "团队规范建设",
+      "gold_id": "bank-proj-021",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "协作 团队规范建设",
+      "gold_id": "bank-proj-021",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "不可能排期应对",
+      "gold_id": "bank-proj-022",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "压力管理 沟通",
+      "gold_id": "bank-proj-022",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "多任务优先级",
+      "gold_id": "bank-proj-023",
+      "acceptable_ids": [
+        "bank-proj-024"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "压力管理 多任务优先级",
+      "gold_id": "bank-proj-023",
+      "acceptable_ids": [
+        "bank-proj-024"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "项目失败复盘",
+      "gold_id": "bank-proj-024",
+      "acceptable_ids": [
+        "bank-proj-023"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "复盘 压力管理",
+      "gold_id": "bank-proj-024",
+      "acceptable_ids": [
+        "bank-proj-023"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "快速学习硬技能",
+      "gold_id": "bank-proj-025",
+      "acceptable_ids": [
+        "bank-proj-027"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "学习能力 通用",
+      "gold_id": "bank-proj-025",
+      "acceptable_ids": [
+        "bank-proj-027"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "接受批评",
+      "gold_id": "bank-proj-026",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "学习能力 接受批评",
+      "gold_id": "bank-proj-026",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "模糊需求自驱",
+      "gold_id": "bank-proj-027",
+      "acceptable_ids": [
+        "bank-proj-025"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "通用 模糊需求自驱",
+      "gold_id": "bank-proj-027",
+      "acceptable_ids": [
+        "bank-proj-025"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "AI 辅助编程实践",
+      "gold_id": "bank-proj-028",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "通用 辅助编程实践",
+      "gold_id": "bank-proj-028",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "成果量化表达",
+      "gold_id": "bank-proj-006",
+      "acceptable_ids": [
+        "bank-proj-012",
+        "bank-proj-013"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "项目深挖 沟通",
+      "gold_id": "bank-proj-006",
+      "acceptable_ids": [
+        "bank-proj-012",
+        "bank-proj-013"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "架构决策复盘",
+      "gold_id": "bank-proj-007",
+      "acceptable_ids": [
+        "bank-proj-008",
+        "bank-proj-001"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "项目深挖 架构决策复盘",
+      "gold_id": "bank-proj-007",
+      "acceptable_ids": [
+        "bank-proj-008",
+        "bank-proj-001"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "技术方案演进",
+      "gold_id": "bank-proj-008",
+      "acceptable_ids": [
+        "bank-proj-007",
+        "bank-proj-001"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "项目深挖 技术方案演进",
+      "gold_id": "bank-proj-008",
+      "acceptable_ids": [
+        "bank-proj-007",
+        "bank-proj-001"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "性能优化案例",
+      "gold_id": "bank-proj-009",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "项目深挖 性能",
+      "gold_id": "bank-proj-009",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "从零到一交付",
+      "gold_id": "bank-proj-010",
+      "acceptable_ids": [
+        "bank-proj-011",
+        "bank-proj-001"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "项目深挖 从零到一交付",
+      "gold_id": "bank-proj-010",
+      "acceptable_ids": [
+        "bank-proj-011",
+        "bank-proj-001"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "自动化提效案例",
+      "gold_id": "bank-proj-011",
+      "acceptable_ids": [
+        "bank-proj-010",
+        "bank-proj-001"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "项目深挖 自动化提效案例",
+      "gold_id": "bank-proj-011",
+      "acceptable_ids": [
+        "bank-proj-010",
+        "bank-proj-001"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "需求理解纠偏",
+      "gold_id": "bank-proj-012",
+      "acceptable_ids": [
+        "bank-proj-006",
+        "bank-proj-013"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "项目深挖 需求理解纠偏",
+      "gold_id": "bank-proj-012",
+      "acceptable_ids": [
+        "bank-proj-006",
+        "bank-proj-013"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "数据说服团队",
+      "gold_id": "bank-proj-013",
+      "acceptable_ids": [
+        "bank-proj-006",
+        "bank-proj-012"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "项目深挖 数据说服团队",
+      "gold_id": "bank-proj-013",
+      "acceptable_ids": [
+        "bank-proj-006",
+        "bank-proj-012"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "自我介绍结构",
+      "gold_id": "bank-proj-029",
+      "acceptable_ids": [
+        "bank-proj-033"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "职业规划 自我介绍结构",
+      "gold_id": "bank-proj-029",
+      "acceptable_ids": [
+        "bank-proj-033"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "离职原因表达",
+      "gold_id": "bank-proj-030",
+      "acceptable_ids": [
+        "bank-proj-032",
+        "bank-proj-035"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "职业规划 离职原因表达",
+      "gold_id": "bank-proj-030",
+      "acceptable_ids": [
+        "bank-proj-032",
+        "bank-proj-035"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "三到五年规划",
+      "gold_id": "bank-proj-031",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "职业规划",
+      "gold_id": "bank-proj-031",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "求职动机",
+      "gold_id": "bank-proj-032",
+      "acceptable_ids": [
+        "bank-proj-030",
+        "bank-proj-035"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "职业规划 求职动机",
+      "gold_id": "bank-proj-032",
+      "acceptable_ids": [
+        "bank-proj-030",
+        "bank-proj-035"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "优势与劣势",
+      "gold_id": "bank-proj-033",
+      "acceptable_ids": [
+        "bank-proj-029"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "职业规划 优势与劣势",
+      "gold_id": "bank-proj-033",
+      "acceptable_ids": [
+        "bank-proj-029"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "薪资期望应对",
+      "gold_id": "bank-proj-034",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "职业规划 薪资期望应对",
+      "gold_id": "bank-proj-034",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "反问环节",
+      "gold_id": "bank-proj-035",
+      "acceptable_ids": [
+        "bank-proj-030",
+        "bank-proj-032"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "职业规划 反问环节",
+      "gold_id": "bank-proj-035",
+      "acceptable_ids": [
+        "bank-proj-030",
+        "bank-proj-032"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "项目难点复盘",
+      "gold_id": "bank-proj-001",
+      "acceptable_ids": [
+        "bank-proj-007",
+        "bank-proj-008",
+        "bank-proj-010",
+        "bank-proj-011"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "项目深挖 复盘 通用",
+      "gold_id": "bank-proj-001",
+      "acceptable_ids": [
+        "bank-proj-007",
+        "bank-proj-008",
+        "bank-proj-010",
+        "bank-proj-011"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "技术方案分歧",
+      "gold_id": "bank-proj-002",
+      "acceptable_ids": [
+        "bank-proj-014",
+        "bank-proj-017",
+        "bank-proj-004"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "协作 技术方案分歧",
+      "gold_id": "bank-proj-002",
+      "acceptable_ids": [
+        "bank-proj-014",
+        "bank-proj-017",
+        "bank-proj-004"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "线上事故复盘",
+      "gold_id": "bank-proj-003",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "复盘 协作",
+      "gold_id": "bank-proj-003",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "跨团队推动",
+      "gold_id": "bank-proj-004",
+      "acceptable_ids": [
+        "bank-proj-014",
+        "bank-proj-017",
+        "bank-proj-002"
+      ],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "沟通 跨团队推动",
+      "gold_id": "bank-proj-004",
+      "acceptable_ids": [
+        "bank-proj-014",
+        "bank-proj-017",
+        "bank-proj-002"
+      ],
+      "query_type": "keyword"
+    },
+    {
+      "query": "技术债取舍",
+      "gold_id": "bank-proj-005",
+      "acceptable_ids": [],
+      "query_type": "verbatim"
+    },
+    {
+      "query": "复盘 技术债取舍",
+      "gold_id": "bank-proj-005",
+      "acceptable_ids": [],
+      "query_type": "keyword"
+    },
+    {
+      "query": "leader 宕机了怎么保证已确认的消息不丢",
+      "gold_id": "bank-kafka-001",
+      "acceptable_ids": [
+        "bank-be-012"
+      ],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "先更新数据库还是先删缓存，为什么",
+      "gold_id": "bank-cache-001",
+      "acceptable_ids": [
+        "bank-cache-002"
+      ],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "热点 key 过期瞬间大量请求打到数据库怎么办",
+      "gold_id": "bank-cache-002",
+      "acceptable_ids": [
+        "bank-be-033",
+        "bank-be-034",
+        "bank-cache-001"
+      ],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "多轮对话的字段该放图状态还是消息列表",
+      "gold_id": "bank-agent-001",
+      "acceptable_ids": [
+        "bank-agent-051",
+        "bank-agent-052",
+        "bank-agent-002",
+        "bank-agent-003"
+      ],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "agent 跑一半停下来等用户确认再继续怎么做",
+      "gold_id": "bank-agent-003",
+      "acceptable_ids": [
+        "bank-agent-051",
+        "bank-agent-052",
+        "bank-agent-001",
+        "bank-agent-002"
+      ],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "中文检索为什么不能直接按空格分词",
+      "gold_id": "bank-agent-006",
+      "acceptable_ids": [],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "关键词和向量两路检索的分数怎么合并",
+      "gold_id": "bank-agent-007",
+      "acceptable_ids": [],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "怎么防止模型谎报题库来源",
+      "gold_id": "bank-agent-009",
+      "acceptable_ids": [],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "mysql 可重复读下幻读解决了吗",
+      "gold_id": "bank-be-001",
+      "acceptable_ids": [
+        "bank-be-007",
+        "bank-be-028",
+        "bank-be-030"
+      ],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "并发扣库存该用悲观锁还是乐观锁",
+      "gold_id": "bank-be-004",
+      "acceptable_ids": [
+        "bank-be-006"
+      ],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "多个实例怎么保证定时任务只跑一份",
+      "gold_id": "bank-be-005",
+      "acceptable_ids": [],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "支付接口被重复调用怎么保证只扣一次钱",
+      "gold_id": "bank-be-008",
+      "acceptable_ids": [],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "消费组积压了几百万条消息怎么处理",
+      "gold_id": "bank-be-012",
+      "acceptable_ids": [
+        "bank-kafka-001"
+      ],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "首屏加载太慢怎么排查优化",
+      "gold_id": "bank-fs-003",
+      "acceptable_ids": [
+        "bank-fs-033",
+        "bank-fs-034"
+      ],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "动画每帧改宽度为什么卡",
+      "gold_id": "bank-fs-004",
+      "acceptable_ids": [],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "自动化测试各层怎么配比",
+      "gold_id": "bank-fs-008",
+      "acceptable_ids": [
+        "bank-fs-009"
+      ],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "讲一次你处理的线上故障",
+      "gold_id": "bank-proj-003",
+      "acceptable_ids": [],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "用户反馈出的题不贴简历怎么排查",
+      "gold_id": "bank-agent-016",
+      "acceptable_ids": [
+        "bank-agent-014"
+      ],
+      "query_type": "paraphrase"
+    },
+    {
+      "query": "量子纠缠是怎么回事",
+      "gold_id": null,
+      "acceptable_ids": [],
+      "query_type": "offtopic"
+    },
+    {
+      "query": "莫扎特的歌剧有哪些",
+      "gold_id": null,
+      "acceptable_ids": [],
+      "query_type": "offtopic"
+    },
+    {
+      "query": "红烧肉怎么做好吃",
+      "gold_id": null,
+      "acceptable_ids": [],
+      "query_type": "offtopic"
+    },
+    {
+      "query": "光合作用的原理",
+      "gold_id": null,
+      "acceptable_ids": [],
+      "query_type": "offtopic"
+    },
+    {
+      "query": "文艺复兴时期的绘画特点",
+      "gold_id": null,
+      "acceptable_ids": [],
+      "query_type": "offtopic"
+    },
+    {
+      "query": "足球越位规则",
+      "gold_id": null,
+      "acceptable_ids": [],
+      "query_type": "offtopic"
+    },
+    {
+      "query": "检索增强生成 文档切块策略",
+      "gold_id": "bank-agent-021",
+      "acceptable_ids": [
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 文档切块策略",
+      "gold_id": "bank-agent-021",
+      "acceptable_ids": [
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Embedding model selection",
+      "gold_id": "bank-agent-022",
+      "acceptable_ids": [
+        "bank-agent-023"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag vector search 模型选型",
+      "gold_id": "bank-agent-022",
+      "acceptable_ids": [
+        "bank-agent-023"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag 向量检索 model selection",
+      "gold_id": "bank-agent-022",
+      "acceptable_ids": [
+        "bank-agent-023"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 向量检索 模型选型",
+      "gold_id": "bank-agent-022",
+      "acceptable_ids": [
+        "bank-agent-023"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 向量检索 模型选型",
+      "gold_id": "bank-agent-022",
+      "acceptable_ids": [
+        "bank-agent-023"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag vector search",
+      "gold_id": "bank-agent-023",
+      "acceptable_ids": [
+        "bank-agent-022"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 向量检索",
+      "gold_id": "bank-agent-023",
+      "acceptable_ids": [
+        "bank-agent-022"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 向量检索",
+      "gold_id": "bank-agent-023",
+      "acceptable_ids": [
+        "bank-agent-022"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 重排",
+      "gold_id": "bank-agent-024",
+      "acceptable_ids": [
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 重排",
+      "gold_id": "bank-agent-024",
+      "acceptable_ids": [
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 多路召回",
+      "gold_id": "bank-agent-025",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 多路召回",
+      "gold_id": "bank-agent-025",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 元数据过滤检索",
+      "gold_id": "bank-agent-026",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 元数据过滤检索",
+      "gold_id": "bank-agent-026",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "增量index更新",
+      "gold_id": "bank-agent-027",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 增量索引更新",
+      "gold_id": "bank-agent-027",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 增量索引更新",
+      "gold_id": "bank-agent-027",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag 增量index更新",
+      "gold_id": "bank-agent-027",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-031",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "语义cache",
+      "gold_id": "bank-agent-028",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 缓存",
+      "gold_id": "bank-agent-028",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 缓存",
+      "gold_id": "bank-agent-028",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag cache",
+      "gold_id": "bank-agent-028",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 答案引用溯源",
+      "gold_id": "bank-agent-029",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 答案引用溯源",
+      "gold_id": "bank-agent-029",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 失败模式分析",
+      "gold_id": "bank-agent-030",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-008",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 失败模式分析",
+      "gold_id": "bank-agent-030",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-008",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 评测 失败模式分析",
+      "gold_id": "bank-agent-030",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-008",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 评测 失败模式分析",
+      "gold_id": "bank-agent-030",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-008",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag evaluation 失败模式分析",
+      "gold_id": "bank-agent-030",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-008",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag eval 失败模式分析",
+      "gold_id": "bank-agent-030",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-008",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "父子块index",
+      "gold_id": "bank-agent-031",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 父子块索引",
+      "gold_id": "bank-agent-031",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 父子块索引",
+      "gold_id": "bank-agent-031",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag 父子块index",
+      "gold_id": "bank-agent-031",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-032",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 表格与结构化数据",
+      "gold_id": "bank-agent-032",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 表格与结构化数据",
+      "gold_id": "bank-agent-032",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 多文档答案聚合",
+      "gold_id": "bank-agent-033",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 多文档答案聚合",
+      "gold_id": "bank-agent-033",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "knowledge base冷启动",
+      "gold_id": "bank-agent-034",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 知识库",
+      "gold_id": "bank-agent-034",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 知识库",
+      "gold_id": "bank-agent-034",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag knowledge base",
+      "gold_id": "bank-agent-034",
+      "acceptable_ids": [
+        "bank-agent-021",
+        "bank-agent-026",
+        "bank-agent-027",
+        "bank-agent-031",
+        "bank-agent-032"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 与微调选型",
+      "gold_id": "bank-agent-035",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 与微调选型",
+      "gold_id": "bank-agent-035",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag model selection",
+      "gold_id": "bank-agent-035",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 模型选型",
+      "gold_id": "bank-agent-035",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 模型选型",
+      "gold_id": "bank-agent-035",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "concurrency与异步调度",
+      "gold_id": "bank-agent-053",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "agent concurrency",
+      "gold_id": "bank-agent-053",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "agent high availability 错误分类处理",
+      "gold_id": "bank-agent-054",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "agent ha 错误分类处理",
+      "gold_id": "bank-agent-054",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "security 沙箱与代码执行",
+      "gold_id": "bank-agent-055",
+      "acceptable_ids": [
+        "bank-agent-057"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "security 工具权限最小化",
+      "gold_id": "bank-agent-057",
+      "acceptable_ids": [
+        "bank-agent-055"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "structured output 输出护栏设计",
+      "gold_id": "bank-agent-061",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "本地模型deployment",
+      "gold_id": "bank-agent-062",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "本地模型deploy",
+      "gold_id": "bank-agent-062",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "部署 model selection",
+      "gold_id": "bank-agent-062",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "deployment 模型选型",
+      "gold_id": "bank-agent-062",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "deploy 模型选型",
+      "gold_id": "bank-agent-062",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Agent security审计",
+      "gold_id": "bank-agent-064",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "security",
+      "gold_id": "bank-agent-064",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "framework选型对比",
+      "gold_id": "bank-agent-065",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "agent framework选型对比",
+      "gold_id": "bank-agent-065",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Agent state management",
+      "gold_id": "bank-agent-001",
+      "acceptable_ids": [
+        "bank-agent-051",
+        "bank-agent-052",
+        "bank-agent-002",
+        "bank-agent-003"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "tool calling循环",
+      "gold_id": "bank-agent-004",
+      "acceptable_ids": [
+        "bank-agent-005",
+        "bank-agent-020"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "tool calling agent",
+      "gold_id": "bank-agent-004",
+      "acceptable_ids": [
+        "bank-agent-005",
+        "bank-agent-020"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "tool calling 工具接口设计",
+      "gold_id": "bank-agent-005",
+      "acceptable_ids": [
+        "bank-agent-004",
+        "bank-agent-020"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 与中文分词",
+      "gold_id": "bank-agent-006",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 与中文分词",
+      "gold_id": "bank-agent-006",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 RRF",
+      "gold_id": "bank-agent-007",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation RRF",
+      "gold_id": "bank-agent-007",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 检索评测",
+      "gold_id": "bank-agent-008",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 检索评测",
+      "gold_id": "bank-agent-008",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "RAG 检索evaluation",
+      "gold_id": "bank-agent-008",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "RAG 检索eval",
+      "gold_id": "bank-agent-008",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 评测",
+      "gold_id": "bank-agent-008",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 评测",
+      "gold_id": "bank-agent-008",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag evaluation",
+      "gold_id": "bank-agent-008",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag eval",
+      "gold_id": "bank-agent-008",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-036",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 幻觉防御",
+      "gold_id": "bank-agent-009",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 幻觉防御",
+      "gold_id": "bank-agent-009",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 安全",
+      "gold_id": "bank-agent-009",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 安全",
+      "gold_id": "bank-agent-009",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rag security",
+      "gold_id": "bank-agent-009",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "structured output可靠性",
+      "gold_id": "bank-agent-010",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "structured output",
+      "gold_id": "bank-agent-010",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "prompt契约管理",
+      "gold_id": "bank-agent-011",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "prompt",
+      "gold_id": "bank-agent-011",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Agent memory设计",
+      "gold_id": "bank-agent-012",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "memory agent",
+      "gold_id": "bank-agent-012",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "multi-agent分工",
+      "gold_id": "bank-agent-013",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "multi-agent agent",
+      "gold_id": "bank-agent-013",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "evaluation agent 评审",
+      "gold_id": "bank-agent-014",
+      "acceptable_ids": [
+        "bank-agent-016"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "eval agent 评审",
+      "gold_id": "bank-agent-014",
+      "acceptable_ids": [
+        "bank-agent-016"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "security 提示注入防御",
+      "gold_id": "bank-agent-015",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "tool calling 工具生态",
+      "gold_id": "bank-agent-020",
+      "acceptable_ids": [
+        "bank-agent-004",
+        "bank-agent-005"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "答案质量evaluation集",
+      "gold_id": "bank-agent-036",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "答案质量eval集",
+      "gold_id": "bank-agent-036",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "evaluation 答案质量评测集",
+      "gold_id": "bank-agent-036",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "eval 答案质量评测集",
+      "gold_id": "bank-agent-036",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-047"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "evaluation 评分器校准",
+      "gold_id": "bank-agent-037",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "eval 评分器校准",
+      "gold_id": "bank-agent-037",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "回归evaluation门禁",
+      "gold_id": "bank-agent-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "回归eval门禁",
+      "gold_id": "bank-agent-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "评测 engineering",
+      "gold_id": "bank-agent-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "evaluation 工程化",
+      "gold_id": "bank-agent-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "eval 工程化",
+      "gold_id": "bank-agent-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "evaluation 在线反馈闭环",
+      "gold_id": "bank-agent-039",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "eval 在线反馈闭环",
+      "gold_id": "bank-agent-039",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "合成testing数据",
+      "gold_id": "bank-agent-040",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "evaluation 合成测试数据",
+      "gold_id": "bank-agent-040",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "eval 合成测试数据",
+      "gold_id": "bank-agent-040",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "评测 合成testing数据",
+      "gold_id": "bank-agent-040",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "agent monitoring 可观测性",
+      "gold_id": "bank-agent-041",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Token cost核算",
+      "gold_id": "bank-agent-042",
+      "acceptable_ids": [
+        "bank-agent-060"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "agent cost",
+      "gold_id": "bank-agent-042",
+      "acceptable_ids": [
+        "bank-agent-060"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "model selection 成本",
+      "gold_id": "bank-agent-044",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "模型选型 cost",
+      "gold_id": "bank-agent-044",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "prompt 采样参数调优",
+      "gold_id": "bank-agent-045",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Prompt cache策略",
+      "gold_id": "bank-agent-046",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "提示词 cache策略",
+      "gold_id": "bank-agent-046",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "检索增强生成 幻觉事后检测",
+      "gold_id": "bank-agent-047",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-036"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrieval augmented generation 幻觉事后检测",
+      "gold_id": "bank-agent-047",
+      "acceptable_ids": [
+        "bank-agent-024",
+        "bank-agent-030",
+        "bank-agent-008",
+        "bank-agent-036"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "evaluation指标设计",
+      "gold_id": "bank-agent-048",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "eval指标设计",
+      "gold_id": "bank-agent-048",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "evaluation 评测指标设计",
+      "gold_id": "bank-agent-048",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "eval 评测指标设计",
+      "gold_id": "bank-agent-048",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "灰度与 A/B testing",
+      "gold_id": "bank-agent-049",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "evaluation 部署 测试",
+      "gold_id": "bank-agent-049",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "eval 部署 测试",
+      "gold_id": "bank-agent-049",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "评测 deployment 测试",
+      "gold_id": "bank-agent-049",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "评测 deploy 测试",
+      "gold_id": "bank-agent-049",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "评测 部署 testing",
+      "gold_id": "bank-agent-049",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "evaluation数据泄漏防范",
+      "gold_id": "bank-agent-050",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "eval数据泄漏防范",
+      "gold_id": "bank-agent-050",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "evaluation 安全",
+      "gold_id": "bank-agent-050",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "eval 安全",
+      "gold_id": "bank-agent-050",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "评测 security",
+      "gold_id": "bank-agent-050",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Kafka high availability",
+      "gold_id": "bank-kafka-001",
+      "acceptable_ids": [
+        "bank-be-012"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Kafka ha",
+      "gold_id": "bank-kafka-001",
+      "acceptable_ids": [
+        "bank-be-012"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "kafka message queue 高可用",
+      "gold_id": "bank-kafka-001",
+      "acceptable_ids": [
+        "bank-be-012"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "kafka mq 高可用",
+      "gold_id": "bank-kafka-001",
+      "acceptable_ids": [
+        "bank-be-012"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "kafka 消息队列 high availability",
+      "gold_id": "bank-kafka-001",
+      "acceptable_ids": [
+        "bank-be-012"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "kafka 消息队列 ha",
+      "gold_id": "bank-kafka-001",
+      "acceptable_ids": [
+        "bank-be-012"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "js 事件循环机制",
+      "gold_id": "bank-fs-011",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "js 闭包与应用",
+      "gold_id": "bank-fs-012",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "js 原型与继承",
+      "gold_id": "bank-fs-013",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "js",
+      "gold_id": "bank-fs-014",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "js 状态机",
+      "gold_id": "bank-fs-015",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "js 新特性日常",
+      "gold_id": "bank-fs-016",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "js 深浅拷贝",
+      "gold_id": "bank-fs-017",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "js 防抖与节流",
+      "gold_id": "bank-fs-018",
+      "acceptable_ids": [
+        "bank-fs-036"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "登录态与authorization",
+      "gold_id": "bank-fs-001",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "authorization 前端",
+      "gold_id": "bank-fs-001",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "鉴权 frontend",
+      "gold_id": "bank-fs-001",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "前端state management",
+      "gold_id": "bank-fs-002",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "frontend状态管理",
+      "gold_id": "bank-fs-002",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "state management 前端",
+      "gold_id": "bank-fs-002",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "状态管理 frontend",
+      "gold_id": "bank-fs-002",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "首屏performance优化",
+      "gold_id": "bank-fs-003",
+      "acceptable_ids": [
+        "bank-fs-033",
+        "bank-fs-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "performance 前端",
+      "gold_id": "bank-fs-003",
+      "acceptable_ids": [
+        "bank-fs-033",
+        "bank-fs-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "性能 frontend",
+      "gold_id": "bank-fs-003",
+      "acceptable_ids": [
+        "bank-fs-033",
+        "bank-fs-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "render 性能",
+      "gold_id": "bank-fs-004",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rendering 性能",
+      "gold_id": "bank-fs-004",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "渲染 performance",
+      "gold_id": "bank-fs-004",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "前backend接口契约",
+      "gold_id": "bank-fs-005",
+      "acceptable_ids": [
+        "bank-fs-010"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "engineering 前后端接口契约",
+      "gold_id": "bank-fs-005",
+      "acceptable_ids": [
+        "bank-fs-010"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "工程化 前backend接口契约",
+      "gold_id": "bank-fs-005",
+      "acceptable_ids": [
+        "bank-fs-010"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "部署 engineering",
+      "gold_id": "bank-fs-006",
+      "acceptable_ids": [
+        "bank-fs-007"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "deployment 工程化",
+      "gold_id": "bank-fs-006",
+      "acceptable_ids": [
+        "bank-fs-007"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "deploy 工程化",
+      "gold_id": "bank-fs-006",
+      "acceptable_ids": [
+        "bank-fs-007"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "engineering 多环境配置管理",
+      "gold_id": "bank-fs-007",
+      "acceptable_ids": [
+        "bank-fs-006"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "testing金字塔",
+      "gold_id": "bank-fs-008",
+      "acceptable_ids": [
+        "bank-fs-009"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "testing 测试金字塔",
+      "gold_id": "bank-fs-008",
+      "acceptable_ids": [
+        "bank-fs-009"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "E2E testing稳定性",
+      "gold_id": "bank-fs-009",
+      "acceptable_ids": [
+        "bank-fs-008"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "测试 engineering",
+      "gold_id": "bank-fs-009",
+      "acceptable_ids": [
+        "bank-fs-008"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "testing 工程化",
+      "gold_id": "bank-fs-009",
+      "acceptable_ids": [
+        "bank-fs-008"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "微frontend拆分",
+      "gold_id": "bank-fs-010",
+      "acceptable_ids": [
+        "bank-fs-005"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "engineering 前端",
+      "gold_id": "bank-fs-010",
+      "acceptable_ids": [
+        "bank-fs-005"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "工程化 frontend",
+      "gold_id": "bank-fs-010",
+      "acceptable_ids": [
+        "bank-fs-005"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "engineering 构建工具原理",
+      "gold_id": "bank-fs-039",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "engineering 性能",
+      "gold_id": "bank-fs-040",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "工程化 performance",
+      "gold_id": "bank-fs-040",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "ts 类型治理",
+      "gold_id": "bank-fs-041",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "ts 工程化",
+      "gold_id": "bank-fs-041",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "typescript engineering",
+      "gold_id": "bank-fs-041",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Git collaboration流",
+      "gold_id": "bank-fs-042",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "engineering 协作流",
+      "gold_id": "bank-fs-042",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "工程化 collaboration流",
+      "gold_id": "bank-fs-042",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "工程化 code quality",
+      "gold_id": "bank-fs-043",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "engineering 代码质量",
+      "gold_id": "bank-fs-043",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "deployment 运维",
+      "gold_id": "bank-fs-044",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "deploy 运维",
+      "gold_id": "bank-fs-044",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "部署 ops",
+      "gold_id": "bank-fs-044",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "engineering",
+      "gold_id": "bank-fs-045",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "performance 懒加载与代码分割",
+      "gold_id": "bank-fs-033",
+      "acceptable_ids": [
+        "bank-fs-003",
+        "bank-fs-034"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "performance 长列表虚拟化",
+      "gold_id": "bank-fs-034",
+      "acceptable_ids": [
+        "bank-fs-003",
+        "bank-fs-033"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "performance 图片与静态资源",
+      "gold_id": "bank-fs-035",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "frontend内存泄漏",
+      "gold_id": "bank-fs-036",
+      "acceptable_ids": [
+        "bank-fs-018"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "performance 前端内存泄漏",
+      "gold_id": "bank-fs-036",
+      "acceptable_ids": [
+        "bank-fs-018"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "性能 frontend内存泄漏",
+      "gold_id": "bank-fs-036",
+      "acceptable_ids": [
+        "bank-fs-018"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Web performance指标",
+      "gold_id": "bank-fs-037",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "performance 监控",
+      "gold_id": "bank-fs-037",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "性能 monitoring",
+      "gold_id": "bank-fs-037",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "frontend错误监控",
+      "gold_id": "bank-fs-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "前端错误monitoring",
+      "gold_id": "bank-fs-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "monitoring 前端",
+      "gold_id": "bank-fs-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "监控 frontend",
+      "gold_id": "bank-fs-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "浏览器cache策略",
+      "gold_id": "bank-fs-023",
+      "acceptable_ids": [
+        "bank-fs-024"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "frontend 浏览器缓存策略",
+      "gold_id": "bank-fs-023",
+      "acceptable_ids": [
+        "bank-fs-024"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "前端 浏览器cache策略",
+      "gold_id": "bank-fs-023",
+      "acceptable_ids": [
+        "bank-fs-024"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "frontend 跨域解决方案",
+      "gold_id": "bank-fs-024",
+      "acceptable_ids": [
+        "bank-fs-023"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "render管线全流程",
+      "gold_id": "bank-fs-025",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "rendering管线全流程",
+      "gold_id": "bank-fs-025",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "frontend 渲染",
+      "gold_id": "bank-fs-025",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "前端 render",
+      "gold_id": "bank-fs-025",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "前端 rendering",
+      "gold_id": "bank-fs-025",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "framework响应式原理",
+      "gold_id": "bank-fs-026",
+      "acceptable_ids": [
+        "bank-fs-029",
+        "bank-fs-032"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "framework 前端",
+      "gold_id": "bank-fs-026",
+      "acceptable_ids": [
+        "bank-fs-029",
+        "bank-fs-032"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "框架 frontend",
+      "gold_id": "bank-fs-026",
+      "acceptable_ids": [
+        "bank-fs-029",
+        "bank-fs-032"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "framework 渲染",
+      "gold_id": "bank-fs-027",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "框架 render",
+      "gold_id": "bank-fs-027",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "框架 rendering",
+      "gold_id": "bank-fs-027",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "框架 js",
+      "gold_id": "bank-fs-028",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "framework javascript",
+      "gold_id": "bank-fs-028",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "framework 组件通信方式",
+      "gold_id": "bank-fs-029",
+      "acceptable_ids": [
+        "bank-fs-026",
+        "bank-fs-032"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "framework 组件设计原则",
+      "gold_id": "bank-fs-030",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "framework 与水合",
+      "gold_id": "bank-fs-031",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "framework 表单状态与校验",
+      "gold_id": "bank-fs-032",
+      "acceptable_ids": [
+        "bank-fs-026",
+        "bank-fs-029"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "distributed事务",
+      "gold_id": "bank-be-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "分布式transaction",
+      "gold_id": "bank-be-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "distributed 事务",
+      "gold_id": "bank-be-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "分布式 transaction",
+      "gold_id": "bank-be-038",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "distributed 与最终一致",
+      "gold_id": "bank-be-039",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "consistency哈希",
+      "gold_id": "bank-be-040",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "distributed 一致性哈希",
+      "gold_id": "bank-be-040",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "分布式 consistency哈希",
+      "gold_id": "bank-be-040",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "microservices 服务注册与发现",
+      "gold_id": "bank-be-041",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "microservices 熔断与降级",
+      "gold_id": "bank-be-042",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "microservices 监控",
+      "gold_id": "bank-be-043",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "微服务 monitoring",
+      "gold_id": "bank-be-043",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "microservices 部署",
+      "gold_id": "bank-be-044",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "微服务 deployment",
+      "gold_id": "bank-be-044",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "微服务 deploy",
+      "gold_id": "bank-be-044",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "distributed ID 生成",
+      "gold_id": "bank-be-045",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "distributed",
+      "gold_id": "bank-be-045",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "秒杀system design",
+      "gold_id": "bank-be-046",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "system design 高可用",
+      "gold_id": "bank-be-046",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "系统设计 high availability",
+      "gold_id": "bank-be-046",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "系统设计 ha",
+      "gold_id": "bank-be-046",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "system design 延迟任务实现",
+      "gold_id": "bank-be-047",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "security 注入防御",
+      "gold_id": "bank-be-048",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "security CSRF",
+      "gold_id": "bank-be-049",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "security OAuth2",
+      "gold_id": "bank-be-050",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "ops linux",
+      "gold_id": "bank-be-051",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "monitoring与告警治理",
+      "gold_id": "bank-be-052",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "ops 监控",
+      "gold_id": "bank-be-052",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "运维 monitoring",
+      "gold_id": "bank-be-052",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "idempotent性设计",
+      "gold_id": "bank-be-008",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "idempotency性设计",
+      "gold_id": "bank-be-008",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "幂等 api design",
+      "gold_id": "bank-be-008",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "idempotent api设计",
+      "gold_id": "bank-be-008",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "idempotency api设计",
+      "gold_id": "bank-be-008",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "high availability 超时与重试",
+      "gold_id": "bank-be-009",
+      "acceptable_ids": [
+        "bank-be-010"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "ha 超时与重试",
+      "gold_id": "bank-be-009",
+      "acceptable_ids": [
+        "bank-be-010"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "api design 接口限流",
+      "gold_id": "bank-be-010",
+      "acceptable_ids": [
+        "bank-be-009"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "api design",
+      "gold_id": "bank-be-011",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "transaction隔离级别",
+      "gold_id": "bank-be-001",
+      "acceptable_ids": [
+        "bank-be-007",
+        "bank-be-028",
+        "bank-be-030"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "database 事务",
+      "gold_id": "bank-be-001",
+      "acceptable_ids": [
+        "bank-be-007",
+        "bank-be-028",
+        "bank-be-030"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "db 事务",
+      "gold_id": "bank-be-001",
+      "acceptable_ids": [
+        "bank-be-007",
+        "bank-be-028",
+        "bank-be-030"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "数据库 transaction",
+      "gold_id": "bank-be-001",
+      "acceptable_ids": [
+        "bank-be-007",
+        "bank-be-028",
+        "bank-be-030"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "联合index设计",
+      "gold_id": "bank-be-002",
+      "acceptable_ids": [
+        "bank-be-003",
+        "bank-be-029"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "database 联合索引设计",
+      "gold_id": "bank-be-002",
+      "acceptable_ids": [
+        "bank-be-003",
+        "bank-be-029"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "db 联合索引设计",
+      "gold_id": "bank-be-002",
+      "acceptable_ids": [
+        "bank-be-003",
+        "bank-be-029"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "数据库 联合index设计",
+      "gold_id": "bank-be-002",
+      "acceptable_ids": [
+        "bank-be-003",
+        "bank-be-029"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "concurrency 悲观锁与乐观锁",
+      "gold_id": "bank-be-004",
+      "acceptable_ids": [
+        "bank-be-006"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "distributed锁",
+      "gold_id": "bank-be-005",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "redis distributed锁",
+      "gold_id": "bank-be-005",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "database连接池",
+      "gold_id": "bank-be-006",
+      "acceptable_ids": [
+        "bank-be-004"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "db连接池",
+      "gold_id": "bank-be-006",
+      "acceptable_ids": [
+        "bank-be-004"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "database 并发",
+      "gold_id": "bank-be-006",
+      "acceptable_ids": [
+        "bank-be-004"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "db 并发",
+      "gold_id": "bank-be-006",
+      "acceptable_ids": [
+        "bank-be-004"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "数据库 concurrency",
+      "gold_id": "bank-be-006",
+      "acceptable_ids": [
+        "bank-be-004"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "database 分库分表",
+      "gold_id": "bank-be-007",
+      "acceptable_ids": [
+        "bank-be-001",
+        "bank-be-028",
+        "bank-be-030"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "db 分库分表",
+      "gold_id": "bank-be-007",
+      "acceptable_ids": [
+        "bank-be-001",
+        "bank-be-028",
+        "bank-be-030"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "index失效场景",
+      "gold_id": "bank-be-029",
+      "acceptable_ids": [
+        "bank-be-002",
+        "bank-be-003"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "database 索引",
+      "gold_id": "bank-be-029",
+      "acceptable_ids": [
+        "bank-be-002",
+        "bank-be-003"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "db 索引",
+      "gold_id": "bank-be-029",
+      "acceptable_ids": [
+        "bank-be-002",
+        "bank-be-003"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "数据库 index",
+      "gold_id": "bank-be-029",
+      "acceptable_ids": [
+        "bank-be-002",
+        "bank-be-003"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "database Binlog",
+      "gold_id": "bank-be-030",
+      "acceptable_ids": [
+        "bank-be-001",
+        "bank-be-007",
+        "bank-be-028"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "db Binlog",
+      "gold_id": "bank-be-030",
+      "acceptable_ids": [
+        "bank-be-001",
+        "bank-be-007",
+        "bank-be-028"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "database 主从与读写分离",
+      "gold_id": "bank-be-031",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "db 主从与读写分离",
+      "gold_id": "bank-be-031",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Redis data structure选型",
+      "gold_id": "bank-be-032",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "redis data structure",
+      "gold_id": "bank-be-032",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "redis high availability 持久化",
+      "gold_id": "bank-be-033",
+      "acceptable_ids": [
+        "bank-be-034",
+        "bank-cache-002"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "redis ha 持久化",
+      "gold_id": "bank-be-033",
+      "acceptable_ids": [
+        "bank-be-034",
+        "bank-cache-002"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Redis high availability架构",
+      "gold_id": "bank-be-034",
+      "acceptable_ids": [
+        "bank-be-033",
+        "bank-cache-002"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "Redis ha架构",
+      "gold_id": "bank-be-034",
+      "acceptable_ids": [
+        "bank-be-033",
+        "bank-cache-002"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "redis high availability",
+      "gold_id": "bank-be-034",
+      "acceptable_ids": [
+        "bank-be-033",
+        "bank-cache-002"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "redis ha",
+      "gold_id": "bank-be-034",
+      "acceptable_ids": [
+        "bank-be-033",
+        "bank-cache-002"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "倒排index与搜索",
+      "gold_id": "bank-be-036",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "倒排索引与search",
+      "gold_id": "bank-be-036",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "搜索 database",
+      "gold_id": "bank-be-036",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "搜索 db",
+      "gold_id": "bank-be-036",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "search 数据库",
+      "gold_id": "bank-be-036",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "database迁移",
+      "gold_id": "bank-be-037",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "db迁移",
+      "gold_id": "bank-be-037",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "database 工程化",
+      "gold_id": "bank-be-037",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "db 工程化",
+      "gold_id": "bank-be-037",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "数据库 engineering",
+      "gold_id": "bank-be-037",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "http network 方法与状态码",
+      "gold_id": "bank-be-021",
+      "acceptable_ids": [
+        "bank-be-023"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "http network",
+      "gold_id": "bank-be-023",
+      "acceptable_ids": [
+        "bank-be-021"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "网络 os",
+      "gold_id": "bank-be-024",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "network 操作系统",
+      "gold_id": "bank-be-024",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "api design 资源建模",
+      "gold_id": "bank-be-025",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "network 长连接与推送",
+      "gold_id": "bank-be-026",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "network",
+      "gold_id": "bank-be-027",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "并发 os",
+      "gold_id": "bank-be-013",
+      "acceptable_ids": [
+        "bank-be-018"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "concurrency 操作系统",
+      "gold_id": "bank-be-013",
+      "acceptable_ids": [
+        "bank-be-018"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "python concurrency",
+      "gold_id": "bank-be-014",
+      "acceptable_ids": [
+        "bank-be-015"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "code quality",
+      "gold_id": "bank-be-017",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "concurrency 死锁四条件",
+      "gold_id": "bank-be-018",
+      "acceptable_ids": [
+        "bank-be-013"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "api design 序列化坑",
+      "gold_id": "bank-be-019",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "code quality 设计模式取舍",
+      "gold_id": "bank-be-020",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "缓存consistency",
+      "gold_id": "bank-cache-001",
+      "acceptable_ids": [
+        "bank-cache-002"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "cache一致性",
+      "gold_id": "bank-cache-001",
+      "acceptable_ids": [
+        "bank-cache-002"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "redis 缓存 consistency",
+      "gold_id": "bank-cache-001",
+      "acceptable_ids": [
+        "bank-cache-002"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "redis cache 一致性",
+      "gold_id": "bank-cache-001",
+      "acceptable_ids": [
+        "bank-cache-002"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "cache击穿与雪崩",
+      "gold_id": "bank-cache-002",
+      "acceptable_ids": [
+        "bank-be-033",
+        "bank-be-034",
+        "bank-cache-001"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "redis cache击穿与雪崩",
+      "gold_id": "bank-cache-002",
+      "acceptable_ids": [
+        "bank-be-033",
+        "bank-be-034",
+        "bank-cache-001"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "collaboration 需求变更应对",
+      "gold_id": "bank-proj-014",
+      "acceptable_ids": [
+        "bank-proj-017",
+        "bank-proj-002",
+        "bank-proj-004"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "跨职能collaboration",
+      "gold_id": "bank-proj-015",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "collaboration 跨职能协作",
+      "gold_id": "bank-proj-015",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "协作 leadership",
+      "gold_id": "bank-proj-016",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "collaboration 领导力",
+      "gold_id": "bank-proj-016",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "collaboration 团队冲突调解",
+      "gold_id": "bank-proj-017",
+      "acceptable_ids": [
+        "bank-proj-014",
+        "bank-proj-002",
+        "bank-proj-004"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "向上communication",
+      "gold_id": "bank-proj-018",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "沟通 leadership",
+      "gold_id": "bank-proj-018",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "communication 领导力",
+      "gold_id": "bank-proj-018",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "远程异步collaboration",
+      "gold_id": "bank-proj-019",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "collaboration",
+      "gold_id": "bank-proj-019",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "communication 说服与被说服",
+      "gold_id": "bank-proj-020",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "collaboration 团队规范建设",
+      "gold_id": "bank-proj-021",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "压力管理 communication",
+      "gold_id": "bank-proj-022",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "项目失败retrospective",
+      "gold_id": "bank-proj-024",
+      "acceptable_ids": [
+        "bank-proj-023"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrospective 压力管理",
+      "gold_id": "bank-proj-024",
+      "acceptable_ids": [
+        "bank-proj-023"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "项目深挖 communication",
+      "gold_id": "bank-proj-006",
+      "acceptable_ids": [
+        "bank-proj-012",
+        "bank-proj-013"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "架构决策retrospective",
+      "gold_id": "bank-proj-007",
+      "acceptable_ids": [
+        "bank-proj-008",
+        "bank-proj-001"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "项目深挖 架构决策retrospective",
+      "gold_id": "bank-proj-007",
+      "acceptable_ids": [
+        "bank-proj-008",
+        "bank-proj-001"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "performance优化案例",
+      "gold_id": "bank-proj-009",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "项目深挖 performance",
+      "gold_id": "bank-proj-009",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "项目难点retrospective",
+      "gold_id": "bank-proj-001",
+      "acceptable_ids": [
+        "bank-proj-007",
+        "bank-proj-008",
+        "bank-proj-010",
+        "bank-proj-011"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "项目深挖 retrospective 通用",
+      "gold_id": "bank-proj-001",
+      "acceptable_ids": [
+        "bank-proj-007",
+        "bank-proj-008",
+        "bank-proj-010",
+        "bank-proj-011"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "collaboration 技术方案分歧",
+      "gold_id": "bank-proj-002",
+      "acceptable_ids": [
+        "bank-proj-014",
+        "bank-proj-017",
+        "bank-proj-004"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "线上事故retrospective",
+      "gold_id": "bank-proj-003",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrospective 协作",
+      "gold_id": "bank-proj-003",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "复盘 collaboration",
+      "gold_id": "bank-proj-003",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    },
+    {
+      "query": "communication 跨团队推动",
+      "gold_id": "bank-proj-004",
+      "acceptable_ids": [
+        "bank-proj-014",
+        "bank-proj-017",
+        "bank-proj-002"
+      ],
+      "query_type": "synonym"
+    },
+    {
+      "query": "retrospective 技术债取舍",
+      "gold_id": "bank-proj-005",
+      "acceptable_ids": [],
+      "query_type": "synonym"
+    }
+  ]
+}

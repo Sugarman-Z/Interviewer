@@ -1,0 +1,186 @@
+@import "../styles/tokens.css";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+  background-color: var(--bg);
+  background-image: linear-gradient(180deg, var(--bg-grad-top) 0%, var(--bg) 340px);
+  font: 400 14.5px/1.75 var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--orange-soft);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* 面试页 chatpage 靠 flex:1 吃满剩余视口 */
+}
+
+.shell {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 页面标题区（各页共用，基准稿 .page-head） */
+.page-head {
+  padding: 36px 0 22px;
+}
+
+.page-head h1 {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.page-head > p {
+  color: var(--ink-2);
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+/* 通用卡片（各页共用，基准稿 .card） */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-l);
+  box-shadow: var(--sh-m);
+}
+
+/* 通用按钮（各页共用，基准稿 .btn 家族；胶囊、橘=主行动） */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 22px;
+  transition: 0.18s;
+  border: 1.5px solid transparent;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-pri {
+  background: var(--orange);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(228, 113, 31, 0.28);
+}
+
+.btn-pri:hover:not(:disabled) {
+  background: var(--orange-deep);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink-2);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  border-color: var(--orange-line);
+  color: var(--ink);
+}
+
+.btn-big {
+  padding: 13px 30px;
+  font-size: 14.5px;
+}
+
+.btn-sm {
+  padding: 7px 14px;
+  font-size: 12px;
+}
+
+.foot {
+  border-top: 1px solid var(--line-2);
+  padding: 20px 16px 26px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-2); /* ink-3 压暖底 ≈2.7:1，页脚承载 Mock 模式告知，须过 AA */
+  line-height: 1.8;
+}
+
+/* 键盘跳链（layout.tsx）：视觉隐藏，Tab 聚焦时浮出 */
+.skipLink {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1.5px solid var(--orange);
+  border-radius: var(--r-s);
+  box-shadow: var(--sh-m);
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  transform: translateY(calc(-100% - 24px));
+}
+
+.skipLink:focus-visible {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-pri:hover:not(:disabled) {
+    transform: none; /* hover 上浮是位移动画，reduced-motion 下关掉 */
+  }
+}
+
+@media (max-width: 719px) {
+  .shell {
+    padding: 0 16px;
+  }
+}

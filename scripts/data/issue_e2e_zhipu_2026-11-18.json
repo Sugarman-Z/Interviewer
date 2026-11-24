@@ -1,0 +1,275 @@
+{
+  "generated_at": "2026-11-18T02:40:23",
+  "provider": "zhipu",
+  "issues_per_config": 5,
+  "configs": {
+    "A_bank": {
+      "questions": 5,
+      "tool_calls": {
+        "search_corpus": 11
+      },
+      "tool_empty_hits": {
+        "search_corpus": 4
+      },
+      "source_types": {
+        "bank": 4,
+        "resume": 1
+      },
+      "fallback_used": 0
+    },
+    "B_candidate": {
+      "questions": 5,
+      "tool_calls": {
+        "search_corpus": 10,
+        "search_candidate": 2
+      },
+      "tool_empty_hits": {
+        "search_corpus": 3
+      },
+      "source_types": {
+        "bank": 5
+      },
+      "fallback_used": 0
+    }
+  },
+  "questions": {
+    "A_bank": [
+      {
+        "done": false,
+        "reason": "第一题从简历核心项目最重的性能专项切入，考察排查方法论与实战深度",
+        "module": "project",
+        "topic": "接口性能优化",
+        "text": "我看到你做过交易下单链路的性能专项，把核心接口 P99 从 180ms 降到 45ms。以这个优化为例，完整讲一下你的排查路线：一开始是怎么定位到瓶颈在哪里的？",
+        "source_type": "bank",
+        "source_ref": "bank:bank-e2e-003｜手写·2026-11-17",
+        "followup_hints": [
+          "慢查询怎么定位",
+          "索引失效的常见原因",
+          "分页改造具体做了什么"
+        ],
+        "bank_qid": "bank-e2e-003"
+      },
+      {
+        "done": false,
+        "reason": "简历明确记录一次线上事故且复盘主导，是 JD 第 5 条核心考察点，也是最有信息量的项目深挖素材",
+        "module": "project",
+        "topic": "上线后故障复盘",
+        "text": "我看到你提到一次缓存批量失效引发数据库连接池耗尽的线上事故——请完整讲讲这次故障：从发现、定位到恢复的 15 分钟里你分别在做什么，后来复盘落地的延迟双删和熔断降级分别解决的是哪个环节的问题？",
+        "source_type": "bank",
+        "source_ref": "bank:bank-e2e-006｜手写·2026-11-17",
+        "followup_hints": [
+          "监控为什么没先报警",
+          "延迟双删为什么能解决当时的问题",
+          "复盘改进项如何落地防复发"
+        ],
+        "bank_qid": "bank-e2e-006"
+      },
+      {
+        "done": false,
+        "reason": "候选人事故涉及缓存失效但复盘回答仅 3 分，深挖 Redis 缓存一致性这一薄弱相关维度验证其真实掌握程度",
+        "module": "project",
+        "topic": "Redis 缓存一致性",
+        "text": "我看到你在事故复盘后落地了延迟双删，结合你的下单链路，说说缓存与数据库双写不一致你会怎么处理、各策略怎么选？",
+        "source_type": "bank",
+        "source_ref": "bank:bank-e2e-002｜手写·2026-11-17",
+        "followup_hints": [
+          "延迟双删的局限",
+          "binlog 订阅方案的代价",
+          "强一致要求下是否还用缓存"
+        ],
+        "bank_qid": "bank-e2e-002"
+      },
+      {
+        "done": false,
+        "reason": "深挖消息管道消费端幂等，覆盖 JD 第4条且简历自研消息管道尚未考察细节",
+        "module": "project",
+        "topic": "Kafka 消费幂等",
+        "text": "我看到你的消息管道日均千万级消息，以 Kafka 消费侧为主的场景下，你是怎么保证消费端幂等的？具体幂等键怎么设计的？",
+        "source_type": "resume",
+        "source_ref": "简历：非核心流程异步化（自研消息管道，日均千万级消息）；技术栈：Kafka（消费侧为主）",
+        "followup_hints": [
+          "重复消费场景下幂等键冲突怎么处理？",
+          "幂等存储用 Redis 还是 MySQL，为什么？"
+        ],
+        "bank_qid": null
+      },
+      {
+        "done": false,
+        "reason": "JD 要求 Redis 分布式锁经验，属于尚未覆盖的重要维度，采用题库命中",
+        "module": "project",
+        "topic": "分布式锁",
+        "text": "JD 里提到分布式锁——你们交易系统多实例部署时用 Redis 实现过分布式锁吗？具体有哪些坑，你是怎么逐一加固的？",
+        "source_type": "bank",
+        "source_ref": "bank:bank-e2e-004｜手写·2026-11-17",
+        "followup_hints": [
+          "锁过期但业务没跑完怎么办",
+          "Redlock 争议",
+          "和数据库悲观锁怎么选"
+        ],
+        "bank_qid": "bank-e2e-004"
+      }
+    ],
+    "B_candidate": [
+      {
+        "done": false,
+        "reason": "首题优先覆盖 JD 硬性要求且简历核心项目明确的慢查询治理实战经验。",
+        "module": "project",
+        "topic": "接口性能优化",
+        "text": "我看到你在交易下单链路优化中把 P99 从 180ms 降到了 45ms，其中做了慢查询治理。请具体讲讲：当时是怎么定位出慢 SQL 的，以及索引重建和分页改造分别解决了什么问题？",
+        "source_type": "bank",
+        "source_ref": "bank:bank-e2e-003｜手写·2026-11-17",
+        "followup_hints": [
+          "EXPLAIN 关键指标",
+          "深分页优化方案",
+          "索引失效场景"
+        ],
+        "bank_qid": "bank-e2e-003"
+      },
+      {
+        "done": false,
+        "reason": "接口优化均分仅 3.0，深挖缓存一致性这一核心薄弱点换角度验证",
+        "module": "project",
+        "topic": "Redis 缓存一致性",
+        "text": "我看到你在缓存批量失效事故复盘后落地了延迟双删。缓存与数据库双写不一致还有哪些处理策略？说说你会在什么场景选哪种策略。",
+        "source_type": "bank",
+        "source_ref": "bank:bank-e2e-002｜手写·2026-11-17",
+        "followup_hints": [
+          "延迟双删的问题",
+          "binlog 订阅方案的代价",
+          "强一致要求下还敢用缓存吗"
+        ],
+        "bank_qid": "bank-e2e-002"
+      },
+      {
+        "done": false,
+        "reason": "候选人简历明确写了缓存批量失效引发连接池耗尽的线上事故，JD 也要求故障处理与复盘经验，题库命中可深挖复盘能力",
+        "module": "project",
+        "topic": "上线后故障复盘",
+        "text": "我看到你提到一次缓存批量失效导致数据库连接池耗尽、15 分钟恢复的线上事故——当时你从发现、恢复到复盘分别做了什么？复盘后落地的改进项是怎么保证不'写完就忘'的？",
+        "source_type": "bank",
+        "source_ref": "bank:bank-e2e-006｜手写·2026-11-17",
+        "followup_hints": [
+          "监控为什么没先报警？",
+          "延迟双删为什么能解决这次问题，熔断降级是在哪一层做的？"
+        ],
+        "bank_qid": "bank-e2e-006"
+      },
+      {
+        "done": false,
+        "reason": "覆盖 JD 消息队列要求且简历写明自研消息管道日均千万级，此前三轮均为 Redis 方向，换维度信息量最大",
+        "module": "project",
+        "topic": "Kafka 消息可靠性",
+        "text": "我看到你提到自研的消息管道日均承载千万级消息，如果线上出现异步消息偶发丢失，你会从哪些环节去排查和加固？",
+        "source_type": "bank",
+        "source_ref": "bank:bank-e2e-001｜手写·2026-11-17",
+        "followup_hints": [
+          "acks 与 min.insync.replicas 配置",
+          "消费端幂等具体实现（简历称消费侧为主，可核实）"
+        ],
+        "bank_qid": "bank-e2e-001"
+      },
+      {
+        "done": false,
+        "reason": "简历中Redis仅覆盖缓存场景，JD明确要求分布式锁，尚未考察，且前几题回答偏弱，换新维度补充信息量。",
+        "module": "project",
+        "topic": "分布式锁",
+        "text": "JD 里我们很看重分布式锁的实践。假设你的订单服务是多实例部署，需要用 Redis 实现一把分布式锁来防止重复下单，你会怎么做？实现里有哪些坑，你会怎么逐一加固？",
+        "source_type": "bank",
+        "source_ref": "bank:bank-e2e-004｜手写·2026-11-17",
+        "followup_hints": [
+          "锁过期但业务没跑完怎么办",
+          "Redlock 的争议",
+          "和数据库悲观锁的选型"
+        ],
+        "bank_qid": "bank-e2e-004"
+      }
+    ]
+  },
+  "absolute": {
+    "A_bank": {
+      "scores": [
+        {
+          "index": 1,
+          "relevance": 5,
+          "faithfulness": 5,
+          "non_repetition": 5,
+          "note": "精准锚定简历中的 P99 180ms→45ms 专项，考察定位方法论，角度独立"
+        },
+        {
+          "index": 2,
+          "relevance": 5,
+          "faithfulness": 5,
+          "non_repetition": 5,
+          "note": "复现简历中的线上事故细节，考察故障处理与复盘，与题1的排查路线角度不同"
+        },
+        {
+          "index": 3,
+          "relevance": 5,
+          "faithfulness": 5,
+          "non_repetition": 4,
+          "note": "锚定延迟双删落地实践，考察一致性策略选型，与题2复盘角度有区分但题材同源"
+        },
+        {
+          "index": 4,
+          "relevance": 5,
+          "faithfulness": 5,
+          "non_repetition": 5,
+          "note": "锚定消息管道日均千万级与 Kafka 消费侧，直击 JD 幂等要求，角度独立"
+        },
+        {
+          "index": 5,
+          "relevance": 4,
+          "faithfulness": 3,
+          "non_repetition": 4,
+          "note": "分布式锁出自 JD 但简历未提及实践，题面'你们用 Redis 实现过分布式锁吗'隐含了简历中不存在的经历，略有诱导虚构风险"
+        }
+      ]
+    },
+    "B_candidate": {
+      "scores": [
+        {
+          "index": 1,
+          "relevance": 5,
+          "faithfulness": 5,
+          "non_repetition": 5,
+          "note": "精准锚定简历慢查询治理成果，考察定位与拆解过程，角度独特"
+        },
+        {
+          "index": 2,
+          "relevance": 5,
+          "faithfulness": 5,
+          "non_repetition": 5,
+          "note": "锚定延迟双删事故复盘，考察一致性策略全景与选型，不与其他题重复"
+        },
+        {
+          "index": 3,
+          "relevance": 5,
+          "faithfulness": 5,
+          "non_repetition": 4,
+          "note": "锚定简历线上事故，考察处置与复盘闭环；与题2同源但角度为故障管理而非技术方案"
+        },
+        {
+          "index": 4,
+          "relevance": 4,
+          "faithfulness": 4,
+          "non_repetition": 5,
+          "note": "锚定自研消息管道，消息可靠性属合理延伸；简历未明写消息丢失问题但为假设性排查而非虚构事实"
+        },
+        {
+          "index": 5,
+          "relevance": 4,
+          "faithfulness": 4,
+          "non_repetition": 5,
+          "note": "分布式锁为JD明确要求但简历无相关实践，题面以假设情景提出，无事实虚构；考察角度独特"
+        }
+      ]
+    }
+  },
+  "pairwise": {
+    "relevance": "tie",
+    "faithfulness": "tie",
+    "non_repetition": "tie",
+    "overall": "B",
+    "reason": "两组覆盖与忠实度相当，但 B 的分布式锁题给出多实例防重复下单的具体场景（更自然、可作答性更强），Kafka 题也更开放利于考察排查思路，A 的分布式锁题依赖候选人确实用过、易僵局。"
+  }
+}

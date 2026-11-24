@@ -1,0 +1,56 @@
+T0 spike 实测记录（2026-11-22，单次实测——数字不可复现，仅证形态；
+复跑命令见各节，zhipu 腿花真额度）
+================================================================================
+
+一、端点分片探针 scripts/spike_probe_streaming.py
+--------------------------------------------------------------------------------
+条件：仓库 .env（INTERVIEWER_LLM_BASE_URL = coding 专用端点）、
+      glm-5.3-flash（quick 档）、reasoning_effort 经 extra_body 透传、
+      NO_PROXY=open.bigmodel.cn、PYTHONUTF8=1
+命令：python scripts/spike_probe_streaming.py
+
+== ① 纯文本流（无 tools，prompt「用三句话介绍 ISR 机制。」） ==
+共 111 chunk，3.16s 全程；content 分片 1-9 字/片，逐片到达
+（首片 +0.91s，末段有空 content 收尾片）→ content 真分片流式
+
+== ② bind_tools 流（交卷 schema 同绑） ==
+共 3 chunk，6.95s：chunk1 携带完整 tool_call（name+args+id+index 0），
+chunk2/3 空（content=""，tool_call_chunks=[]，additional_kwargs 空）
+→ tool args 原子齐发；前置 ~6.95s 服务端思考静默（reasoning 不经
+  langchain 的 content/additional_kwargs 泄漏）
+
+== 标准端点对照（SPIKE_STD_ENDPOINT=1，open.bigmodel.cn/api/paas/v4/） ==
+不可做：API 429 code 1113「余额不足或无可用资源包」——key 是 coding
+资源包，标准端点无余额。
+
+二、真图录制 scripts/record_stream_chunks.py（SPIKE-2）
+--------------------------------------------------------------------------------
+条件：同上 + 默认工具配置（corpus/candidate local）+ tmp sqlite；
+max_questions=4；追问以「自信但说错」答案钓得（纯摆烂会被直接换题）
+产出：tests/fixtures/stream_chunks_issue.json（3 chunk，单 chunk 整块
+args，agg text == 挂起题面）、stream_chunks_evaluator.json（3 chunk，
+followup_text == 挂起追问句）。真机每调用确实只有 3 chunk（录制器
+逐 chunk 全存，无丢失）。
+
+三、SPIKE-3 代理实验 scripts/spike_sse_proxy.py + curl（Git Bash）
+--------------------------------------------------------------------------------
+条件：spike 服务占 127.0.0.1:8000（真后端已停）；前端 next dev 绑
+[::]:3000（VS Code 端口转发占 127.0.0.1:3000——curl 走 [::1]:3000，
+浏览器用户不受影响）；next.config.ts proxyTimeout=190_000（③ 实验临时改 5_000）
+
+== ① 逐块透传 ==
+命令：curl -s -N --max-time 3.5 "http://[::1]:3000/api/spike/sse?interval_ms=1000&total_s=8" | grep -c "^data:"
+结果：4（3.5s 截断时已收到 4 条；缓冲型代理为 0 条）
+另：全量跑 6s 流，事件内 t= 时标逐秒到达（1.03/2.03/3.02/4.03/5.05 + done）
+
+== ③ proxyTimeout 空闲语义（临时 proxyTimeout=5_000，改配置须重启 dev） ==
+活跃流：curl 同上 interval_ms=1000&total_s=8 → real 0m8.149s，收齐
+        8 条 + done → 活过 5s 上限，字节重置计时
+静默流：curl "...?silent_s=8" → real 0m5.124s，收到 0 条 → 恰在 ~5s
+        空闲处被切
+结论：proxyTimeout 是 socket 空闲超时；15s ping 保活下 190s 不会掐
+流式回合，无需上调（R4 关闭）。
+
+四、pytest 基线
+--------------------------------------------------------------------------------
+跑完 T0 后：449 passed, 1 skipped（spike 脚本不进回归，fixture 惰性）

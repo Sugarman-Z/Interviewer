@@ -1,0 +1,91 @@
+# 领域术语词表（WP-C6③）：canonical + aliases 的硬映射。
+#
+# 三个消费方（词表因此不腐化——每个消费方都反向逼词表长全）：
+#   1. lint_bank 第 8 节：题库 tag ↔ 词表对账（未知 tag ⚠ 报告）
+#   2. promote_staging：候选题 tag 不在词表 → 该文件中止不入库（"拒绝入库"硬闸）
+#   3. gen_rag_goldset synonym 桶：alias↔canonical 换面变体 query（测同义鲁棒性）
+#
+# 纪律：
+# - tag 必须先入表再入库（表覆盖全部现行 61 个 tag——test_glossary 锁同步）
+# - aliases 只追加不改 canonical（改 canonical = 全库 tag 迁移，另走专项）
+# - 别名保守主义：只收"确实有人这么叫"的面，胡编英文别名 = 给 synonym 框
+#   噪音；拉丁面在匹配时带词边界护栏（"os" 不会切中 "postgres"）
+# - 条目分两类：tag 条目（canonical=tag 本身）与术语条目（非 tag，如
+#   垃圾回收——查询变体/归一用，lint 不检查它们）
+
+entries:
+  # ── 平台/框架/语言（tag 原样注册，别名给通行缩写/全称）──
+  - {canonical: kafka, aliases: []}
+  - {canonical: redis, aliases: []}
+  - {canonical: langgraph, aliases: []}
+  - {canonical: linux, aliases: []}
+  - {canonical: python, aliases: []}
+  - {canonical: http, aliases: []}
+  - {canonical: web, aliases: []}
+  - {canonical: javascript, aliases: [js]}
+  - {canonical: typescript, aliases: [ts]}
+  - {canonical: css, aliases: []}
+  - {canonical: agent, aliases: []}
+  - {canonical: 多智能体, aliases: [multi-agent]}
+  - {canonical: rag, aliases: [检索增强生成, retrieval augmented generation]}
+
+  # ── 后端/系统（中↔英通行面）──
+  - {canonical: 消息队列, aliases: [message queue, mq]}
+  - {canonical: 缓存, aliases: [cache]}
+  - {canonical: 一致性, aliases: [consistency]}
+  - {canonical: 事务, aliases: [transaction]}
+  - {canonical: 分布式, aliases: [distributed]}
+  - {canonical: 并发, aliases: [concurrency]}
+  - {canonical: 幂等, aliases: [idempotent, idempotency]}
+  - {canonical: 微服务, aliases: [microservices]}
+  - {canonical: 高可用, aliases: [high availability, ha]}
+  - {canonical: 性能, aliases: [performance]}
+  - {canonical: 安全, aliases: [security]}
+  - {canonical: 鉴权, aliases: [authorization]}
+  - {canonical: 部署, aliases: [deployment, deploy]}
+  - {canonical: 运维, aliases: [ops]}
+  - {canonical: 监控, aliases: [monitoring]}
+  - {canonical: 数据库, aliases: [database, db]}
+  - {canonical: 索引, aliases: [index]}
+  - {canonical: 数据结构, aliases: [data structure]}
+  - {canonical: 操作系统, aliases: [os]}
+  - {canonical: 网络, aliases: [network]}
+  - {canonical: 测试, aliases: [testing]}
+  - {canonical: 代码质量, aliases: [code quality]}
+  - {canonical: 工程化, aliases: [engineering]}
+  - {canonical: 系统设计, aliases: [system design]}
+
+  # ── 前端 ──
+  - {canonical: 前端, aliases: [frontend]}
+  - {canonical: 后端, aliases: [backend]}
+  - {canonical: 渲染, aliases: [render, rendering]}
+  - {canonical: 状态管理, aliases: [state management]}
+  - {canonical: api设计, aliases: [api design]}
+
+  # ── AI/agent 技术面 ──
+  - {canonical: 向量检索, aliases: [vector search]}
+  - {canonical: 工具调用, aliases: [tool calling]}
+  - {canonical: 结构化输出, aliases: [structured output]}
+  - {canonical: 提示词, aliases: [prompt]}
+  - {canonical: 模型选型, aliases: [model selection]}
+  - {canonical: 记忆, aliases: [memory]}
+  - {canonical: 知识库, aliases: [knowledge base]}
+  - {canonical: 搜索, aliases: [search]}
+  - {canonical: 评测, aliases: [evaluation, eval]}
+
+  # ── 软技能/复盘域（中文为正典；通行英文面收最有把握的）──
+  - {canonical: 项目深挖, aliases: []}
+  - {canonical: 复盘, aliases: [retrospective]}
+  - {canonical: 沟通, aliases: [communication]}
+  - {canonical: 协作, aliases: [collaboration]}
+  - {canonical: 领导力, aliases: [leadership]}
+  - {canonical: 学习能力, aliases: []}
+  - {canonical: 压力管理, aliases: []}
+  - {canonical: 职业规划, aliases: []}
+  - {canonical: 成本, aliases: [cost]}
+  - {canonical: 通用, aliases: []}
+  - {canonical: 框架, aliases: [framework]}
+
+  # ── 术语级条目（非 tag——查询变体/同义归一用）──
+  - {canonical: 垃圾回收, aliases: [gc, garbage collection]}
+  - {canonical: 缓存雪崩, aliases: [cache stampede, cache avalanche]}

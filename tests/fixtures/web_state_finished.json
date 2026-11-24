@@ -1,0 +1,106 @@
+{
+  "state": {
+    "session_id": "fx-finished",
+    "position": "后端开发",
+    "candidate_profile": "简历",
+    "jd_requirements": "",
+    "past_context": "",
+    "transcript": [
+      {
+        "role": "interviewer",
+        "content": "你好，我是今天「后端开发」岗位的面试官。我们先从一个简单的自我介绍开始：请介绍一下你的背景、主要经历和你想强调的方向。",
+        "phase": "intro"
+      },
+      {
+        "role": "candidate",
+        "content": "标准回答",
+        "topic": ""
+      },
+      {
+        "role": "interviewer",
+        "content": "介绍一下你简历里最核心的一个项目：它解决什么问题，你负责哪部分？",
+        "kind": "issue",
+        "module": "project",
+        "topic": "项目整体架构"
+      },
+      {
+        "role": "candidate",
+        "content": "标准回答",
+        "topic": "项目整体架构"
+      },
+      {
+        "role": "interviewer",
+        "content": "这个项目里你做过哪些技术选型？当时为什么选它而不是备选方案？",
+        "kind": "issue",
+        "module": "project",
+        "topic": "技术选型"
+      },
+      {
+        "role": "candidate",
+        "content": "标准回答",
+        "topic": "技术选型"
+      },
+      {
+        "role": "system",
+        "content": "（发题官收场：题数上限（2 题））",
+        "kind": "issue_done"
+      }
+    ],
+    "pending_question": "",
+    "last_answer": "标准回答",
+    "current_question": {},
+    "current_topic": "",
+    "followup_state": {
+      "topic": "",
+      "qa_history": "",
+      "followup_count": 0,
+      "total_count": 2
+    },
+    "last_scorecard": {
+      "technical_depth": 3,
+      "correctness": 3,
+      "communication": 3,
+      "evidence": {
+        "technical_depth": "（mock）回答涉及了相关内容",
+        "correctness": "（mock）未见事实性错误",
+        "communication": "（mock）能说清大意"
+      },
+      "weak_points": [],
+      "action": "advance",
+      "followup_text": ""
+    },
+    "issued_keys": [
+      "项目整体架构",
+      "技术选型"
+    ],
+    "consecutive_llm_failures": 0,
+    "topic_results": [
+      {
+        "module": "project",
+        "topic": "项目整体架构",
+        "scores": {
+          "technical_depth": 3,
+          "correctness": 3,
+          "communication": 3
+        },
+        "action": "advance",
+        "eval_failed": false
+      },
+      {
+        "module": "project",
+        "topic": "技术选型",
+        "scores": {
+          "technical_depth": 3,
+          "correctness": 3,
+          "communication": 3
+        },
+        "action": "advance",
+        "eval_failed": false
+      }
+    ],
+    "retrieval_trace": [],
+    "module_report": "（quick mock 回复：按指令处理。）",
+    "interview_report": "（deep mock 回复：按指令处理。）"
+  },
+  "pending": null
+}

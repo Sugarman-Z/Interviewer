@@ -1,0 +1,238 @@
+{
+  "cases": [
+    {
+      "name": "mixed-main-followup-skip",
+      "topic_results": [
+        {
+          "qnum": "1",
+          "topic": "并发与线程池",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 4, "correctness": 5, "communication": 3 }
+        },
+        {
+          "qnum": "1.1",
+          "topic": "扩容时机与代价",
+          "is_followup": true,
+          "skipped": false,
+          "module": "project",
+          "action": "followup",
+          "eval_failed": false,
+          "scores": { "technical_depth": 2, "correctness": 3, "communication": 4 }
+        },
+        {
+          "qnum": "2",
+          "topic": "Redis 缓存一致性",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 4, "correctness": 4, "communication": 5 }
+        },
+        {
+          "qnum": "3",
+          "topic": "MySQL 索引",
+          "is_followup": false,
+          "skipped": true,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 2, "correctness": 2, "communication": 2 }
+        }
+      ],
+      "expected": {
+        "overall": 3.3,
+        "dim_averages": { "technical_depth": 3.0, "correctness": 3.5, "communication": 3.5 }
+      }
+    },
+    {
+      "name": "uniform-with-followup",
+      "topic_results": [
+        {
+          "qnum": "1",
+          "topic": "消息队列",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 3, "correctness": 3, "communication": 3 }
+        },
+        {
+          "qnum": "1.1",
+          "topic": "幂等与代价",
+          "is_followup": true,
+          "skipped": false,
+          "module": "project",
+          "action": "followup",
+          "eval_failed": false,
+          "scores": { "technical_depth": 4, "correctness": 4, "communication": 5 }
+        }
+      ],
+      "expected": {
+        "overall": 3.7,
+        "dim_averages": { "technical_depth": 3.5, "correctness": 3.5, "communication": 4.0 }
+      }
+    },
+    {
+      "name": "single-strong-row",
+      "topic_results": [
+        {
+          "qnum": "1",
+          "topic": "系统设计",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 5, "correctness": 4, "communication": 4 }
+        }
+      ],
+      "expected": {
+        "overall": 4.3,
+        "dim_averages": { "technical_depth": 5.0, "correctness": 4.0, "communication": 4.0 }
+      }
+    },
+    {
+      "name": "eval-failed-excluded",
+      "topic_results": [
+        {
+          "qnum": "1",
+          "topic": "并发与线程池",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 4, "correctness": 4, "communication": 5 }
+        },
+        {
+          "qnum": "2",
+          "topic": "Redis 缓存一致性",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": true,
+          "scores": {}
+        },
+        {
+          "qnum": "3",
+          "topic": "MySQL 索引",
+          "is_followup": false,
+          "skipped": true,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 2, "correctness": 2, "communication": 2 }
+        }
+      ],
+      "expected": {
+        "overall": 3.2,
+        "dim_averages": { "technical_depth": 3.0, "correctness": 3.0, "communication": 3.5 }
+      }
+    },
+    {
+      "name": "half-up-tie",
+      "topic_results": [
+        {
+          "qnum": "1",
+          "topic": "消息队列",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 3, "correctness": 3, "communication": 3 }
+        },
+        {
+          "qnum": "2",
+          "topic": "网络与 TCP",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 3, "correctness": 3, "communication": 3 }
+        },
+        {
+          "qnum": "3",
+          "topic": "分布式锁",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 4, "correctness": 4, "communication": 4 }
+        },
+        {
+          "qnum": "4",
+          "topic": "系统设计",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 3, "correctness": 3, "communication": 3 }
+        }
+      ],
+      "expected": {
+        "overall": 3.3,
+        "dim_averages": { "technical_depth": 3.3, "correctness": 3.3, "communication": 3.3 }
+      }
+    },
+    {
+      "name": "repeating-mean-tie",
+      "topic_results": [
+        {
+          "qnum": "1",
+          "topic": "消息队列",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 1, "correctness": 1, "communication": 1 }
+        },
+        {
+          "qnum": "2",
+          "topic": "网络与 TCP",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 2, "correctness": 1, "communication": 1 }
+        },
+        {
+          "qnum": "3",
+          "topic": "分布式锁",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 2, "correctness": 1, "communication": 1 }
+        },
+        {
+          "qnum": "4",
+          "topic": "系统设计",
+          "is_followup": false,
+          "skipped": false,
+          "module": "project",
+          "action": "advance",
+          "eval_failed": false,
+          "scores": { "technical_depth": 2, "correctness": 1, "communication": 1 }
+        }
+      ],
+      "expected": {
+        "overall": 1.2,
+        "dim_averages": { "technical_depth": 1.8, "correctness": 1.0, "communication": 1.0 }
+      }
+    }
+  ]
+}

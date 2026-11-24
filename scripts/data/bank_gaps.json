@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-11-17",
+  "bank_size": 200,
+  "sessions_scanned": 6,
+  "sessions_with_trace": 0,
+  "gaps": [],
+  "excluded_top": [],
+  "hit_top": [],
+  "quality_signals": [
+    "[9e3ec567a324] issue_done: （发题官收场：编造题库命中熔断（bank_qid=null，连续 2 次））"
+  ]
+}

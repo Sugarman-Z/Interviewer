@@ -1,0 +1,4 @@
+# 语料正典 LF（bank_writer 换行契约在 git 侧的防线，2026-11-17 全量审查 high①）：
+# corpus 下的题库 md 由工具链统一 LF 写出/字节级追加；eol=lf 保证任何机器
+# checkout 出来都是 LF，杜绝 Windows 工作区 CRLF 与"不动既有字节"合同打架。
+corpus/** text eol=lf

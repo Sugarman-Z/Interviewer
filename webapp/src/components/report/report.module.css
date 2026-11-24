@@ -1,0 +1,542 @@
+/* 终场报告 —— docs/design/direction-b.html「终场报告」屏移植；逐题区按 spec §10.2
+   换用 C 稿的表格 + tfoot 方案。颜色走全局 tokens.css；.card/.btn/.page-head 在 globals.css。 */
+
+.rcol {
+  max-width: 920px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* 报告头：圆环 + 等级 + 三维均值条 */
+.rhead {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 28px 32px;
+}
+
+.ring {
+  position: relative;
+  width: 122px;
+  height: 122px;
+  flex: none;
+}
+
+.ring svg {
+  transform: rotate(-90deg);
+  display: block;
+}
+
+.ringC {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ringC b {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.ringC span {
+  font-size: 11px;
+  color: var(--ink-2); /* ink-3 压白卡 2.94:1；分制说明（T8 收口） */
+  margin-top: 4px;
+}
+
+.rinfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.grade {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 11px;
+  border-radius: 99px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+}
+
+.grade.bg {
+  color: var(--green-deep);
+  background: var(--green-soft);
+  border-color: var(--green-line);
+}
+
+.grade.bm {
+  color: var(--amber-ink);
+  background: var(--amber-soft);
+  border-color: var(--amber-soft);
+}
+
+.grade.bl {
+  color: var(--rust-ink);
+  background: var(--rust-soft);
+  border-color: var(--rust-soft);
+}
+
+.rinfo h2 {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+
+.rdims {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.rdim {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.rdim .bar {
+  width: 88px;
+  height: 6px;
+  background: var(--surface-muted);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.rdim .bar i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #ec8a3c, var(--orange));
+  border-radius: 99px;
+  transition: width 0.6s ease;
+}
+
+.rdim b {
+  color: var(--ink);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 卡片标题 */
+/* .card 是 globals.css 全局类，模块内须 :global 引用否则被哈希永不命中
+   （T8 评审实锤：此规则自 T6 起未生效过，卡片一直缺内边距/间距） */
+.rcol > :global(.card) {
+  margin-top: 18px;
+  padding: 26px 30px;
+}
+
+.c-t {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.c-t svg {
+  color: var(--orange);
+}
+
+.c-sub {
+  font-size: 12px;
+  color: var(--ink-2); /* ink-3 压白卡 2.94:1，小字注释须过 AA */
+  font-weight: 400;
+}
+
+/* 总评 markdown */
+.prose {
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--ink-2);
+}
+
+.prose h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 18px 0 8px;
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose p {
+  margin-bottom: 10px;
+}
+
+.prose ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 6px 0 10px;
+}
+
+.prose li {
+  padding-left: 18px;
+  position: relative;
+}
+
+.prose li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.85em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.prose strong {
+  color: var(--ink);
+}
+
+/* 逐题得分表 */
+.qtWrap {
+  overflow-x: auto;
+}
+
+.qt {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.qt th {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-2); /* ink-3 压白卡 2.94:1；列头是读表必需（T8 收口） */
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.qt td {
+  padding: 11px 10px;
+  border-bottom: 1px solid var(--line-2);
+  vertical-align: middle;
+}
+
+/* 锚点回链落点让出 sticky 顶栏（桌面 62px + 余量） */
+.qt tr {
+  scroll-margin-top: 74px;
+}
+
+.qt tbody tr:hover {
+  background: var(--surface-warm);
+}
+
+/* 目标行高亮（薄弱点卡回链落地） */
+.qt tr:target {
+  background: var(--orange-soft);
+}
+
+.qt .num {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.qn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.fuMark {
+  color: var(--orange-line);
+  font-weight: 700;
+}
+
+.fuTag {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--orange-ink); /* orange-deep 压 orange-soft 仅 3.86:1 */
+  background: var(--orange-soft);
+  padding: 1px 7px;
+  border-radius: 99px;
+}
+
+.skipTag {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ink-2); /* ink-3 在 surface-muted 上对比度不足（2.5:1） */
+  background: var(--surface-muted);
+  padding: 1px 7px;
+  border-radius: 99px;
+}
+
+.fuRow td:first-child {
+  padding-left: 26px;
+}
+
+/* 分数色带：绿 ≥4 / 琥珀 ≥3 / 锈 <3 */
+.sc {
+  display: inline-block;
+  min-width: 26px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 2px 7px;
+  font-weight: 700;
+}
+
+.sc.g {
+  color: var(--green-deep);
+  background: var(--green-soft);
+}
+
+.sc.m {
+  color: var(--amber-ink);
+  background: var(--amber-soft);
+}
+
+.sc.l {
+  color: var(--rust-ink);
+  background: var(--rust-soft);
+}
+
+.qavg {
+  display: inline-block;
+  min-width: 44px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 8px;
+  font-weight: 800;
+}
+
+.qavg.g {
+  color: var(--green-deep);
+  background: var(--green-soft);
+}
+
+.qavg.m {
+  color: var(--amber-ink);
+  background: var(--amber-soft);
+}
+
+.qavg.l {
+  color: var(--rust-ink);
+  background: var(--rust-soft);
+}
+
+/* 未评分占位：eval_failed 行的维度分/均分格 */
+.unscored {
+  font-size: 11px;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.qt tfoot td {
+  border-top: 2px solid var(--line);
+  border-bottom: none;
+  font-weight: 700;
+  color: var(--ink);
+  padding-top: 13px;
+}
+
+/* 薄弱点小结 */
+.wk {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  counter-reset: wk;
+}
+
+.wk li {
+  counter-increment: wk;
+  position: relative;
+  padding: 13px 16px 13px 48px;
+  background: #fffdf8;
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-m);
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.85;
+}
+
+.wk li::before {
+  content: counter(wk);
+  position: absolute;
+  left: 14px;
+  top: 15px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--rust-soft);
+  color: var(--rust-ink);
+  font-weight: 700;
+  font-size: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.wk li b {
+  color: var(--ink);
+}
+
+.wkLinks {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--ink-2); /* ink-3 压 #fffdf8 ≈2.9:1；回链引导语（T8 收口） */
+}
+
+.wkLinks a {
+  color: var(--orange-ink); /* 卡面 #fffdf8 上 orange-deep 仅 4.43:1 */
+  text-decoration: none;
+  border-bottom: 1px dashed var(--orange-line);
+}
+
+.wkLinks a:hover {
+  border-bottom-style: solid;
+}
+
+.wkNone {
+  font-size: 13px;
+  color: var(--ink-2);
+  background: var(--green-soft);
+  border: 1px solid var(--green-line);
+  border-radius: var(--r-m);
+  padding: 13px 16px;
+}
+
+/* 未收场 / 加载 / 错误 */
+.noticeCard {
+  margin: 40px auto;
+  max-width: 460px;
+  padding: 28px 30px;
+  text-align: center;
+}
+
+.noticeCard p {
+  color: var(--ink-2);
+  font-size: 13.5px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.noticeCard .err {
+  color: var(--rust-ink);
+}
+
+.noticeBtns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 底部操作 */
+.rbtns {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+/* 响应式 */
+@media (max-width: 719px) {
+  .rhead {
+    flex-direction: column;
+    gap: 20px;
+    padding: 22px;
+  }
+
+  .rdims {
+    gap: 12px;
+  }
+
+  .rdim .bar {
+    width: 60px;
+  }
+
+  .rcol > :global(.card) {
+    padding: 20px 18px;
+  }
+
+  .rbtns :global(.btn) {
+    flex: 1;
+  }
+
+ /* 表格降级（ 自 C 嫁接）：行变卡片，td[data-d] 自带维度标签 */
+  .qt tr {
+    scroll-margin-top: 110px; /* 移动端顶栏换行更高 */
+  }
+
+  .qt,
+  .qt tbody,
+  .qt tr,
+  .qt td {
+    display: block;
+    width: 100%;
+  }
+
+  .qt thead {
+    display: none;
+  }
+
+  .qt tr {
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-m);
+    padding: 8px 4px;
+    margin-bottom: 10px;
+  }
+
+  .qt tbody tr:hover,
+  .qt tr:target {
+    background: var(--orange-soft);
+  }
+
+  .qt td {
+    border-bottom: none;
+    padding: 5px 12px;
+    text-align: left;
+  }
+
+  .qt td[data-d]::before {
+    content: attr(data-d) "：";
+    color: var(--ink-2); /* ink-3 压白卡 2.94:1、target 行 orange-soft 上 2.52:1；thead 隐藏后这是唯一列标识（T8 收口） */
+    font-size: 11px;
+    margin-right: 6px;
+  }
+
+  .qt .num {
+    text-align: left;
+  }
+
+  .qt tfoot {
+    display: none; /* 移动端卡片化后均分见报告头三维条 */
+  }
+
+  .fuRow td:first-child {
+    padding-left: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rdim .bar i {
+    transition: none;
+  }
+}
